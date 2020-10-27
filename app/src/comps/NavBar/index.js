@@ -37,6 +37,7 @@ const NavButton = styled.div`
 `;
 
 const NavIcon = styled.div`
+
     margin-top:3px;
     margin-right:2px;
     width:55%;
@@ -44,13 +45,24 @@ const NavIcon = styled.div`
     background-size:contain;
     background-repeat: no-repeat;
     background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
+
+    img{
+       fill:black;
+    }
+
 `;
 
-const NavLabel = styled.label`
+const NavLabel = styled.div`
     height:20px;
     width:100%; 
 
+    img {
+        fill:black;
+    }
+
 `;
+
+
 
 const OrderNum = styled.div`
     font-size:10px;
@@ -84,7 +96,7 @@ const NavBar = ({bgimg,title, btnState, orderActive, orderNum}) => {
         </OrderNum>
         <NavBox>
             <NavButton >
-                <NavIcon bgimg="/home.png"></NavIcon>
+                <NavIcon><img src="/home.svg"/></NavIcon>
                 <NavLabel>Home</NavLabel>
             </NavButton>
 

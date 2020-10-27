@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled, {css} from 'styled-components';
+import AvatarOverlap from '../AvatarOverlap';
 
 const ConfirmContainer = styled.div`
     width: 308px;
@@ -19,7 +20,11 @@ const AvatarPlaceHolder = styled.div`
     display:flex;
     align-items:center;
     justify-content:center;
-    border: 0.4px solid #9D9D9D;
+    margin-left:40px;
+    div{
+        z-index:1;
+    }
+
 
 `;
 
@@ -65,7 +70,7 @@ const ConfirmButtons = styled.div`
 const ConfirmOrder = ({Seller, Quantity, Product}) =>{
     return <ConfirmContainer>
             <AvatarPlaceHolder>
-                    Avatar PlaceHolder
+            <AvatarOverlap></AvatarOverlap>
             </AvatarPlaceHolder>
                 <SellerLabel>{Seller}'s Order</SellerLabel>
             <OrderBox>
@@ -77,6 +82,7 @@ const ConfirmOrder = ({Seller, Quantity, Product}) =>{
                     <ConfirmButtons active={true}></ConfirmButtons>
             </ConfirmButtonContainer>
             <a>View full order details</a>
+            
     </ConfirmContainer>
 }
 
