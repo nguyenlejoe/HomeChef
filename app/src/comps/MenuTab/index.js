@@ -47,10 +47,10 @@ line-height: 36px;
 `
 
 const EnterIcon = styled.div`
-align-items:right;
+align-items:center;
 position:absolute;
-left:320px;
-top:45px;
+left:160%;
+top:0px;
 `
 const MenuTab = ({MenuText}) => {
     
@@ -63,10 +63,10 @@ const MenuTab = ({MenuText}) => {
         
         <ContentContainer> 
             
-            <TabText> {MenuText} </TabText>
-            <EnterIcon>
+            <TabText> {MenuText} <EnterIcon>
             <img src="/enter.png"/>
-            </EnterIcon>
+            </EnterIcon> </TabText>
+            
         </ContentContainer>
     </Menutabcont>
 

@@ -5,15 +5,12 @@ const Buttoncont = styled.div`
 cursor:pointer;
 height: 36px;
 width: 260px;
-left: 7366px;
-top: 3156px;
 border-radius: 20px;
 background: #2B445E;
 display:flex;
 align-text:center;
 justify-content:center;
 align-items:center;
-
 `
 const Carttxt = styled.div`
 display:flex;
@@ -29,14 +26,7 @@ const IconCont = styled.div`
 position:relative;
 top:6px;
 left:10px;
-
 `
-
-
-
-
-
-
 const ViewCartButton = ({itemsnum}) => {
     
     return <Buttoncont>
