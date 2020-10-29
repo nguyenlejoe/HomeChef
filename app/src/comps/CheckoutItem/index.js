@@ -35,6 +35,7 @@ text-align: left;
 
 const ChefNote = styled.div`
 color: #2B445E;
+cursor:pointer;
 
 `
 
@@ -79,7 +80,7 @@ const CheckoutItem = ({Quant, Itemnm, Note, Pricetag,}) => {
     return <Checkoutitemcont>
             <Carttxt>
             <Quantity>{Quant}</Quantity>
-            <ItemName>{Itemnm}<ChefNote>{Note}</ChefNote></ItemName>
+            <ItemName>{Itemnm}<ChefNote>   {Note}</ChefNote></ItemName>
             <Price>{Pricetag}</Price>
             <Delete></Delete>
             <Iconcont>
