@@ -39,7 +39,7 @@ const MealPrice = styled.div`
 
 
 
-const OrderDetails = ({Mealnm, MealPrc, bgimg}) => {
+const FoodDisplayCover = ({Mealnm, MealPrc, bgimg}) => {
     
     return <FoodDisplayCont>
         <FoodCont  bgimg={bgimg}>
@@ -52,7 +52,7 @@ const OrderDetails = ({Mealnm, MealPrc, bgimg}) => {
 
 }
 
-OrderDetails.defaultProps = {
+FoodDisplayCover.defaultProps = {
     
     Mealnm:"Joe's Pho",
     MealPrc: "$12.99",
@@ -61,4 +61,4 @@ OrderDetails.defaultProps = {
 
 }
 
-export default OrderDetails;
+export default FoodDisplayCover;
