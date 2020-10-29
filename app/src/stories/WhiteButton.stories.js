@@ -7,4 +7,4 @@ export default {
   component: WhiteButton,
 };
 
-export const MyWhiteButton = () => <WhiteButton text="Filter" />
+export const MyWhiteButton = () => <WhiteButton text="+" />
