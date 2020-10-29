@@ -5,8 +5,33 @@
 
 .TopNavCon{
    width: 100%;
+   color: white;
 }
 
-.content{
+.Content{
     display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+
+    div{
+        margin: 5px;
+    }
 }
+
+.Cart{
+    display:flex;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    bottom: 15%;
+}
+
+.Nav{
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
