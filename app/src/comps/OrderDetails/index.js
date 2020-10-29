@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
+import Avatar from '../Avatar';
 
 const DetailsContainer = styled.div`
   display:flex;
@@ -13,10 +14,9 @@ font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 36px;
-/* identical to box height */
-
-
 color: #2B445E;
+left:20px;
+position:relative;
 `
 
 const DetailsRectangle = styled.div`
@@ -68,26 +68,37 @@ font-size: 19px;
 line-height: 28px;
 color: #2B445E;
 text-decoration:underline;
+cursor:pointer;
 `
 const FullDetails = styled.div`
 font-family: Poppins;
-margin-top:10px;
+margin-top:30px;
 margin-bottom:10px;
 font-weight: 500;
 font-size: 14px;
 line-height: 21px;
 color: #2B445E;
+cursor:pointer;
 `
 const Detailstxtboxs = styled.div`
 position: relative;
-left:10%;
-top:10%;
+left:20px;
+top:20px;
 
+`
+
+const Photocont = styled.div`
+z-index:1;
+position:relative;
+left:300px;
+size:105px;
 `
 
 
 
-const OrderDetails = ({Chef, OrderNum, Pickupdate, Locationtxt}) => {
+
+
+const OrderDetails = ({Chef, OrderNum, Pickupdate, Locationtxt, profileimg}) => {
     
     return <DetailsContainer>
         <Chefname> {Chef} </Chefname>
@@ -99,6 +110,10 @@ const OrderDetails = ({Chef, OrderNum, Pickupdate, Locationtxt}) => {
             <Contact>Chef Contact Details</Contact>
             <FullDetails>View full order details</FullDetails>
             </Detailstxtboxs>
+            <Photocont>
+            <Avatar bgimg={profileimg}></Avatar>
+            </Photocont>
+
         </DetailsRectangle>
     </DetailsContainer>
 
