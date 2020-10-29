@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled, {css} from 'styled-components';
 
 const TopNavContainer = styled.div`
-    width: 414px;
+    width: 100%;
     height: 73px;
     background-color:#F4F4F4;
     display:flex;
@@ -115,7 +115,7 @@ const TopNav = ({}) =>{
             checkOff("chef");
            }
         }}>
-            <Icon bgimg="/chef.png"></Icon>
+            <Icon bgimg="/chefIcon.png"></Icon>
             <Title active={ChefExpand}>Chefs</Title>
         
         </TopNavButton>
