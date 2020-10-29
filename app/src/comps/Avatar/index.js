@@ -7,8 +7,8 @@ height:80px;
 `;
 
 const AvatarImg = styled.div`
-width:100%;
-height:100%;
+min-width:100%;
+min-height:100%;
 background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
 background-size:cover;
 border-radius:100px;
