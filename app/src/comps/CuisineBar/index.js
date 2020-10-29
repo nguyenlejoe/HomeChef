@@ -1,8 +1,6 @@
 import React from 'react';
-import { Dropdown } from 'semantic-ui-react';
 import styled, {css} from 'styled-components';
 import Button from '../MainButton';
-import DropDown from '../DropDown';
 
 const CuisineNav = styled.div`
     display:flex;

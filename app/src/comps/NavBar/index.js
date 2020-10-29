@@ -3,8 +3,9 @@ import styled, {css} from 'styled-components';
 
 const NavContainer = styled.div`
 display:flex;
-height:107px;
-width:420px;
+height:100%;
+width:100%;
+background-color:#FFFFFF;
 `;
 
 const NavBox = styled.div`
@@ -12,12 +13,10 @@ justify-content:space-around;
 display:flex;
 align-items:center;
 position:relative;
-bottom:-22px;
 width:100%;
-height:80%;
-border-style:solid;
-border-width:1px;
-border-color:#C6C6C6;
+height:100%;
+border-top: 1px solid #C6C6C6;
+
 
 `;
 
@@ -28,7 +27,6 @@ const NavButton = styled.div`
     margin:2px;
     width:15%;
     height:80%; 
-    // background-color:black;
     text-align:center;
 
     ${props => props.active === true && css`
