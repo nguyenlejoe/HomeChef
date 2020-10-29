@@ -5,7 +5,7 @@ const Accounts = styled.div`
     font-family: Poppins;
     display:flex;
     color:#FFF;
-    background-color:#20B573;
+    background-color:#222;
 `;
 
 const Chef = styled.div`

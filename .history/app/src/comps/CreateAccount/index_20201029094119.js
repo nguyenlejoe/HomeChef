@@ -5,10 +5,10 @@ const Accounts = styled.div`
     font-family: Poppins;
     display:flex;
     color:#FFF;
-    background-color:#20B573;
 `;
 
 const Chef = styled.div`
+    background-color:#209B64;
     width:118px;
     height:190px;
     border-radius:31px;
@@ -17,14 +17,12 @@ const Chef = styled.div`
     align-items:center;
     justify-content:center;
     margin-right:40px;
-
-    :hover{
-        background-color:#209B64;
-        
-    }
+    
 `;
 
 const Gourmet = styled.div`
+    
+    background-color:#209B64;
     width:118px;
     height:190px;
     border-radius:31px;
@@ -33,11 +31,6 @@ const Gourmet = styled.div`
     align-items:center;
     justify-content:center;
     margin-right:40px;
-
-    :hover{
-        background-color:#209B64;
-        
-    }
 `;
 
 const ChefImg = styled.div`
