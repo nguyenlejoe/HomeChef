@@ -5,20 +5,12 @@ const InputCont = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
+    padding-right: 10px;
     
 `;
-
-const InputText = styled.h2`
-    margin-bottom: 5px;
-    font-family: sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-    color: ${props=>props.color ? props.color : "#1E9761"};
-
-`;
-
 const InputForm = styled.input`
+    width: ${props =>props.width ? props.width : '93px'};
+    height: ${props =>props.height ? props.height : '34px'};
     font-family: sans-serif;
     text-align: center;
     background-color: #ECECEC;
@@ -27,13 +19,11 @@ const InputForm = styled.input`
     border-radius: 20px;
     outline: none;
     border: none;
-    padding: 10px 0px 10px 0 px;
 `;
 
-const Input = ({text, PHtext, color}) => {
+const Input = ({PHtext, width, height}) => {
     return <InputCont>
-        <InputText text="Set pick up Time">{text, color}</InputText>
-        <InputForm type="text" placeholder={PHtext}></InputForm>
+        <InputForm type="text" placeholder={PHtext} width={width} height={height}></InputForm>
     </InputCont>;
 }
 
