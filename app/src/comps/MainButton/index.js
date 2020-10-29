@@ -1,26 +1,40 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
+import icon2 from '../../assets/DollarSign.png';
 
 const ButtonContainer = styled.button`
-    background-color: #24B574;
-    border-radius: 5px;
+    width: ${props =>props.width ? props.width : '239px'};
+    height: ${props =>props.height ? props.height : '60px'};
+    background-color: ${props =>props.bgcolor ? props.bgcolor : '#24B574'};
+    border-radius: ${props =>props.radius ? props.radius : '5px'};
     display: flex;
     justify-content: center;
     align-items: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border:none;
-    padding: 0px 45px 0px 45px;
 `;
 
 const ButtonText = styled.p`
     text-align: center;
-    font-size: 15px;
-    color:#FFF;
+    font-size: ${props =>props.fontSize ? props.fontSize : '15px'};;
+    color:${props =>props.textColor ? props.textColor : '#FFFFFF'};
 `;
 
-const Button = ({text,color,bgcolor, width, height}) => {
-    return <ButtonContainer color = {bgcolor} height={height} width={width}>
-                <ButtonText color = {color}>{text}</ButtonText>
+const Icon = styled.div`
+    ${() => css`
+        background-image: url(${props =>props.icon1 ? props.icon1 : icon2});
+        background-color:white;
+        padding:10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        position:absolute;
+        left: 0px;
+        `}
+    `;
+
+const Button = ({text,textColor,bgcolor, width, height, radius, fontSize}) => {
+    return <ButtonContainer bgcolor = {bgcolor} height={height} width={width} radius={radius}>
+                <ButtonText fontSize={fontSize} textColor = {textColor}>{text}</ButtonText>
             </ButtonContainer>
 }
 
