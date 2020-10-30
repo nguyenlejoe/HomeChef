@@ -3,11 +3,15 @@ import './index.scss'
 import TopNav from '../comps/TopNav';
 import FoodDisplayCover from '../comps/FoodDisplayCover';
 import ViewCartButton from '../comps/ViewCartButton';
-import NavBar from '../comps/NavBar';
+import NavBarGourmet from '../comps/NavBarGourmet';
+import CuisineBar from '../comps/CuisineBar';
 
 
 export default function Home() {
   return<div className="app">
+        <div className="CuisineBox">
+            <CuisineBar></CuisineBar>
+        </div>
         <div className="TopNavCon">
           <TopNav></TopNav>
         </div>
@@ -25,12 +29,12 @@ export default function Home() {
         </div>
   
         <div className="Nav">
-          <NavBar
+          <NavBarGourmet
           bgimg = "/Search.png"
           title = "Search"
           btnState = {true}
           orderActive = {true}
-          ></NavBar>
+          ></NavBarGourmet>
         </div>
         
         
