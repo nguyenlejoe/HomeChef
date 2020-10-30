@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../comps/NavBar';
+import NavBar from '../comps/NavBarGourmet';
 
 
 
@@ -9,16 +9,9 @@ export default {
     component: NavBar
 };
 
-export const ChefNavBar = () => <NavBar 
-    bgimg = "/orderIcon.png"
-    title = "Orders"
-></NavBar>
 
-export const GourmetNavBar = () => <NavBar
-    bgimg = "/Search.png"
-    title = "Search"
-    btnState = {true}
-    orderActive = {true}
+
+export const GourmetNavBar = () => <NavBar 
 
 >
     
