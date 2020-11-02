@@ -126,7 +126,7 @@ const [ButtonActiveVal,SetActive] = useState(1);
                 <NavIcon><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.625 35.25C27.3589 35.25 35.25 27.359 35.25 17.625C35.25 7.89099 27.3589 0 17.625 0C7.89111 0 0 7.89099 0 17.625C0 27.359 7.89111 35.25 17.625 35.25ZM19.0234 19.0239H27.4165V16.2263H19.0234V7.8335H16.2261V16.2263H7.83301V19.0239H16.2261V27.4169H19.0234V19.0239Z" fill={ButtonActiveVal === 3 ? "#24B574" : "#C6C6C6"}/>
                 </svg></NavIcon>
-                <NavLabel ButtonActive={ButtonActiveVal === 3 ? "#24B574" : "#C6C6C6"}>Create Listing</NavLabel>
+                <NavLabel ButtonActive={ButtonActiveVal === 3 ? "#24B574" : "#C6C6C6"}>Create</NavLabel>
             </NavButton>
 
 
