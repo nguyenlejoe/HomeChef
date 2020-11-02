@@ -15,7 +15,7 @@ cursor:pointer;
 
 `
 const ContentContainer = styled.div`
-display:flex;
+display:flex; 
 
 `
 
@@ -57,7 +57,7 @@ const MenuTab = ({MenuText}) => {
     return <Menutabcont>
         <TabIcon>
                 <TabSquare>
-
+                <img src="/currentorders.svg"/>
                 </TabSquare>
             </TabIcon>
         
