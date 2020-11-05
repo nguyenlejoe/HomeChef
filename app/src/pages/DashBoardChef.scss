@@ -16,9 +16,11 @@
     height: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    z-index: -1;
 
     a{
         color:#2B445E;

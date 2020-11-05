@@ -1,0 +1,45 @@
+.app{
+    width: 100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+
+.content{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    h3{
+        color:#1E9761;
+    }
+}
+
+.InputBox{
+    :nth-child(1){
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+.TagBox{
+    margin: 20px;
+}
+
+.descBox{
+    margin: 10px;
+}
+
+.noteBox{
+    margin: 10px;
+}
+
+.dateBox{
+    margin: 10px;
+}
+
+.buttonBox{
+    margin: 15px;
+    :nth-child(1){
+        font-size: 20px;
+    }
+}
