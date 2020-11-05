@@ -7,7 +7,7 @@ import NavBarGourmet from '../comps/NavBarGourmet';
 import CuisineBar from '../comps/CuisineBar';
 
 
-export default function Home() {
+export default function DashBoardGourmet() {
   return<div className="app">
         <div className="CuisineBox">
             <CuisineBar></CuisineBar>

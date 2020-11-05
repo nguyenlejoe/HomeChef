@@ -7,12 +7,12 @@ import FoodDisplayCover from '../comps/FoodDisplayCover';
 
 
 
-export default function Home() {
+export default function ChefPage() {
   return<div className="app">
         <div className="CoverImage"></div>
         <div className="ChefDesc">
             <h2>Alex Inglis</h2>
-            <p>Lived in the bog for 7 years. fuck you alex</p>
+            <p>Loves mama's chicken</p>
         </div>
         <div className="AvatarBox">
                 <Avatar></Avatar>

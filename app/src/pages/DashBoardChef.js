@@ -8,13 +8,14 @@ import ActivityFeed from '../comps/ActivityFeed';
 
 
 
-export default function Home() {
+export default function DashBoardChefPage() {
   return<div className="app">
         <h3>Order expected today</h3>
         <div className="OrderToday">
             <div className="SumBox"><SummaryBox></SummaryBox></div>
             <div className="SumBox"><SummaryBox></SummaryBox></div>
-            <a>Scroll down to view more</a>
+            <div className="SumBox"><SummaryBox></SummaryBox></div>
+            <div className="SumBox"><SummaryBox></SummaryBox></div>
         </div>
 
         <h3>Activity Feed</h3>
