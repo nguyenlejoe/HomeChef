@@ -6,6 +6,7 @@ const TopBarContainer = styled.div`
    font-family: Poppins;
    display:flex;
    align-items:center;
+   
    width:350px;
    padding:10px;
    position:relative;
