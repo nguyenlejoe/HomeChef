@@ -1,5 +1,5 @@
 import React from 'react';
-import './BecomeChef.scss';
+import './BecomeChef.scss'; //don't need this because it's imported in App.scss
 import SignUp from '../comps/SignUp';
 import Button from '../comps/MainButton';
 import CreateAccount from '../comps/CreateAccount';
@@ -8,7 +8,7 @@ import './global.scss';
 
 
 export default function BecomeChefPage() {
-  return<div className="app">
+  return<div className="app becomechef">
         <div className="LogoBox">
         <h1>Create an account for</h1>
         <CreateAccount></CreateAccount>

@@ -1,4 +1,6 @@
 import React from 'react';
+//only need to import scss once here
+import './App.scss';
 import {
   BrowserRouter as Router,
   Switch,
