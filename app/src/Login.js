@@ -1,12 +1,12 @@
 import React from 'react';
 //import logo from './logo.svg';
 //import './App.css';
-import Pages from './pages/DashBoardChef';
+import Login from './pages/Login';
 
-function App() {
+function Login() {
   return (
-    <Pages />
+    <Login />
   );
 }
 
-export default App;
+export default Login;
