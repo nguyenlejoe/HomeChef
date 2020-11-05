@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 
 const Menutabcont = styled.div`
 height: 84px;
-max-width: 344px;
+width: 344px;
 left: 0px;
 top: 0px;
 border-radius: 25px;
