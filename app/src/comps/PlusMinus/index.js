@@ -19,7 +19,7 @@ const ButtonText = styled.p`
 `;
 
 
-const Button = ({text}) => {
+const PlusMinus = ({text}) => {
     return <ButtonContainer  >
                 <ButtonText>{text}</ButtonText>
             </ButtonContainer>
@@ -29,4 +29,4 @@ ButtonText.defaultprops = {
     color:null,
 }
 
-export default Button;
+export default PlusMinus;
