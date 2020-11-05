@@ -8,12 +8,12 @@ const ActivityBox = styled.div`
     width:338px;
     height:414px;
     background: #FAFAFA;
-    border: 0.4px solid #B8B8B8;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     padding:10px;
     justify-content:space-between;
+    
     
 `;
 

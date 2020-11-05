@@ -32,7 +32,7 @@ const Gourmet = styled.div`
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    margin-right:40px;
+
 
     :hover{
         background-color:#209B64;
