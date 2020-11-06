@@ -12,6 +12,7 @@ border: 1px solid #E1E1E1;
 box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 cursor:pointer;
+// display:flex;
 
 `
 const ContentContainer = styled.div`
@@ -47,10 +48,10 @@ line-height: 36px;
 `
 
 const EnterIcon = styled.div`
-align-items:center;
-position:absolute;
-left:160%;
-top:0px;
+align-items:right;
+position:relative;
+left:300px;
+top:-50px;
 `
 const MenuTab = ({MenuText}) => {
     
@@ -63,11 +64,14 @@ const MenuTab = ({MenuText}) => {
         
         <ContentContainer> 
             
-            <TabText> {MenuText} <EnterIcon>
-            <img src="/enter.png"/>
-            </EnterIcon> </TabText>
+            <TabText> {MenuText} </TabText>
+
+            
             
         </ContentContainer>
+        <EnterIcon>
+            <img src="/enter.png"/>
+            </EnterIcon> 
     </Menutabcont>
 
 }
