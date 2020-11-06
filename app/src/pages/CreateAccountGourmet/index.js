@@ -11,6 +11,7 @@ export default function CreateAccountPage() {
   const history = useHistory();
   
   return<div className="CreateAccountGourmetApp">
+
         <div className="LogoBox">
         <h1>Create an account for</h1>
         <CreateAccount onClick={()=>{
