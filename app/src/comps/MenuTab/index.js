@@ -33,6 +33,7 @@ border-radius: 10px;
 position:relative;
 background: #FFFFFF;
 box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.25);
+background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
 
 `
 
@@ -53,12 +54,12 @@ position:relative;
 left:300px;
 top:-50px;
 `
-const MenuTab = ({MenuText}) => {
+const MenuTab = ({MenuText, bgimg, }) => {
     
     return <Menutabcont>
         <TabIcon>
-                <TabSquare>
-                <img src="/currentorders.svg"/>
+                <TabSquare bgimg={bgimg}>
+                {/* <img src="/currentorders.svg"/> */}
                 </TabSquare>
             </TabIcon>
         
@@ -79,7 +80,7 @@ const MenuTab = ({MenuText}) => {
 MenuTab.defaultProps = {
     
     MenuText:"Current Orders",
-
+    bgimg : "./currentorders.svg"
 }
 
 export default MenuTab;
