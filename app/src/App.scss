@@ -1,3 +1,9 @@
-//import all the scss here
-@import './global.scss';
-@import './pages/BecomeChef.scss';
+@import './pages/BecomeChef/BecomeChef.scss';
+@import './pages/ChefPage/ChefPage.scss';
+@import './pages/CreateAccountChef/CreateAccountCheff.scss';
+@import './pages/CreateAccountGourmet/CreateAccountGourmet.scss';
+@import './pages/CreateItem/CreateItem.scss';
+@import './pages/DashBoardChef/DashBoardChef.scss';
+@import './pages/DashBoardGourmet/DashBoardGourmet.scss';
+@import './pages/Login/login.scss';
+@import './pages/MyAccountGourmet/MyAccountGourmet.scss';
