@@ -1,14 +1,14 @@
 import React from 'react';
 import './ChefPage.scss'
-import NavBarGourmet from '../comps/NavBarGourmet';
-import Avatar from '../comps/Avatar';
-import FoodDisplayCover from '../comps/FoodDisplayCover';
+import NavBarGourmet from '../../comps/NavBarGourmet';
+import Avatar from '../../comps/Avatar';
+import FoodDisplayCover from '../../comps/FoodDisplayCover';
 
 
 
 
 export default function ChefPage() {
-  return<div className="app">
+  return<div className="ChefPageApp">
         <div className="CoverImage"></div>
         <div className="ChefDesc">
             <h2>Alex Inglis</h2>

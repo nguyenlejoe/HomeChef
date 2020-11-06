@@ -1,13 +1,17 @@
 import React from 'react';
 import './MyAccountGourmet.scss'
-import NavBarGourmet from '../comps/NavBarGourmet';
-import Avatar from '../comps/Avatar';
-import MenuTab from '../comps/MenuTab';
+import NavBarGourmet from '../../comps/NavBarGourmet';
+import Avatar from '../../comps/Avatar';
+import MenuTab from '../../comps/MenuTab';
+import {useHistory, Link} from "react-router-dom";
 
 
 
-export default function Home() {
-  return<div className="app">
+export default function MyAccountGourmetPage() {
+
+  const history = useHistory();
+
+  return<div className="MyAccountGourmetApp">
         <div className="TopBar">
             <Avatar></Avatar>
             <h3>Alex Inglis</h3>
@@ -34,10 +38,10 @@ export default function Home() {
         </div>
         <div className="Nav">
           <NavBarGourmet
-          bgimg = "/Search.png"
-          title = "Search"
-          btnState = {true}
-          orderActive = {true}
+            active={4}
+            onClickHome={()=>{
+              history.push("/DashBoardGourmet");
+            }}
           ></NavBarGourmet>
         </div>
         

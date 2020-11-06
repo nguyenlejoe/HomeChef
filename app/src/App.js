@@ -5,9 +5,13 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import CreateAccountPage from './pages/CreateAccount/';
+import CreateAccountPageChef from './pages/CreateAccountChef';
 import Login from './pages/Login/';
 import DashBoardGourmet from './pages/DashBoardGourmet/';
+import CreateAccountGourmet from './pages/CreateAccountGourmet';
+import DashBoardChef from './pages/DashBoardChef';
+import MyAccountGourmet from './pages/MyAccountGourmet';
+import CreateItem from './pages/CreateItem';
 
 
 
@@ -16,8 +20,13 @@ function App() {
     <Router>
       <Switch>
       <Route path="/" exact component={Login}></Route>
-      <Route path="/CreateAccount" exact component={CreateAccountPage}></Route>
+      <Route path="/CreateAccountChef" exact component={CreateAccountPageChef}></Route>
       <Route path="/DashBoardGourmet" exact component={DashBoardGourmet}></Route>
+      <Route path="/CreateAccountGourmet" exact component={CreateAccountGourmet}></Route>
+      <Route path="/DashBoardChef" exact component={DashBoardChef}></Route>
+      <Route path="/MyAccountGourmet" exact component={MyAccountGourmet}></Route>
+      <Route path="/CreateItem" exact component={CreateItem}></Route>
+      
       </Switch>
     </Router>
   );

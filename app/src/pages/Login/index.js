@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 export default function Login() {
-  return<div className="app">
+  return<div className="LoginApp">
         <div className="LogoBox">
           <img src="./logo.svg"></img>
         </div>
@@ -28,7 +28,7 @@ export default function Login() {
         </div>
        
 
-            <Link to ="/CreateAccount">
+            <Link to ="/CreateAccountChef">
             <div className="ButtonBox"> 
             <Button text="Create Account"></Button>
             </div>

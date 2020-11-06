@@ -1,17 +1,17 @@
 import React from 'react';
 import './CreateItem.scss';
-import Input from '../comps/SignUp';
-import Tags from '../comps/AddTags';
-import Desc from '../comps/Description';
-import Note from '../comps/BuyerNote';
-import PickDate from '../comps/UpDate';
-import PickTime from '../comps/UpTime';
-import Button from '../comps/MainButton';
+import Input from '../../comps/SignUp';
+import Tags from '../../comps/AddTags';
+import Desc from '../../comps/Description';
+import Note from '../../comps/BuyerNote';
+import PickDate from '../../comps/UpDate';
+import PickTime from '../../comps/UpTime';
+import Button from '../../comps/MainButton';
 
 
 
 export default function CreateItemPage() {
-  return<div className="app">
+  return<div className="CreateItemApp">
     <div className="content">
       <h3>Create a menu item</h3>
       <div className="InputBox">

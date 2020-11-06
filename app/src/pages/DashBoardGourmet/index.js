@@ -5,10 +5,14 @@ import FoodDisplayCover from '../../comps/FoodDisplayCover';
 import ViewCartButton from '../../comps/ViewCartButton';
 import NavBarGourmet from '../../comps/NavBarGourmet';
 import CuisineBar from '../../comps/CuisineBar';
+import {useHistory, Link} from "react-router-dom";
 
 
 export default function DashBoardGourmet() {
-  return<div className="app">
+
+  const history = useHistory();
+
+  return<div className="DashBoardGourmetApp">
         <div className="CuisineBox">
             <CuisineBar></CuisineBar>
         </div>
@@ -30,10 +34,10 @@ export default function DashBoardGourmet() {
   
         <div className="Nav">
           <NavBarGourmet
-          bgimg = "/Search.png"
-          title = "Search"
-          btnState = {true}
-          orderActive = {true}
+            active={1}
+            onClickAccount={()=>{
+              history.push("/MyAccountGourmet");
+            }}
           ></NavBarGourmet>
         </div>
         

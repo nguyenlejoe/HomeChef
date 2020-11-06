@@ -1,15 +1,15 @@
 import React from 'react';
 import './DashBoardChef.scss'
-import NavBarChef from '../comps/NavBarChef';
-import SummaryBox from '../comps/SummaryBox';
-import ActivityFeed from '../comps/ActivityFeed';
+import NavBarChef from '../../comps/NavBarChef';
+import SummaryBox from '../../comps/SummaryBox';
+import ActivityFeed from '../../comps/ActivityFeed';
 
 
 
 
 
 export default function DashBoardChefPage() {
-  return<div className="app">
+  return<div className="DashBoardChefApp">
         <h3>Order expected today</h3>
         <div className="OrderToday">
             <div className="SumBox"><SummaryBox></SummaryBox></div>
@@ -23,7 +23,9 @@ export default function DashBoardChefPage() {
             <ActivityFeed></ActivityFeed>
         </div>
         <div className="Nav">
-          <NavBarChef></NavBarChef>
+          <NavBarChef
+          active={1}
+          ></NavBarChef>
         </div>
         
         
