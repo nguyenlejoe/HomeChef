@@ -1,0 +1,30 @@
+.app{
+    width: 100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+
+.topbuttons {
+    display: inline-flex;
+    max-height:10px;
+    margin:10px;
+}
+
+.Orderboxes {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:44px;
+}
+
+.Nav{
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    :nth-child(1){
+        font-size: 12px;
+    }
+}
