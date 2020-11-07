@@ -78,18 +78,14 @@ const OrderNum = styled.div`
 
 
 
-const NavBar = ({bgimg,title, btnState, orderActive, orderNum}) => {
+const NavBar = ({active, onClickHome, onClickOrder, onClickCreate, onClickAccount , onClickCalendar ,bgimg,title, btnState, orderActive, orderNum}) => {
 
-const [ButtonActiveVal,SetActive] = useState(1);
+const [ButtonActiveVal,SetActive] = useState(active);
     
     return <NavContainer>
-        {/* <OrderNum active={orderActive}>
-            {orderNum}
-        </OrderNum> */}
         <NavBox>
-            <NavButton onClick={()=>{
-                SetActive(1);
-            }}
+            <NavButton 
+            onClick={onClickHome}
             ButtonActive = {ButtonActiveVal === 1 ? "#24B574" : "#C6C6C6"}
             >
             <NavIcon><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,9 +96,7 @@ const [ButtonActiveVal,SetActive] = useState(1);
             </NavButton>
 
             <NavButton
-            onClick={()=>{
-                SetActive(2);
-            }}
+            onClick={onClickOrder}
             ButtonActive = {ButtonActiveVal === 2 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
@@ -118,9 +112,7 @@ const [ButtonActiveVal,SetActive] = useState(1);
 
 
             <NavButton
-            onClick={()=>{
-                SetActive(3);
-            }}
+            onClick={onClickCreate}
             ButtonActive = {ButtonActiveVal === 3 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,9 +124,7 @@ const [ButtonActiveVal,SetActive] = useState(1);
 
             
             <NavButton
-            onClick={()=>{
-                SetActive(4);
-            }}
+            onClick={onClickCalendar}
             ButtonActive = {ButtonActiveVal === 4 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,9 +138,7 @@ const [ButtonActiveVal,SetActive] = useState(1);
 
 
             <NavButton
-            onClick={()=>{
-                SetActive(5);
-            }}
+            onClick={onClickAccount}
             ButtonActive = {ButtonActiveVal === 5 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
