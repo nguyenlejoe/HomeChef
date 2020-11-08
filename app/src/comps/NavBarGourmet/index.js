@@ -55,16 +55,14 @@ const NavLabel = styled.div`
 
 
 
-const NavBar = ({}) => {
+const NavBar = ({active, onClickHome, onClickSearch, onClickCalendar, onClickAccount}) => {
 
-const [ButtonActiveVal,SetActive] = useState(1);
+const [ButtonActiveVal,SetActive] = useState(active);
     
     return <NavContainer>
         <NavBox>
-
-            <NavButton onClick={()=>{
-                SetActive(1);
-            }}
+            
+            <NavButton onClick={onClickHome} 
             ButtonActive = {ButtonActiveVal === 1 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
@@ -76,9 +74,10 @@ const [ButtonActiveVal,SetActive] = useState(1);
             </NavButton>
 
             <NavButton
-            onClick={()=>{
-                SetActive(2);
-            }}
+            onClick={onClickSearch}
+            // onClick={()=>{
+            //     SetActive(active);
+            // }}
             ButtonActive = {ButtonActiveVal === 2 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
@@ -91,9 +90,10 @@ const [ButtonActiveVal,SetActive] = useState(1);
             </NavButton>
             
             <NavButton
-            onClick={()=>{
-                SetActive(3);
-            }}
+            onClick={onClickCalendar}
+            // onClick={()=>{
+            //     SetActive(active);
+            // }}
             ButtonActive = {ButtonActiveVal === 3 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
@@ -109,9 +109,10 @@ const [ButtonActiveVal,SetActive] = useState(1);
 
 
             <NavButton
-            onClick={()=>{
-                SetActive(4);
-            }}
+            onClick={onClickAccount}
+            // onClick={()=>{
+            //     SetActive(active);
+            // }}
             ButtonActive = {ButtonActiveVal === 4 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
