@@ -9,8 +9,6 @@ const SignUpCont = styled.div`
 
 
 const SignUpForm = styled.input`
-    // width: ${props =>props.width ? props.width : '239px'};
-    // height: ${props =>props.height ? props.height : '60px'};
     font-family: sans-serif;
     ::placeholder{
         color: #B8B8B8;

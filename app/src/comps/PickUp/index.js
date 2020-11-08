@@ -16,14 +16,14 @@ const InputForm = styled.input`
     background-color: #ECECEC;
     ::placeholder{
         color: #A5A5A5};
-    border-radius: 20px;
+    border-radius: border-radius: ${props =>props.radius ? props.radius : '20px'};;
     outline: none;
     border: none;
 `;
 
-const Input = ({PHtext, width, height}) => {
+const Input = ({PHtext, width, height, radius}) => {
     return <InputCont>
-        <InputForm type="text" placeholder={PHtext} width={width} height={height}></InputForm>
+        <InputForm type="text" placeholder={PHtext} width={width} height={height} radius={radius}></InputForm>
     </InputCont>;
 }
 

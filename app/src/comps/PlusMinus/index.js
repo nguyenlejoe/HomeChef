@@ -13,7 +13,8 @@ const ButtonContainer = styled.button`
 `;
 
 const ButtonText = styled.p`
-    text-align: center;
+    // text-align: center;
+    // justify-content: center;
     font-size: 35px;
     color:#24B574;
 `;
