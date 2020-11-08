@@ -36,18 +36,7 @@ export default function Home() {
                     <div className="stars"><img src='/star.png' /></div>
                 </div>
                 <div>Yunus is a fried rice genius! You need to try his food at least once for your life</div>    
-            </div>
-            <div className="ReviewCont">
-                <div className="ReviewProfile"><Avatar width="60px" height="60px"></Avatar><a>Lisa L</a></div>
-                <div className="rating">
-                    <div className="stars"><img src='/star.png' /></div>
-                    <div className="stars"><img src='/star.png' /></div>
-                    <div className="stars"><img src='/star.png' /></div>
-                    <div className="stars"><img src='/star.png' /></div>
-                    <div className="stars"><img src='/star.png' /></div>
-                </div>
-                <div>Yunus is a fried rice genius! You need to try his food at least once for your life</div>    
-            </div>     
+            </div>   
         </div>
         <div className="Nav">
           <NavBarGourmet

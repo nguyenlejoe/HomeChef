@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AvatarContainer = styled.div`
-width: ${props =>props.width ? props.width : '80px'};
-height: ${props =>props.height ? props.height : '80px'};
+width:${props=>props.avwidth ? props.avwidth : "0"};
+height:${props=>props.avheight ? props.avheight : "0"};
 `;
 
 const AvatarImg = styled.div`
@@ -15,14 +15,16 @@ border-radius:100px;
 
 `;
 
-const Avatar = ({bgimg, width, height}) =>{
-    return <AvatarContainer height={height} width={width}>
-        <AvatarImg bgimg={bgimg} ></AvatarImg>
+const Avatar = ({bgimg, avwidth, avheight}) =>{
+    return <AvatarContainer>
+        <AvatarImg bgimg={bgimg} avwidth={avwidth} avheight={avheight} ></AvatarImg>
     </AvatarContainer>
 }
 
 Avatar.defaultProps = {
     bgimg : "./alex.jpg",
+    avwidth : "60px",
+    avheight : "60px"
 }
 
 export default Avatar;

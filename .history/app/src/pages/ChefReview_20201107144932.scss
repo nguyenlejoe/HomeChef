@@ -33,15 +33,15 @@
 }
 
 .ReviewList{
+    height:70%;
     margin-top:-70px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .ReviewCont{
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .ReviewProfile{

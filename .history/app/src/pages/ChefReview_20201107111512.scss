@@ -1,7 +1,7 @@
 .app{
     width: 100vw;
     height:100vh;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .CoverImage{
@@ -20,6 +20,7 @@
     }
 }
 
+
 .AvatarBox{
     height:0px;
     position: relative;
@@ -32,33 +33,18 @@
     }   
 }
 
-.ReviewList{
-    margin-top:-70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.Rating{
+    
 }
 
-.ReviewCont{
-    margin-bottom: 15px;
+.stars{
+    width:10%;
+    height:100%;
+    background-image:url(/star.png);
+    background-repeat:no-repeat;
+    background-position:center;
 }
-
-.ReviewProfile{
-    display: flex;
-
-    a{
-        margin: 20px 0 0 10px;
-        font-size: 18px;
-    }
-}
-
-
-.rating{
-    display: flex;
-}
-
-
 
 .Nav{
     height: 10%;

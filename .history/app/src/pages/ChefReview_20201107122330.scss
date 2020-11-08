@@ -1,7 +1,7 @@
 .app{
     width: 100vw;
     height:100vh;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .CoverImage{
@@ -20,6 +20,7 @@
     }
 }
 
+
 .AvatarBox{
     height:0px;
     position: relative;
@@ -32,27 +33,15 @@
     }   
 }
 
-.ReviewList{
-    margin-top:-70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.ReviewCont{
-    margin-bottom: 15px;
-}
 
 .ReviewProfile{
     display: flex;
 
     a{
-        margin: 20px 0 0 10px;
+        margin-left: 30px;
         font-size: 18px;
     }
 }
-
 
 .rating{
     display: flex;
