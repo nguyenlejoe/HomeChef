@@ -5,7 +5,7 @@ import icon2 from '../../assets/DollarSign.png';
 const ButtonContainer = styled.button`
     width: ${props =>props.width ? props.width : '239px'};
     height: ${props =>props.height ? props.height : '60px'};
-    background-color: ${props =>props.bgcolor ? props.bgcolor : '#24B574'};
+    background-color: ${props =>!props.disabled ? props.bgcolor : '#24B574'};
     border-radius: ${props =>props.radius ? props.radius : '5px'};
     display: flex;
     justify-content: center;
@@ -32,8 +32,10 @@ const Icon = styled.div`
         `}
     `;
 
-const Button = ({text,textColor,bgcolor, width, height, radius, fontSize}) => {
-    return <ButtonContainer bgcolor = {bgcolor} height={height} width={width} radius={radius}>
+const Button = ({disabled, text,textColor,bgcolor, width, height, radius, fontSize}) => {
+    console.log('disabled', disabled)
+    
+    return <ButtonContainer disabled={disabled} bgcolor = {bgcolor} height={height} width={width} radius={radius}>
                 <ButtonText fontSize={fontSize} textColor = {textColor}>{text}</ButtonText>
             </ButtonContainer>
 }

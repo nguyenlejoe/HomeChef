@@ -20,8 +20,8 @@ const ButtonText = styled.p`
 `;
 
 
-const PlusMinus = ({text}) => {
-    return <ButtonContainer  >
+const PlusMinus = ({text, onClick}) => {
+    return <ButtonContainer onClick={onClick}>
                 <ButtonText>{text}</ButtonText>
             </ButtonContainer>
 }

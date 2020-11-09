@@ -34,9 +34,13 @@ color: #2B445E;
 
 }
 `;
-const CurrentOrder = () =>{
+const CurrentOrder = ({name, state, setState}) =>{
+    
+function select () {
+    setState({[name]: !state[name]})
+}
 return (
-<ItemBox>
+<ItemBox onClick={select} style={{border: state[name] ? "3px solid #24B574" : ""}} >
     <ItemImage><img src='/food.png' /></ItemImage>
     <ItemText>
         <p>Order number : 203948271 </p>
