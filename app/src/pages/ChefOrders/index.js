@@ -1,10 +1,10 @@
 import React from 'react';
 import './ChefOrders.scss'
 import Button from '../comps/WhiteButton';
-import ConfirmOrder from '../comps/ConfirmOrder';
-import NavBarChef from '../comps/NavBarChef';
-import Avatar from '../comps/Avatar';
-import FoodDisplayCover from '../comps/FoodDisplayCover';
+import ConfirmOrder from '../../comps/ConfirmOrder';
+import NavBarChef from '../../comps/NavBarChef';
+import Avatar from '../../comps/Avatar';
+import FoodDisplayCover from '../../comps/FoodDisplayCover';
 
 
 

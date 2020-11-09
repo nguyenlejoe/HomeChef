@@ -13,6 +13,8 @@ import CreateAccountGourmet from './pages/CreateAccountGourmet';
 import DashBoardChef from './pages/DashBoardChef';
 import MyAccountGourmet from './pages/MyAccountGourmet';
 import CreateItem from './pages/CreateItem';
+import AddBalance from './pages/AddBalance';
+import CurrentOrderPage from './pages/CurrentOrderPage';
 
 
 
@@ -27,7 +29,8 @@ function App() {
       <Route path="/DashBoardChef" exact component={DashBoardChef}></Route>
       <Route path="/MyAccountGourmet" exact component={MyAccountGourmet}></Route>
       <Route path="/CreateItem" exact component={CreateItem}></Route>
-      
+      <Route path="/AddBalance" exact component={AddBalance}></Route>
+      <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
       </Switch>
     </Router>
   );
