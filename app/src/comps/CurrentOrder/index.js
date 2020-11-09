@@ -16,6 +16,7 @@ padding: 10px;
 
 const ItemImage = styled.div`
 display: inline-flex;
+background-image:url(${props=>props.bgImg ? props.bgImg : '/food.png'});
 `;
 
 const ItemText = styled.div`
@@ -34,15 +35,19 @@ color: #2B445E;
 
 }
 `;
-const CurrentOrder = () =>{
+const CurrentOrder = ({name, state, setState, oNumber, upTime, location, bgImg}) =>{
+    
+function select () {
+    setState({[name]: !state[name]})
+}
 return (
-<ItemBox>
-    <ItemImage><img src='/food.png' /></ItemImage>
+<ItemBox onClick={select} style={{border: state[name] ? "3px solid #24B574" : ""}} >
+    <ItemImage bgImg={bgImg}></ItemImage>
     <ItemText>
-        <p>Order number : 203948271 </p>
-        <p>Pick up time : 10/09/2020</p>
-        <p>Location : 2456 Hastings st</p>
-        <p><span>Chef contact details</span></p>
+        <p>Order number : {oNumber} </p>
+        <p>Pick up time : {upTime}</p>
+        <p>Location : {location}</p>
+        <p><span onClick="">Chef contact details</span></p>
     </ItemText>
 </ItemBox>
 )

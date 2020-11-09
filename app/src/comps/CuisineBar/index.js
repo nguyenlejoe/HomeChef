@@ -4,11 +4,14 @@ import Button from '../MainButton';
 import Select from 'react-select';
 import makeAnimated from 'react-select/animated';
 
+
 const CuisineNav = styled.div`
     display:flex;
     align-items: center;
     justify-content: space-between;
-`;
+    `;
+
+
 const selectCuisine =[
     {value: 'turkish', label: 'Turkish'},
     {value: 'France', label: 'France'},
@@ -32,7 +35,7 @@ function customTheme(theme) {
         ...theme,
         colors: {
             ...theme.colors,
-            primary: '#24B574'
+            primary: '#24B574',
         },
     }
 }
@@ -40,11 +43,14 @@ function customTheme(theme) {
 const CuisineBar = () =>{
     return <CuisineNav>
         <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="Filter" bgcolor= "#FFFFFF" textColor="#24B574"/>
-        <Select placeholder="Cuisine"
+        <Select 
+            placeholder="Cuisine"
             theme={customTheme} 
             options={selectCuisine}
             autoFocus
-            isSearchable />
+            isSearchable 
+            className={"select"}
+        />
         <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="$20.00" bgcolor= "#FFFFFF" textColor="#24B574"/>
     </CuisineNav>
 };

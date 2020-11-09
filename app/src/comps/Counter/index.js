@@ -19,6 +19,7 @@ function Counter(){
     const [count,setCount] = useState(1)
 
     function minusCount() {
+        count > 1 &&
         setCount(prevCount => prevCount -1)
     }
 
