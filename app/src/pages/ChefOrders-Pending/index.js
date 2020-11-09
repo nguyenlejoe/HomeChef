@@ -22,7 +22,7 @@ export default function Home() {
     <ConfirmOrder></ConfirmOrder>
     </div>
     <div className="Nav">
-    <NavBarChef></NavBarChef>
+    <NavBarChef active={2}></NavBarChef>
     </div>
     </div>
 
