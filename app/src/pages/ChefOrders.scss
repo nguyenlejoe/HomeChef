@@ -2,6 +2,7 @@
     width: 100vw;
     height:100vh;
     overflow-x: hidden;
+<<<<<<< HEAD
     h3{
         margin: 15px;
         color:#24B574;
@@ -37,6 +38,23 @@
 
 .SumBox{
     margin: 5px;
+=======
+}
+
+.topbuttons {
+    display: inline-flex;
+    max-height:10px;
+    margin:10px;
+}
+
+.Orderboxes {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:44px;
+>>>>>>> 065d6a6876a349750527cf8f60d28ccee673cebb
 }
 
 .Nav{
@@ -48,6 +66,7 @@
         font-size: 12px;
     }
 }
+<<<<<<< HEAD
 
 .CuisineBox{
     height: 10%;
@@ -60,3 +79,5 @@
         margin: 7px;
     }
 }
+=======
+>>>>>>> 065d6a6876a349750527cf8f60d28ccee673cebb

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled,  {css}from 'styled-components';
 
 const Accounts = styled.div`
     font-family: Poppins;
@@ -18,10 +18,11 @@ const Chef = styled.div`
     justify-content:center;
     margin-right:40px;
 
-    :hover{
-        background-color:#209B64;
-        
-    }
+
+    ${props => props.active === true && css`
+    background-color:#209B64;
+    `}
+
 `;
 
 const Gourmet = styled.div`
@@ -33,10 +34,9 @@ const Gourmet = styled.div`
     align-items:center;
     justify-content:center;
 
-
-    :hover{
-        background-color:#209B64;
-        
+    ${props => props.active === true && css`
+    background-color:#209B64;
+        `}
     }
 `;
 
@@ -48,22 +48,22 @@ const GourmetImg = styled.div`
     margin-bottom:10px;
 `;
 
-const CreateAccount = ({cheftext, gourmettext}) => {
+const CreateAccount = ({activeChef, activeGourmet,  cheftext, gourmettext, onClick}) => {
 
     return <Accounts>
-            <Chef>
+            <Chef onClick={onClick} active={activeChef}>
                 <ChefImg><img src='/chef.png' /></ChefImg>
                 Chef
             </Chef>
-            <Gourmet>
-                <GourmetImg><img src='/gourmet.png' /></GourmetImg>
+            <Gourmet onClick={onClick} active={activeGourmet}>
+                <GourmetImg ><img src='/gourmet.png' /></GourmetImg>
                 Gourmet
             </Gourmet>
         </Accounts>
 }
 
 CreateAccount.defaultProps = {
-    
+
 }
 
 export default CreateAccount;
