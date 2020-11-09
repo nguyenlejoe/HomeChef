@@ -1,7 +1,4 @@
 import React from 'react';
-//import logo from './logo.svg';
-//import './App.css';
-import Pages from './pages/ChefReview';
 import './App.scss';
 import {
   BrowserRouter as Router,
@@ -20,6 +17,8 @@ import OrderConfirmation from './pages/OrderConfirmation';
 import Checkout from './pages/Checkout';
 import ChefReview from './pages/ChefReview';
 import ChefOrdersConfirmed from './pages/ChefOrdersConfirmed';
+import AddBalance from './pages/AddBalance';
+import CurrentOrderPage from './pages/CurrentOrderPage';
 
 
 
@@ -39,8 +38,8 @@ function App() {
       <Route path="/Checkout" exact component={Checkout}></Route>
       <Route path="/ChefReview" exact component={ChefReview}></Route>
       <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
-    
-      
+      <Route path="/AddBalance" exact component={AddBalance}></Route>
+      <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
       </Switch>
     </Router>
   );
