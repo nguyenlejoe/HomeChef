@@ -38,15 +38,19 @@
      }
      
      .CuisineBox{
-         height: 10%;
-         width: 100%;
-         position: fixed;
+         align-items: center;
+         justify-content: center;
+         height: 1%;
+         width: 90%;
+         position: relative;
          top: 10px;
          z-index: 1;
-     
-         div{
-             margin: 7px;
-         }
+         padding-top: 35px;
+         margin-left: 20px;
+         .css-2b097c-container{
+            width: 30vw;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
      }
      
 }

@@ -6,13 +6,14 @@ import PlusMinus from '../PlusMinus';
 
 function Counter(){
 
-    const countCont = styled.div`
+    const CounterCont = styled.div`
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 50vw;
     `;
-    const countNum = styled.p`
-
+    const CounterNum = styled.p`
+        font-size: 24px;
     `;
 
     const [count,setCount] = useState(1)
@@ -25,11 +26,11 @@ function Counter(){
         setCount(prevCount => prevCount +1)
     }
     
-    return <countCont>
+    return <CounterCont>
             <PlusMinus onClick={minusCount} text="-"/>
-            <countNum>{count}</countNum>
+            <CounterNum>{count}</CounterNum>
             <PlusMinus onClick={plusCount} text="+"/>
-        </countCont>
+        </CounterCont>
     
 
     
