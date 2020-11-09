@@ -17,10 +17,7 @@ import DashBoardChef from './pages/DashBoardChef';
 import MyAccountGourmet from './pages/MyAccountGourmet';
 import CreateItem from './pages/CreateItem';
 import OrderConfirmation from './pages/OrderConfirmation';
-import Checkout from './pages/Checkout';
-import ChefReview from './pages/ChefReview';
-import ChefOrdersConfirmed from './pages/ChefOrdersConfirmed';
-
+import ChefOrders from './pages/ChefOrders.js';
 
 
 
@@ -36,10 +33,7 @@ function App() {
       <Route path="/MyAccountGourmet" exact component={MyAccountGourmet}></Route>
       <Route path="/CreateItem" exact component={CreateItem}></Route>
       <Route path="/OrderConfirmation" exact component={OrderConfirmation}></Route>
-      <Route path="/Checkout" exact component={Checkout}></Route>
-      <Route path="/ChefReview" exact component={ChefReview}></Route>
-      <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
-    
+      <Route path="/ChefOrders" exact component={ChefOrders}></Route>
       
       </Switch>
     </Router>

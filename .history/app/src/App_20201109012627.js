@@ -19,7 +19,6 @@ import CreateItem from './pages/CreateItem';
 import OrderConfirmation from './pages/OrderConfirmation';
 import Checkout from './pages/Checkout';
 import ChefReview from './pages/ChefReview';
-import ChefOrdersConfirmed from './pages/ChefOrdersConfirmed';
 
 
 
@@ -38,7 +37,6 @@ function App() {
       <Route path="/OrderConfirmation" exact component={OrderConfirmation}></Route>
       <Route path="/Checkout" exact component={Checkout}></Route>
       <Route path="/ChefReview" exact component={ChefReview}></Route>
-      <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
     
       
       </Switch>

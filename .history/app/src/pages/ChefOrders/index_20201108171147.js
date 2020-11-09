@@ -1,9 +1,8 @@
 import React from 'react';
 import './ChefOrders.scss'
-<<<<<<< HEAD
-import NavBarChef from '../comps/NavBarChef';
-import SummaryBox from '../comps/SummaryBox';
-import ActivityFeed from '../comps/ActivityFeed';
+import NavBarChef from '../../comps/NavBarChef';
+import SummaryBox from '../../comps/SummaryBox';
+import ActivityFeed from '../../comps/ActivityFeed';
 
 
 
@@ -26,7 +25,6 @@ export default function ChefOrdersPage() {
         
         
     </div>
-=======
 import Button from '../comps/WhiteButton';
 import ConfirmOrder from '../comps/ConfirmOrder';
 import NavBarChef from '../comps/NavBarChef';
@@ -53,6 +51,5 @@ export default function Home() {
     <NavBarChef></NavBarChef>
     </div>
     </div>
->>>>>>> 065d6a6876a349750527cf8f60d28ccee673cebb
 
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
 //import './App.css';
-import Pages from './pages/ChefReview';
+import Pages from './pages/ChefOrdersConfirmed';
 import './App.scss';
 import {
   BrowserRouter as Router,
@@ -39,7 +39,6 @@ function App() {
       <Route path="/Checkout" exact component={Checkout}></Route>
       <Route path="/ChefReview" exact component={ChefReview}></Route>
       <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
-    
       
       </Switch>
     </Router>

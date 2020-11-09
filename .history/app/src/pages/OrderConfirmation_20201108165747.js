@@ -4,7 +4,7 @@ import Button from '../comps/MainButton';
 import TopBar from '../comps/TopBar';
 import OrderDetails from '../comps/OrderDetails';
 
-export default function OrderConfirmationPage() {
+export default function OrderConfirmation() {
   return<div className="app">             
        <div className="cart">
            <TopBar text="Confirmation"></TopBar>
