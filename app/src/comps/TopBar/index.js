@@ -3,6 +3,12 @@ import styled from 'styled-components';
 
 
 const TopBarContainer = styled.div`
+   font-family: Poppins;
+   display:flex;
+   position:relative;
+   align-items:center;
+   width:350px;
+   padding:15px;
    display:inline-flex;
    align-items:center;
    justify-content: space-between;

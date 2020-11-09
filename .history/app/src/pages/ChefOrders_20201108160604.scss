@@ -1,0 +1,62 @@
+.app{
+    width: 100vw;
+    height:100vh;
+    overflow-x: hidden;
+    h3{
+        margin: 15px;
+        color:#24B574;
+    }
+}
+
+.OrderToday{
+    background: #FAFAFA;
+    border-bottom: 0.4px solid #B8B8B8;
+    border-top: 0.4px solid #B8B8B8;
+    box-sizing: border-box;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    a{
+        color:#2B445E;
+        margin: 15px;
+    }
+    
+}
+
+.ActivityFeedBox{
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-self: start;
+    align-items: center;
+}
+
+.SumBox{
+    margin: 5px;
+}
+
+.Nav{
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    :nth-child(1){
+        font-size: 12px;
+    }
+}
+
+.CuisineBox{
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+
+    div{
+        margin: 7px;
+    }
+}
