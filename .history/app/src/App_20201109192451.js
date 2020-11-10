@@ -13,21 +13,15 @@ import CreateAccountGourmet from './pages/CreateAccountGourmet';
 import DashBoardChef from './pages/DashBoardChef';
 import MyAccountGourmet from './pages/MyAccountGourmet';
 import CreateItem from './pages/CreateItem';
-import OrderConfirmation from './pages/OrderConfirmation';
-import Checkout from './pages/Checkout';
-import ChefReview from './pages/ChefReview';
-import ChefOrdersConfirmed from './pages/ChefOrdersConfirmed';
-import AddBalance from './pages/AddBalance';
-import CurrentOrderPage from './pages/CurrentOrderPage';
-import OrderHistoryPage from './pages/OrderHistoryPage';
-import DishDescription from './pages/DishDescription';
 import ChefOrders from './pages/ChefOrders-Pending';
 import ChefOrdersconfirm from './pages/ChefOrders-Confirmed';
 import GourmetFavorites from './pages/FavoritesGourmet';
 import OrderConfirmation from './pages/OrderConfirmation';
 import Checkout from './pages/Checkout';
-import ChefMyAccount from './pages/ChefMyAccount'
+import ChefReview from './pages/ChefReview';
 
+
+import CurrentOrderPage from './pages/CurrentOrderPage';
 
 
 
@@ -36,8 +30,6 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route path="/" exact component={ChefMyAccount}></Route>
-      <Route path="/" exact component={ChefOrdersconfirm}></Route>
       <Route path="/" exact component={GourmetFavorites}></Route>
       {/* <Route path="/" exact component={Login}></Route> */}
       <Route path="/CreateAccountChef" exact component={CreateAccountPageChef}></Route>
@@ -49,13 +41,10 @@ function App() {
       <Route path="/OrderConfirmation" exact component={OrderConfirmation}></Route>
       <Route path="/Checkout" exact component={Checkout}></Route>
       <Route path="/ChefReview" exact component={ChefReview}></Route>
-      <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
-      <Route path="/AddBalance" exact component={AddBalance}></Route>
+   
+      
       <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
-      <Route path="/OrderHistoryPage" exact component={OrderHistoryPage}></Route>
-      <Route path="/DishDescription" exact component={DishDescription}></Route>
-
-
+ 
       </Switch>
     </Router>
   );
