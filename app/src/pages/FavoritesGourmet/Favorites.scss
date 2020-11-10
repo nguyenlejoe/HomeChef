@@ -6,8 +6,31 @@
 
 
 
+.HeadingTxt{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    // padding: 10px;
+    h3{
+        color:Black;
+    }
+font-size: 24px;
+font-style: normal;
 
 
+
+}
+
+.backbutton {
+    position: relative;
+    margin: 10px;
+}
+
+.foodcovers {
+    display: grid;
+    grid-template-columns: auto auto ;
+    justify-content: center;
+}
 
 
 .Nav{
