@@ -15,6 +15,7 @@ import MyAccountGourmet from './pages/MyAccountGourmet';
 import CreateItem from './pages/CreateItem';
 import AddBalance from './pages/AddBalance';
 import CurrentOrderPage from './pages/CurrentOrderPage';
+import OrderHistoryPage from './pages/OrderHistoryPage';
 
 
 
@@ -31,6 +32,7 @@ function App() {
       <Route path="/CreateItem" exact component={CreateItem}></Route>
       <Route path="/AddBalance" exact component={AddBalance}></Route>
       <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
+      <Route path="/OrderHistoryPage" exact component={OrderHistoryPage}></Route>
       </Switch>
     </Router>
   );

@@ -42,6 +42,7 @@ const Button = ({disabled, text,textColor,bgcolor, width, height, radius, fontSi
 
 ButtonText.defaultprops = {
     color:null,
+    disabled: true,
 }
 
 export default Button;

@@ -53,6 +53,8 @@ return (
 )
 }
 
-
+CurrentOrder.defaultProps = {
+    bgImg: "/food.png",
+}
 
 export default CurrentOrder;
