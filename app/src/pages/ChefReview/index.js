@@ -8,7 +8,7 @@ export default function Home() {
         <div className="CoverImage"></div>
         <div className="ChefDesc">
             <h2>Alex Inglis</h2>
-            <p>Lived in the bog for 7 years. fuck you alex</p>
+            <p>Loves mamas fried chicken</p>
         </div>
         <div className="AvatarBox">
                 <Avatar></Avatar>

@@ -35,6 +35,7 @@ function App() {
       <Switch>
       <Route path="/ChefMyAccount" exact component={ChefMyAccount}></Route>
       <Route path="/ChefOrdersConfirm" exact component={ChefOrdersConfirm}></Route>
+      <Route path="/ChefOrdersPending" exact component={ChefOrdersPending}></Route>
       <Route path="/GourmetFavorites" exact component={GourmetFavorites}></Route>
       <Route path="/" exact component={Login}></Route>
       <Route path="/CreateAccountChef" exact component={CreateAccountPageChef}></Route>

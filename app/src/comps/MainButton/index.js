@@ -20,22 +20,10 @@ const ButtonText = styled.p`
     color:${props =>props.textColor ? props.textColor : '#FFFFFF'};
 `;
 
-const Icon = styled.div`
-    ${() => css`
-        background-image: url(${props =>props.icon1 ? props.icon1 : icon2});
-        background-color:white;
-        padding:10px;
-        background-repeat: no-repeat;
-        background-position: center;
-        position:absolute;
-        left: 0px;
-        `}
-    `;
 
 const MainButton = ({disabled, text,textColor,bgcolor, width, height, radius, fontSize}) => {
     
     return <ButtonContainer disabled={disabled} bgcolor = {bgcolor} height={height} width={width} radius={radius}>
-
                 <ButtonText fontSize={fontSize} textColor = {textColor}>{text}</ButtonText>
             </ButtonContainer>
 }

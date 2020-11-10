@@ -19,6 +19,20 @@
             margin: 30px;
             color: #2B445E;
         }
+
+        .input{
+            margin: 20px;
+            :nth-child(1){
+                font-size: 20px;
+            }
+        }
+        
+        .ButtonBox1{
+            margin: 10px;
+            :nth-child(1){
+                font-size: 20px;
+            }
+        }
     }
     
     .LogoBox{
@@ -28,18 +42,5 @@
         height: 40%;
     }
     
-    .input{
-        margin: 20px;
-        :nth-child(1){
-            font-size: 20px;
-        }
-    }
-    
-    .ButtonBox{
-        margin: 15px;
-        :nth-child(1){
-            font-size: 20px;
-        }
-    }
 }
 
