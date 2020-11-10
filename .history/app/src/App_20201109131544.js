@@ -19,7 +19,7 @@ import ChefReview from './pages/ChefReview';
 import ChefOrdersConfirmed from './pages/ChefOrdersConfirmed';
 import AddBalance from './pages/AddBalance';
 import CurrentOrderPage from './pages/CurrentOrderPage';
-
+import ChefOrers from './pages/ChefOrers';
 
 
 
@@ -41,7 +41,7 @@ function App() {
       <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
       <Route path="/AddBalance" exact component={AddBalance}></Route>
       <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
- 
+      <Route path="/ChefOrders" exact component={ChefOrders}></Route>
       </Switch>
     </Router>
   );

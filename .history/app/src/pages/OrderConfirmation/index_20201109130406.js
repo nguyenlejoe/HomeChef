@@ -3,12 +3,8 @@ import './OrderConfirmation.scss';
 import Button from '../../comps/MainButton';
 import TopBar from '../../comps/TopBar';
 import OrderDetails from '../../comps/OrderDetails';
-import ConfirmedLottie from '../../comps/ConfirmedLottie';
-
-
 
 export default function OrderConfirmation() {
-    
   return <div className="app">             
        <div>
            <TopBar text="Confirmation"></TopBar>
@@ -16,7 +12,6 @@ export default function OrderConfirmation() {
        <div className="OrderCont">
         <div className="OrderConfirmed">
             Order confirmed
-            <ConfirmedLottie></ConfirmedLottie>
             <OrderDetails profileimg="none" Chef=""></OrderDetails>
         </div>
         <div className="ButtonBox"> 

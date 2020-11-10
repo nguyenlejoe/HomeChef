@@ -2,38 +2,24 @@
     width: 100vw;
     height:100vh;
     overflow-x: hidden;
-    
+    position: relative;
 }
 
-.cart{
-    margin-bottom: 200px;
-}
-
-.checkout{
-    margin: 100px 0;
+.OrderCont{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    
     justify-content: center;
 }
 
-.checkoutone{
-    margin-bottom: 50px;
-}
-
-.checkouttwo{
-    margin-bottom: 50px;
-}
-
-.total{
+.OrderConfirmed{
     display: flex;
     justify-content: center;
+    font-size: 24px;
     font-weight: bold;
+    margin:40px 0;
 }
 
-.PriceText{
-  margin-left:100px;
-}
 
 .ButtonBox{
     position: absolute;

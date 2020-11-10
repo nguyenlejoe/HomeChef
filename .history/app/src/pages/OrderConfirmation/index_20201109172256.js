@@ -3,12 +3,19 @@ import './OrderConfirmation.scss';
 import Button from '../../comps/MainButton';
 import TopBar from '../../comps/TopBar';
 import OrderDetails from '../../comps/OrderDetails';
-import ConfirmedLottie from '../../comps/ConfirmedLottie';
-
+import Lottie from 'react-lottie';
+import animData from '../../public/confirmed.json';
 
 
 export default function OrderConfirmation() {
-    
+    const dO = {
+        loop: true,
+        autoplay: true, 
+        animationData: animData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      };
   return <div className="app">             
        <div>
            <TopBar text="Confirmation"></TopBar>
@@ -16,7 +23,9 @@ export default function OrderConfirmation() {
        <div className="OrderCont">
         <div className="OrderConfirmed">
             Order confirmed
-            <ConfirmedLottie></ConfirmedLottie>
+            <Lottie
+            options={dO}
+            />
             <OrderDetails profileimg="none" Chef=""></OrderDetails>
         </div>
         <div className="ButtonBox"> 
