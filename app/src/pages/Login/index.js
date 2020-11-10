@@ -33,7 +33,7 @@ export default function Login() {
             <Button text="Create Account" ></Button>
             </div>
             </Link>
-     </div>   
+</div>
         
     </div>
 
