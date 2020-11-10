@@ -98,7 +98,6 @@ size:105px;
 
 
 
-
 const OrderDetails = ({Chef, OrderNum, Pickupdate, Locationtxt, profileimg}) => {
     
     return <DetailsContainer>
