@@ -13,6 +13,8 @@ box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 cursor:pointer;
 // display:flex;
+margin:10px;
+align-items:center;
 
 `
 const ContentContainer = styled.div`

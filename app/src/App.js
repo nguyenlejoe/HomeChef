@@ -16,6 +16,7 @@ import CreateItem from './pages/CreateItem';
 import ChefOrders from './pages/ChefOrders-Pending';
 import ChefOrdersconfirm from './pages/ChefOrders-Confirmed';
 import GourmetFavorites from './pages/FavoritesGourmet';
+import ChefMyAccount from './pages/ChefMyAccount'
 
 
 
@@ -23,6 +24,8 @@ function App() {
   return (
     <Router>
       <Switch>
+      <Route path="/" exact component={ChefMyAccount}></Route>
+      <Route path="/" exact component={ChefOrdersconfirm}></Route>
       <Route path="/" exact component={GourmetFavorites}></Route>
       {/* <Route path="/" exact component={Login}></Route> */}
       <Route path="/CreateAccountChef" exact component={CreateAccountPageChef}></Route>
