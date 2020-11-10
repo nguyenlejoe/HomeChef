@@ -10,7 +10,15 @@ import NavBarChef from '../../comps/NavBarChef';
 
 export default function Home() {
   return<div>
+    
 
+
+
+<NavBarChef> </NavBarChef>
   </div>
+
+
+
+
 
 }
