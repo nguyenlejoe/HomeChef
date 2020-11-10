@@ -5,47 +5,37 @@ import styled from 'styled-components';
 const TopBarContainer = styled.div`
    font-family: Poppins;
    display:flex;
-   position:relative;
    align-items:center;
+   border: 0.6px solid #CCCCCC;
    width:350px;
-   padding:15px;
-   display:inline-flex;
-   align-items:center;
-   justify-content: space-between;
-   border: none;
-   margin-top:5px;
-   width: 90vw;
+   padding:10px;
+   position:relative;
 `;
 
 const LeftArrowImg = styled.div`
+    margin-right:15px;
 `;
 
-const TopLeftText = styled.h2`
-    width: 375px;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    margin-top:15px
-    font-size: 20px;
-    font-family: sans-serif;
+const TopLeftText = styled.div`
+    display:flex;
+    
 `;
 
-const CreditText = styled.p`
-   font-family: sans-serif;
+const CreditText = styled.div`
    color:#24B574;
-   font-size:18px;
+   font-size:13px;
+   position:absolute;
+   right:15px;
 `;
 
 
 const TopBar = ({text}) => {
 
-    return <>
-    <TopBarContainer>
+    return <TopBarContainer>
             <LeftArrowImg><img src='/leftarrow.png' /></LeftArrowImg>
+            <TopLeftText>{text}</TopLeftText>
             <CreditText>Credit $20</CreditText>
         </TopBarContainer>
-        <TopLeftText>{text}</TopLeftText>
-        </>
 }
 
 TopBar.defaultProps = {

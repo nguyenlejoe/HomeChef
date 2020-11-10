@@ -24,14 +24,16 @@ export default function Login() {
         <a>Forgot password?</a>
 
         <div className="ButtonBox"> 
-        <Button text="Log In"></Button>
+        <Button text="Log In" ></Button>
         </div>
-        <Link to ="/CreateAccountChef">
-          <div className="ButtonBox"> 
-          <Button text="Create Account"></Button>
-          </div>
-        </Link>
-     </div>   
+       
+
+            <Link to ="/CreateAccountChef">
+            <div className="ButtonBox"> 
+            <Button text="Create Account" ></Button>
+            </div>
+            </Link>
+</div>
         
     </div>
 

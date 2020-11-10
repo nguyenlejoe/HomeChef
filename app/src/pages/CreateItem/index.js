@@ -7,37 +7,41 @@ import Note from '../../comps/BuyerNote';
 import PickDate from '../../comps/UpDate';
 import PickTime from '../../comps/UpTime';
 import Button from '../../comps/MainButton';
+import AddListingItem from '../../comps/AddListingItem';
 
 
 
 export default function CreateItemPage() {
   return<div className="CreateItemApp">
     <div className="content">
-      <h3>Create a menu item</h3>
-      <div className="InputBox">
-       <Input PHtext="Enter Food Name"></Input>
-      </div>
-      <div className="TagBox">
-        <Tags></Tags>
-      </div>
-      <div className="descBox">
-        <Desc></Desc>
-      </div>
-      <div className="noteBox">
-        <Note></Note>
-      </div>
-      <div className="dateBox">
-        <PickDate></PickDate>
-      </div>
-      <div className="timeBox">
-        <PickTime></PickTime>
-      </div>
-      <div className="buttonBox">
-        <Button text="Create Item"></Button>
-      </div>
+        
+        <h3>Create a menu item</h3>
+        <div className="InputBox">
+        <Input PHtext="Enter Food Name"></Input>
+        </div>
+        <div className="TagBox">
+          <Tags></Tags>
+        </div>
+        <div className="descBox">
+          <Desc></Desc>
+        </div>
+        <div className="addPhotoBox">
+          <AddListingItem></AddListingItem>
+        </div>
+        <div className="noteBox">
+          <Note></Note>
+        </div>
+        <div className="dateBox">
+          <PickDate></PickDate>
+        </div>
+        <div className="timeBox">
+          <PickTime></PickTime>
+        </div>
+        <div className="buttonBox">
+          <Button text="Create Item"></Button>
+        </div>
 
-    
-    
+      
     
     </div>
     
