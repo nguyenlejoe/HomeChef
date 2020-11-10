@@ -9,6 +9,12 @@ import NavBarChef from '../../comps/NavBarChef';
 
 export default function Home() {
   return<div className="app">
+      <div className="CoverImage"></div>
+        <div className="ChefDesc">
+            <h2>Alex Inglis</h2>
+            <p>Chef from Australia</p>
+        </div>
+
 
       <div>
       <MenuTabs MenuText="My Menu"></MenuTabs>
