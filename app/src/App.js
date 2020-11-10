@@ -13,7 +13,6 @@ import CreateAccountGourmet from './pages/CreateAccountGourmet';
 import DashBoardChef from './pages/DashBoardChef';
 import MyAccountGourmet from './pages/MyAccountGourmet';
 import CreateItem from './pages/CreateItem';
-<<<<<<< HEAD
 import OrderConfirmation from './pages/OrderConfirmation';
 import Checkout from './pages/Checkout';
 import ChefReview from './pages/ChefReview';
@@ -22,12 +21,10 @@ import AddBalance from './pages/AddBalance';
 import CurrentOrderPage from './pages/CurrentOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 import DishDescription from './pages/DishDescription';
-
-=======
 import ChefOrders from './pages/ChefOrders-Pending';
 import ChefOrdersconfirm from './pages/ChefOrders-Confirmed';
 import GourmetFavorites from './pages/FavoritesGourmet';
->>>>>>> df30b24fda8406241ed80d710fb574e0869dd68b
+
 
 
 
@@ -43,7 +40,6 @@ function App() {
       <Route path="/DashBoardChef" exact component={DashBoardChef}></Route>
       <Route path="/MyAccountGourmet" exact component={MyAccountGourmet}></Route>
       <Route path="/CreateItem" exact component={CreateItem}></Route>
-<<<<<<< HEAD
       <Route path="/OrderConfirmation" exact component={OrderConfirmation}></Route>
       <Route path="/Checkout" exact component={Checkout}></Route>
       <Route path="/ChefReview" exact component={ChefReview}></Route>
@@ -52,9 +48,7 @@ function App() {
       <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
       <Route path="/OrderHistoryPage" exact component={OrderHistoryPage}></Route>
       <Route path="/DishDescription" exact component={DishDescription}></Route>
-=======
-      
->>>>>>> df30b24fda8406241ed80d710fb574e0869dd68b
+
       </Switch>
     </Router>
   );
