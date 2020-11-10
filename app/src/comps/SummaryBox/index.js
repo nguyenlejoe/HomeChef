@@ -6,7 +6,7 @@ const SummaryContainer = styled.div`
     background-color: #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     width: 308px;
-    height: 137px;
+    height: 170px;
     border-radius:20px;
 `;
 

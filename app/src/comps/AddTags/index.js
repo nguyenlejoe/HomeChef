@@ -20,26 +20,20 @@ const AddContent = styled.div`
    padding-top:10px;
 `;
 
-const AddInput = styled.input`
-    width: 300px;
-    height: 40px;
-    background-color: #ECECEC;
-    border-radius: 64px;
-    border:none;   
-`;
-
 const SearchImg = styled.div`
     margin:0 10px;
 `;
 
-
+const SpicyImg = styled.div`
+  
+`;
 
 const AddTags = ({}) => {
     return <AddTagsContainer>
         <AddCap>Add categories and tags </AddCap>
         <AddContent>
             <SearchImg><img src='/searchicon.png' /></SearchImg>
-            <AddInput type="text" img src='/searchicon.png' />
+            <SpicyImg><img src='/spicy.png' /></SpicyImg>
         </AddContent>
     </AddTagsContainer>
 }

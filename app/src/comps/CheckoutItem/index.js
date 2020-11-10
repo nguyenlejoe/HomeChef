@@ -97,7 +97,7 @@ const CheckoutItem = ({Quant, Itemnm, Note, Pricetag,}) => {
 CheckoutItem.defaultProps = {
     
     Quant:"1x",
-    Itemnm:"Yunus's Fried Rice",
+    Itemnm:"Yunus' Fried Rice",
     Note:"Add Note for Chef",
     Pricetag:"$12.99",
 
