@@ -3,12 +3,16 @@ import './DashBoardChef.scss'
 import NavBarChef from '../../comps/NavBarChef';
 import SummaryBox from '../../comps/SummaryBox';
 import ActivityFeed from '../../comps/ActivityFeed';
-
+import {useHistory, Link} from "react-router-dom";
 
 
 
 
 export default function DashBoardChefPage() {
+
+  const history = useHistory();
+  
+
   return<div className="DashBoardChefApp">
         <h3>Order expected today</h3>
         <div className="OrderToday">
@@ -25,6 +29,9 @@ export default function DashBoardChefPage() {
         <div className="Nav">
           <NavBarChef
           active={1}
+          onClickCreate={()=>{
+            history.push("/CreateItem");
+          }}
           ></NavBarChef>
         </div>
         
