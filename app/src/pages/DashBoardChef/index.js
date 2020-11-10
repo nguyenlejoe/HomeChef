@@ -32,6 +32,12 @@ export default function DashBoardChefPage() {
           onClickCreate={()=>{
             history.push("/CreateItem");
           }}
+          onClickAccount={()=>{
+            history.push("/ChefMyAccount");
+          }}
+          onClickOrder={()=>{
+            history.push("/ChefOrdersPending");
+          }}
           ></NavBarChef>
         </div>
         

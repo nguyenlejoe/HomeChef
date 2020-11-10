@@ -40,8 +40,8 @@ export default function CreateAccountPage() {
         </div>
         
 
-        <Link to="/DashBoardGourmet">
-        <div className="ButtonBox"> 
+        <Link style={{ textDecoration: 'none' }} to="/DashBoardGourmet">
+        <div className="ButtonBox1"> 
         <Button text="Proceed"></Button>
         </div>
         </Link>
