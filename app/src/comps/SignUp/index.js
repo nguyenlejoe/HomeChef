@@ -15,16 +15,13 @@ const SignUpForm = styled.input`
     };
     outline: none;
     border: none;
-    border-bottom: ${props =>props.border_bottom ? props.border_bottom : 'none'} solid #E0E0E0;
-    border-radius: ${props =>props.radius ? props.radius : '0px'};
+    border-bottom: 3px solid #E0E0E0; 
 `;
 
-const SignUp = ({text, PHtext=text, width, height, border, radius, border_bottom}) => {
+const SignUp = ({text, PHtext=text, width, height}) => {
     return <SignUpCont>
-        <SignUpForm type="text" placeholder={PHtext} width={width} height={height} border={border} radius={radius} border_bottom= {border_bottom} ></SignUpForm>
+        <SignUpForm type="text" placeholder={PHtext} width={width} height={height} ></SignUpForm>
     </SignUpCont>;
 }
-SignUp.defaultProps={
-    border_bottom: '3px',
-}
+
 export default SignUp;

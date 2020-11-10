@@ -15,21 +15,26 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 
 filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.25));
 background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
 background-size:cover;
-
 `
 const Foodtxt = styled.div`
 position:relative;
 display:flex;
 flex-direction:column;
 text-align:center;
-top:160px;
+top:140px;
 color:white;
 font-weight: 500;
 font-size: 19px;
 line-height: 27px;
+width:110px;
+justify-content:center;
+align-items:center;
+left:25px;
 `
 const MealName = styled.div`
 font-size: 23px;
+
+
 `
 const MealPrice = styled.div`
 
