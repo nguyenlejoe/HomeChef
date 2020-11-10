@@ -19,7 +19,7 @@ import GourmetFavorites from './pages/FavoritesGourmet';
 import OrderConfirmation from './pages/OrderConfirmation';
 import Checkout from './pages/Checkout';
 
-
+import CurrentOrderPage from './pages/CurrentOrderPage';
 
 
 
@@ -41,7 +41,7 @@ function App() {
 
    
       
-
+      <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
  
       </Switch>
     </Router>

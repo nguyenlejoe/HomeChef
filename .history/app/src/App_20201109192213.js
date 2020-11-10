@@ -17,9 +17,6 @@ import ChefOrders from './pages/ChefOrders-Pending';
 import ChefOrdersconfirm from './pages/ChefOrders-Confirmed';
 import GourmetFavorites from './pages/FavoritesGourmet';
 import OrderConfirmation from './pages/OrderConfirmation';
-import Checkout from './pages/Checkout';
-
-
 
 
 
@@ -38,10 +35,10 @@ function App() {
       <Route path="/CreateItem" exact component={CreateItem}></Route>
       <Route path="/OrderConfirmation" exact component={OrderConfirmation}></Route>
       <Route path="/Checkout" exact component={Checkout}></Route>
-
-   
-      
-
+      <Route path="/ChefReview" exact component={ChefReview}></Route>
+      <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
+      <Route path="/AddBalance" exact component={AddBalance}></Route>
+      <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
  
       </Switch>
     </Router>
