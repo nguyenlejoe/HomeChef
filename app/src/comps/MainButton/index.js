@@ -32,17 +32,16 @@ const Icon = styled.div`
         `}
     `;
 
-const Button = ({disabled, text,textColor,bgcolor, width, height, radius, fontSize}) => {
-    console.log('disabled', disabled)
+const MainButton = ({disabled, text,textColor,bgcolor, width, height, radius, fontSize}) => {
     
     return <ButtonContainer disabled={disabled} bgcolor = {bgcolor} height={height} width={width} radius={radius}>
                 <ButtonText fontSize={fontSize} textColor = {textColor}>{text}</ButtonText>
             </ButtonContainer>
 }
 
-ButtonText.defaultprops = {
+MainButton.defaultProps = {
     color:null,
     disabled: true,
 }
 
-export default Button;
+export default MainButton;

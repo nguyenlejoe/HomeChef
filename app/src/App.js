@@ -20,6 +20,7 @@ import ChefOrdersConfirmed from './pages/ChefOrdersConfirmed';
 import AddBalance from './pages/AddBalance';
 import CurrentOrderPage from './pages/CurrentOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
+import DishDescription from './pages/DishDescription';
 
 
 
@@ -42,6 +43,7 @@ function App() {
       <Route path="/AddBalance" exact component={AddBalance}></Route>
       <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
       <Route path="/OrderHistoryPage" exact component={OrderHistoryPage}></Route>
+      <Route path="/DishDescription" exact component={DishDescription}></Route>
       </Switch>
     </Router>
   );

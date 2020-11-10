@@ -26,13 +26,11 @@ export default function Login() {
         <div className="ButtonBox"> 
         <Button text="Log In"></Button>
         </div>
-       
-
-            <Link to ="/CreateAccountChef">
-            <div className="ButtonBox"> 
-            <Button text="Create Account"></Button>
-            </div>
-            </Link>
+        <Link to ="/CreateAccountChef">
+          <div className="ButtonBox"> 
+          <Button text="Create Account"></Button>
+          </div>
+        </Link>
      </div>   
         
     </div>
