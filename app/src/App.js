@@ -16,14 +16,12 @@ import CreateItem from './pages/CreateItem';
 import OrderConfirmation from './pages/OrderConfirmation';
 import Checkout from './pages/Checkout';
 import ChefReview from './pages/ChefReview';
-import ChefOrdersConfirmed from './pages/ChefOrdersConfirmed';
+import ChefOrdersConfirm from './pages/ChefOrders-Confirmed';
 import AddBalance from './pages/AddBalance';
 import CurrentOrderPage from './pages/CurrentOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
 import DishDescription from './pages/DishDescription';
 import GourmetFavorites from './pages/FavoritesGourmet';
-import OrderConfirmation from './pages/OrderConfirmation';
-import Checkout from './pages/Checkout';
 import ChefMyAccount from './pages/ChefMyAccount'
 
 
@@ -47,11 +45,10 @@ function App() {
       <Route path="/OrderConfirmation" exact component={OrderConfirmation}></Route>
       <Route path="/Checkout" exact component={Checkout}></Route>
       <Route path="/ChefReview" exact component={ChefReview}></Route>
-      <Route path="/ChefOrdersConfirmed" exact component={ChefOrdersConfirmed}></Route>
       <Route path="/AddBalance" exact component={AddBalance}></Route>
       <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
       <Route path="/OrderHistoryPage" exact component={OrderHistoryPage}></Route>
-      <Route path="/DishDescription" exact component={DishDescription}></Route>
+      {/* <Route path="/DishDescription" exact component={DishDescription}></Route> */}
 
 
       </Switch>
