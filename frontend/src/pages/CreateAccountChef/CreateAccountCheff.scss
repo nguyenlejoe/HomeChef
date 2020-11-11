@@ -1,0 +1,61 @@
+.CreateAccountCheffApp{
+    width: 100vw;
+    height:100vh;
+    background-color: #24B574;
+    overflow-x: hidden;
+
+    .InputBoxGourmet{
+        padding-top:10px;
+        height:90%;
+        background: #FFFFFF;
+        box-shadow: 0px -9px 18px rgba(0, 0, 0, 0.25);
+        border-radius: 25px 25px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        a{
+            margin: 30px;
+            color: #2B445E;
+        }
+
+        .input{
+            margin: 12px;
+            :nth-child(1){
+                font-size: 20px;
+            }
+        }
+        
+        .ButtonBox1{
+            margin: 35px;
+            :nth-child(1){
+                font-size: 20px;
+            }
+        }
+
+        .safe{
+            h3{
+                text-align: center;
+            }
+            
+        }
+    }
+    
+    
+    .LogoBox{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40%;
+        h1{
+            color: white;
+            font-size: 24px;
+        }
+        
+    }
+    
+ 
+}
+
