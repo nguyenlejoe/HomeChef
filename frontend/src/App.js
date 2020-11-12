@@ -20,8 +20,7 @@ import ChefOrdersConfirm from './pages/ChefOrders-Confirmed';
 import AddBalance from './pages/AddBalance';
 import CurrentOrderPage from './pages/CurrentOrderPage';
 import OrderHistoryPage from './pages/OrderHistoryPage';
-// import DishDescription from './pages/DishDescription';
-import ChefOrdersPending from './pages/ChefOrders-Pending';
+import DishDescription from './pages/DishDescription';
 import GourmetFavorites from './pages/FavoritesGourmet';
 import ChefMyAccount from './pages/ChefMyAccount'
 
@@ -33,11 +32,10 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route path="/ChefMyAccount" exact component={ChefMyAccount}></Route>
-      <Route path="/ChefOrdersConfirm" exact component={ChefOrdersConfirm}></Route>
-      <Route path="/ChefOrdersPending" exact component={ChefOrdersPending}></Route>
-      <Route path="/GourmetFavorites" exact component={GourmetFavorites}></Route>
-      <Route path="/" exact component={Login}></Route>
+      <Route path="/" exact component={ChefMyAccount}></Route>
+      <Route path="/" exact component={ChefOrdersConfirm}></Route>
+      <Route path="/" exact component={GourmetFavorites}></Route>
+      {/* <Route path="/" exact component={Login}></Route> */}
       <Route path="/CreateAccountChef" exact component={CreateAccountPageChef}></Route>
       <Route path="/DashBoardGourmet" exact component={DashBoardGourmet}></Route>
       <Route path="/CreateAccountGourmet" exact component={CreateAccountGourmet}></Route>
@@ -50,7 +48,7 @@ function App() {
       <Route path="/AddBalance" exact component={AddBalance}></Route>
       <Route path="/CurrentOrderPage" exact component={CurrentOrderPage}></Route>
       <Route path="/OrderHistoryPage" exact component={OrderHistoryPage}></Route>
-      {/* <Route path="/DishDescription" exact component={DishDescription}></Route> */}
+      <Route path="/DishDescription" exact component={DishDescription}></Route>
 
 
       </Switch>

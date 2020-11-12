@@ -5,13 +5,58 @@ import Trending from '../../comps/TrendingTag';
 import Input from '../../comps/PickUp';
 import Counter from '../../comps/Counter';
 import Calendar from '../../comps/Calendar';
+import Button from '../../comps/MainButton';
 
 
-export default function DishDescription() {
+export default function DishDescription({chefName, foodName, description, ingredient, list}) {
 
     return(
-        <div>
-            <Calendar/>
+        <div className="appContainer">
+            <div className="coverImage">
+                <div className="forLeft">
+                    <Button  width="114px" height="36px" bgcolor="#E82828" text="4 left" radius="0px 10px 10px 0px" />
+                </div>                
+            </div>
+            <h2>{chefName}</h2>
+            <div className="Avatar">
+                <Avatar/>
+            </div>
+            <div className="tagBox">
+                <Trending/>
+                <Trending text="Taiwan" bgcolor="#EB5757"/>
+                <Trending text="Rice" bgcolor="#F2C94C"/>
+            </div>
+            <div className="foodDetail">
+                <h1>{foodName}</h1>
+                <p>{description}</p>
+            </div>
+            <div className="ingredients">
+                <h3> {ingredient} </h3>
+                <ul className="columnList">
+                    <li>{list}</li>
+                    <li>Vegetable</li>
+                    <li>Garlic</li>
+                    <li>Onion</li>
+                    <li>Cooked Rice</li>
+                    <li>Carrot</li>
+                </ul>
+            </div>
+            <h4>Order for another day</h4>
+            <div className="calendarBox">
+                <Calendar/>
+            </div>
+            <h4>Add a note for the Chef</h4>
+            <input/>
+            <div className="counter"><Counter/></div>
+            <Button width="175px" height="40px" text="Add to Cart"/>
         </div>
     )
+}
+
+DishDescription.defaultProps = {
+    chefName: "Yunus Emre",
+    foodName: "Fried Rice",
+    description: "The choice of oil for fried rice plays an important part to create the authentic Asian flavor. Oils suitable for stir-frying are peanut oil, vegetable oil, and palm oil. They have a high smoking point which is suitable for stir-frying and a neutral taste that will not affect the flavor of the fried rice.",
+    ingredient: "Ingredients",
+    list:"Egg"
 }

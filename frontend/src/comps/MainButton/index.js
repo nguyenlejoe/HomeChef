@@ -16,7 +16,7 @@ const ButtonContainer = styled.button`
 
 const ButtonText = styled.p`
     text-align: center;
-    font-size: ${props =>props.fontSize ? props.fontSize : '15px'};;
+    font-size: ${props =>props.fontSize ? props.fontSize : '15px'};
     color:${props =>props.textColor ? props.textColor : '#FFFFFF'};
 `;
 
