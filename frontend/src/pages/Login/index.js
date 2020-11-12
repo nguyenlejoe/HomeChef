@@ -41,7 +41,7 @@ export default function Login() {
 
   return<div className="LoginApp">
         <div className="LogoBox">
-          <img src="./logo.svg"></img>
+        <div className="logo"></div>
         </div>
         
 

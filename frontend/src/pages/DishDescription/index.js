@@ -3,7 +3,7 @@ import './DishDescription.scss';
 import Avatar from '../../comps/Avatar';
 import Trending from '../../comps/TrendingTag';
 import Input from '../../comps/PickUp';
-import Counter from '../../comps/Counter';
+// import Counter from '../../comps/Counter';
 import Calendar from '../../comps/Calendar';
 import Button from '../../comps/MainButton';
 
@@ -47,7 +47,7 @@ export default function DishDescription({chefName, foodName, description, ingred
             </div>
             <h4>Add a note for the Chef</h4>
             <input/>
-            <div className="counter"><Counter/></div>
+            {/* <div className="counter"><Counter/></div> */}
             <Button width="175px" height="40px" text="Add to Cart"/>
         </div>
     )

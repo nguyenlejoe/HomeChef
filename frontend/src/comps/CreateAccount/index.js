@@ -46,6 +46,7 @@ const ChefImg = styled.div`
 
 const GourmetImg = styled.div`
     margin-bottom:10px;
+
 `;
 
 const CreateAccount = ({activeChef, activeGourmet,  cheftext, gourmettext, onClick}) => {
