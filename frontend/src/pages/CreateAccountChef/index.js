@@ -60,9 +60,6 @@ export default function CreateAccountPageChef() {
           }}
         ></SignUp>
         </div>
-        <div className="input">
-        <SignUp text="Date of Birth"></SignUp>
-        </div>
         
         <div className="safe">
         <h3>Food Safe Verification</h3>

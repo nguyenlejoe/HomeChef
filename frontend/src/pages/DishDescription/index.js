@@ -6,16 +6,25 @@ import Input from '../../comps/PickUp';
 // import Counter from '../../comps/Counter';
 import Calendar from '../../comps/Calendar';
 import Button from '../../comps/MainButton';
+import CoverImage from '../../comps/CoverImage';
 
 
-export default function DishDescription({chefName, foodName, description, ingredient, list}) {
+export default function DishDescription(props,{chefName, foodName, description, ingredient, list}) {
+
+    var dish = props.location.state.o;
+
+    console.log(props.location.state);
+
+    console.log(dish.user);
 
     return(
         <div className="appContainer">
             <div className="coverImage">
-                <div className="forLeft">
-                    <Button  width="114px" height="36px" bgcolor="#E82828" text="4 left" radius="0px 10px 10px 0px" />
-                </div>                
+                     <div className="forLeft">
+                        <Button  width="114px" height="36px" bgcolor="#E82828" text={dish.countInStock + " left"} radius="0px 10px 10px 0px" />
+                    </div>   
+                <CoverImage bgimg={dish.image}>  
+                </CoverImage>          
             </div>
             <h2>{chefName}</h2>
             <div className="Avatar">
@@ -27,18 +36,18 @@ export default function DishDescription({chefName, foodName, description, ingred
                 <Trending text="Rice" bgcolor="#F2C94C"/>
             </div>
             <div className="foodDetail">
-                <h1>{foodName}</h1>
+                <h1>{dish.name}</h1>
                 <p>{description}</p>
             </div>
             <div className="ingredients">
                 <h3> {ingredient} </h3>
                 <ul className="columnList">
-                    <li>{list}</li>
                     <li>Vegetable</li>
                     <li>Garlic</li>
                     <li>Onion</li>
                     <li>Cooked Rice</li>
                     <li>Carrot</li>
+                    <li>Peas</li>
                 </ul>
             </div>
             <h4>Order for another day</h4>
