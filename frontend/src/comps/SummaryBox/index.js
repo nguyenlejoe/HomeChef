@@ -3,6 +3,8 @@ import styled, {css} from 'styled-components';
 import AvatarOverlap from '../AvatarOverlap';
 
 const SummaryContainer = styled.div`
+    display: inline-flex;
+    flex-direction: column;
     background-color: #FFFFFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     width: 308px;
@@ -10,12 +12,13 @@ const SummaryContainer = styled.div`
     border-radius:20px;
 `;
 
-const TitleContainer = styled.div`
-    height:40%;
+const TitleCont = styled.h3`
+    height: 40%;
     display:flex;
     justify-content:center;
     align-items:center;
     margin:10px;
+    padding-bottom:15px;
 `;
 
 const ContentContainer = styled.div`
@@ -78,7 +81,7 @@ const AvatarBox = styled.div`
 const SummaryBox = ({buyer,product, note1, date}) => {
     
     return <SummaryContainer>
-                <TitleContainer><h2>{buyer} bought {product}</h2></TitleContainer>
+                <TitleCont>{buyer} bought {product}</TitleCont>
                 <ContentContainer>
                     <InfoBox>
                         <DateContainer>Confirmed on {date}</DateContainer>
