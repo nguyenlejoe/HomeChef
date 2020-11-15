@@ -10,14 +10,20 @@
     margin: 10px;
 }
 
-.SearchBox{
+.SearchPopup{
     margin-bottom: 20px;
+    z-index:1;
+    // position: ${props=>props.expanded ? "relative" : ""};
+    // top: ${props=>props.expanded ? "200px" : "0px"};
+    
 }
 
 .foodcovers {
     display: grid;
     grid-template-columns: auto auto ;
     justify-content: center;
+    z-index:-1;
+    
 }
 
 

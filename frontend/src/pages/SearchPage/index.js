@@ -1,5 +1,5 @@
 import React from 'react';
-import './Search.scss';
+import './SearchPage.scss';
 import SearchTwo from '../../comps/SearchTwo';
 import Foodcover from '../../comps/FoodDisplayCover';
 import NavBarChef from '../../comps/NavBarChef';
@@ -7,11 +7,12 @@ import BackButton from '../../comps/BackButton';
 
 
 export default function SearchPage() {
+
   return<div>
     <div className="backbutton">
         <BackButton></BackButton>
     </div>
-    <div className="SearchBox">
+    <div className="SearchPopup">
       <SearchTwo></SearchTwo>
     </div>
     <div className="foodcovers">
@@ -21,7 +22,6 @@ export default function SearchPage() {
       <Foodcover  Mealnm="Veg Burger" MealPrc="$8.99"></Foodcover>
       <Foodcover  Mealnm="Yunus' Fried Rice" MealPrc="$8.99"></Foodcover>
       <Foodcover  Mealnm="Pad Thai" MealPrc="$8.99"></Foodcover>
-
     </div>
 
 {/* <NavBarChef active={1}> </NavBarChef> */}
