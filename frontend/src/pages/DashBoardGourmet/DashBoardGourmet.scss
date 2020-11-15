@@ -1,6 +1,10 @@
 .DashBoardGourmetApp{
     width: 100vw;
     height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
     overflow-x: hidden;
    
     .TopNavCon{
@@ -39,13 +43,23 @@
      
      .CuisineBox{
          height: 10%;
-         width: 100%;
+         width: 95%;
          position: fixed;
-         top: 10px;
+         top: 15px;
          z-index: 1;
-     
-         div{
-             margin: 7px;
+         .css-2b097c-container{
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            width: 115px;
+            .css-yk16xz-control{
+                background-color: #24B574;
+                color: #FFFFFF;
+            }
+            .css-1uccc91-singleValue{
+                color: #FFFFFF;
+            }
+            .css-1wa3eu0-placeholder{
+                color: #FFFFFF;
+            }
          }
      }
      
