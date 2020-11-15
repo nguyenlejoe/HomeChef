@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useHistory, Link} from "react-router-dom";
 
 const AvatarContainer = styled.div`
 width:80px;
@@ -17,7 +18,9 @@ border-radius:100px;
 
 const Avatar = ({bgimg}) =>{
     return <AvatarContainer>
+       
         <AvatarImg bgimg={bgimg}></AvatarImg>
+      
     </AvatarContainer>
 }
 

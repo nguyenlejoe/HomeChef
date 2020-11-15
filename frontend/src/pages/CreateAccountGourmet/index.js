@@ -39,14 +39,11 @@ export default function CreateAccountPageGourmet() {
 
         <div className="InputBoxGourmet">
         <div className="input">
-        <SignUp text="First Name"
+        <SignUp text="Name"
         onChange={(e)=>{
           setName(e.target.value);
         }}
         ></SignUp>
-        </div>
-        <div className="input">
-        <SignUp text="Last Name"></SignUp>
         </div>
         <div className="input">
         <SignUp text="Email Address"
@@ -56,14 +53,13 @@ export default function CreateAccountPageGourmet() {
         ></SignUp>
         </div>
         <div className="input">
-        <SignUp text="Password"
+        <SignUp 
+        type="password"
+        text="Password"
         onChange={(e)=>{
           setPass(e.target.value);
         }}
         ></SignUp>
-        </div>
-        <div className="input">
-        <SignUp text="Date of Birth"></SignUp>
         </div>
         
 

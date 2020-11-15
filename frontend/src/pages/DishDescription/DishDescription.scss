@@ -23,7 +23,6 @@
 }
 
 .appContainer h2{
-    position: absolute;
     top: 325px;
     left: 25px;
     text-align: center;
@@ -34,9 +33,9 @@
 }
 
 .Avatar{
-    position: absolute;
-    top: 290px;
-    right: 10px;
+    position: relative;
+    top: -40px;
+    left: 280px;
 }
 
 .tagBox{

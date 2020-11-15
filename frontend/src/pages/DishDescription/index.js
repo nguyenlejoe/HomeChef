@@ -24,11 +24,10 @@ export default function DishDescription(props,{chefName, foodName, description, 
                 <CoverImage bgimg={dish.image}></CoverImage>
                 <div className="forLeft">
                     <Button  width="114px" height="36px" bgcolor="#E82828" text={dish.countInStock + " left"} radius="0px 10px 10px 0px" />
-                </div>                
-            </div>
-            <h2>{chefName}</h2>
-            <div className="Avatar">
+                </div> 
+                <div className="Avatar">
                 <Avatar/>
+            </div>               
             </div>
             <div className="tagBox">
                 <Trending/>

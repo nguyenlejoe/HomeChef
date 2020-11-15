@@ -11,10 +11,9 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const history = useHistory();
+  const [wrong, setWrong] = useState("");
 
-  function Test () {
-    alert("test");
-  }
+  
 
   const HandleLogin = async(email, pass) =>{
     try{
@@ -32,6 +31,7 @@ export default function Login() {
     console.log(resp.data);
   }
   catch(error){
+    setWrong("The email or password you entered is incorrect.");
     console.log("sorry not a user");
   }
   }
@@ -55,11 +55,17 @@ export default function Login() {
           </div>
         
           <div className="input">
-          <SignUp text="Password"
+          <SignUp 
+          type="password"
+          text="Password"
           onChange={(e)=>{
             setPass(e.target.value) 
            }}
           ></SignUp>
+          </div>
+          
+          <div className="incorrect">
+          <label>{wrong}</label>
           </div>
         
           <a>Forgot password?</a>
