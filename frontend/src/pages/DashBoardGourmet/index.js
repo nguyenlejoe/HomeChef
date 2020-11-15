@@ -34,12 +34,15 @@ export default function DashBoardGourmet() {
           <TopNav></TopNav>
         </div>
         <div className="Content">
+          
           {products.map((o,i)=>{
-           return <FoodDisplayCover
+           return <Link to={{ pathname: "/DishDescription", state: {o} }}>
+           <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
            MealPrc={o.price}
            ></FoodDisplayCover>
+           </Link>
           })}
           
         
