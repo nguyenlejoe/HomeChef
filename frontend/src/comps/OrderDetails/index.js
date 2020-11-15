@@ -23,7 +23,7 @@ const DetailsRectangle = styled.div`
 background-color: #FFFFFF;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 height: 285px;
-width: 369px;
+width: 339px;
 left: 0px;
 top: 37px;
 border-radius: 33px;

@@ -26,6 +26,7 @@ import ChefMyAccount from './pages/ChefMyAccount';
 import ChefPage from './pages/ChefPage';
 import ChefCalendar from './pages/ChefCalendar';
 import LoadingPage from './pages/LoadingPage';
+import Search from './pages/Search';
 import './App.scss';
 
 
@@ -58,6 +59,7 @@ function App() {
       <Route path="/ChefPage" exact component={ChefPage}></Route>
       <Route path="/ChefCalendar" exact component={ChefCalendar}></Route>
       <Route path="/LoadingPage" exact component={LoadingPage}></Route>
+      <Route path="/Search" exact component={Search}></Route>
 
       </Switch>
     </Router>

@@ -14,17 +14,19 @@ const AddCap = styled.div`
 const AddContent = styled.div`
    display:flex;
    align-items:center;
-   width:280px;
-   border-radius: 64px;
-   background: #ECECEC;
-   padding-top:10px;
+   justify-content:center;
+`;
+
+
+const SearchInput = styled.input`
+    width:276px;
+    height:35px;
+    border-radius: 64px;
+    background: #ECECEC;
+    border:none;
 `;
 
 const SearchImg = styled.div`
-    margin:0 10px;
-`;
-
-const SpicyImg = styled.div`
   
 `;
 
@@ -33,7 +35,8 @@ const AddTags = ({}) => {
         <AddCap>Add categories and tags </AddCap>
         <AddContent>
             <SearchImg><img src='/searchicon.png' /></SearchImg>
-            <SpicyImg><img src='/spicy.png' /></SpicyImg>
+            <SearchInput type="text" placeholder="" /> 
+            {/* <SpicyImg><img src='/spicy.png' /></SpicyImg> */}
         </AddContent>
     </AddTagsContainer>
 }
