@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AvatarContainer = styled.div`
-width:80px;
-height:80px;
+width:${props=>props.width ? props.width : "80px"};
+height:${props=>props.height ? props.height : "80px"};
 `;
 
 const AvatarImg = styled.div`
@@ -15,8 +15,8 @@ border-radius:100px;
 
 `;
 
-const Avatar = ({bgimg}) =>{
-    return <AvatarContainer>
+const Avatar = ({bgimg, width, height}) =>{
+    return <AvatarContainer width={width} height={height}>
         <AvatarImg bgimg={bgimg}></AvatarImg>
     </AvatarContainer>
 }
