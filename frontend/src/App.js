@@ -24,6 +24,8 @@ import DishDescription from './pages/DishDescription';
 import GourmetFavorites from './pages/FavoritesGourmet';
 import ChefMyAccount from './pages/ChefMyAccount';
 import ChefPage from './pages/ChefPage';
+import ChefCalendar from './pages/ChefCalendar';
+import LoadingPage from './pages/LoadingPage';
 import './App.scss';
 
 
@@ -54,6 +56,8 @@ function App() {
       <Route path="/ChefOrdersConfirm" exact component={ChefOrdersConfirm}></Route>
       <Route path="/ChefOrdersPending" exact component={ChefOrdersPending}></Route>
       <Route path="/ChefPage" exact component={ChefPage}></Route>
+      <Route path="/ChefCalendar" exact component={ChefCalendar}></Route>
+      <Route path="/LoadingPage" exact component={LoadingPage}></Route>
 
       </Switch>
     </Router>
