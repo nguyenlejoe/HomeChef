@@ -10,7 +10,7 @@ import axios from "axios";
 
 
 export default function DashBoardGourmet() {
-  //Testing
+  
 
   const [products, setProducts] = useState([]);
 
@@ -20,6 +20,8 @@ export default function DashBoardGourmet() {
     console.log(resp.data.products);
   }
 
+
+  
 
   const history = useHistory();
 
@@ -33,24 +35,15 @@ export default function DashBoardGourmet() {
         </div>
         <div className="Content">
           {products.map((o,i)=>{
-           return <Link to={{ pathname: "/DishDescription", state: {o} }}>
-           <FoodDisplayCover
+           return <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
            MealPrc={o.price}
            ></FoodDisplayCover>
-           </Link>
           })}
-          
           
         
         </div>
-{/* 
-        <Link to={{
-  pathname: '/yourPage',
-  state: [{id: 1, name: 'Ford', color: 'red'}]
-}}> Your Page </Link> */}
-        
         
         <div className="Cart">
           <ViewCartButton></ViewCartButton>

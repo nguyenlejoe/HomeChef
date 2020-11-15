@@ -1,4 +1,3 @@
-import { on } from 'nodemon';
 import React, { useState } from 'react';
 import styled, {css} from 'styled-components';
 import AvatarOverlap from '../AvatarOverlap';
@@ -68,7 +67,7 @@ const ConfirmButtons = styled.div`
     `}
 `;
 
-const ConfirmOrder = ({Seller, Quantity, Product, onClick}) =>{
+const ConfirmOrder = ({Seller, Quantity, Product}) =>{
     return <ConfirmContainer>
             <AvatarPlaceHolder>
             <AvatarOverlap></AvatarOverlap>
@@ -79,8 +78,8 @@ const ConfirmOrder = ({Seller, Quantity, Product, onClick}) =>{
             </OrderBox>
             <labe>Confirm Order?</labe>
             <ConfirmButtonContainer>
-                    <ConfirmButtons onClick={onClick}></ConfirmButtons>
-                    <ConfirmButtons onClick={onClick}  active={true}></ConfirmButtons>
+                    <ConfirmButtons></ConfirmButtons>
+                    <ConfirmButtons active={true}></ConfirmButtons>
             </ConfirmButtonContainer>
             <a>View full order details</a>
             

@@ -61,21 +61,23 @@ const [ButtonActiveVal,SetActive] = useState(active);
     
     return <NavContainer>
         <NavBox>
-            {/* Home Button */}
+            
             <NavButton onClick={onClickHome} 
             ButtonActive = {ButtonActiveVal === 1 ? "#24B574" : "#C6C6C6"}
             >
-                <NavIcon>
-                    <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <NavIcon>
+                <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14.5834 29.1667V20.4167H20.4167V29.1667H27.7084V17.5H32.0834L17.5001 4.375L2.91675 17.5H7.29175V29.1667H14.5834Z" fill={ButtonActiveVal === 1 ? "#24B574" : "#C6C6C6"}/>
-                    </svg>
-                </NavIcon>
+                </svg>
+            </NavIcon>
                 <NavLabel ButtonActive={ButtonActiveVal === 1 ? "#24B574" : "#C6C6C6"}>Home</NavLabel>
             </NavButton>
 
-            {/* Search Button */}
             <NavButton
             onClick={onClickSearch}
+            // onClick={()=>{
+            //     SetActive(active);
+            // }}
             ButtonActive = {ButtonActiveVal === 2 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
@@ -87,10 +89,11 @@ const [ButtonActiveVal,SetActive] = useState(active);
                 <NavLabel ButtonActive={ButtonActiveVal === 2 ? "#24B574" : "#C6C6C6"} >Search</NavLabel>
             </NavButton>
             
-
-            {/* Calendar Button */}
             <NavButton
             onClick={onClickCalendar}
+            // onClick={()=>{
+            //     SetActive(active);
+            // }}
             ButtonActive = {ButtonActiveVal === 3 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
@@ -105,9 +108,11 @@ const [ButtonActiveVal,SetActive] = useState(active);
             </NavButton>
 
 
-            {/* Account Button */}
             <NavButton
             onClick={onClickAccount}
+            // onClick={()=>{
+            //     SetActive(active);
+            // }}
             ButtonActive = {ButtonActiveVal === 4 ? "#24B574" : "#C6C6C6"}
             >
                 <NavIcon>
