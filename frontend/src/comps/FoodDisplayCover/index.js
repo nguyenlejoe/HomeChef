@@ -44,9 +44,9 @@ const MealPrice = styled.div`
 
 
 
-const FoodDisplayCover = ({Mealnm, MealPrc, bgimg, onClick}) => {
+const FoodDisplayCover = ({Mealnm, MealPrc, bgimg}) => {
     
-    return <FoodDisplayCont onClick={onClick}>
+    return <FoodDisplayCont>
         <FoodCont  bgimg={bgimg}>
             <Foodtxt>
             <MealName>{Mealnm}</MealName>
