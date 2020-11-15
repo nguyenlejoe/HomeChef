@@ -26,6 +26,7 @@ export default function DashBoardGourmet() {
   const history = useHistory();
 
 
+
   return<div className="DashBoardGourmetApp" onLoad={HandleData}>
         <div className="CuisineBox">
             <CuisineBar></CuisineBar>
