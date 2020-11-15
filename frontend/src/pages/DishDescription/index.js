@@ -42,7 +42,7 @@ export default function DishDescription(props,{chefName, foodName, description, 
             <div className="ingredients">
                 <h3> {ingredient} </h3>
                 <ul className="columnList">
-                    <li>{list}</li>
+                    <li>egg</li>
                     <li>Vegetable</li>
                     <li>Garlic</li>
                     <li>Onion</li>

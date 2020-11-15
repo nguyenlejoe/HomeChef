@@ -36,6 +36,9 @@ export default function Home() {
     onClickHome={()=>{
       history.push("/DashBoardChef");
     }}
+    onClickCalendar={()=>{
+      history.push("/ChefCalendar");
+    }}
     ></NavBarChef>
     </div>
     </div>
