@@ -34,7 +34,7 @@ const TopBar = ({text}) => {
     return <TopBarContainer>
             <LeftArrowImg><img src='/leftarrow.png' /></LeftArrowImg>
             <TopLeftText>{text}</TopLeftText>
-            <CreditText>Credit $20</CreditText>
+            
         </TopBarContainer>
 }
 

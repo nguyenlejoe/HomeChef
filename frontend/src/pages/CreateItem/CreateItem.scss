@@ -9,9 +9,21 @@
         flex-direction: column;
         padding: 10px;
        
-        h3{
-            color:#1E9761;
+
+        .TopBox{
+            display:flex;
+            h3{
+                margin-left: -45px;
+                color:#1E9761;
+            }
+
+            .backBox{
+                position: relative;
+                left: -90px;
+                top: 10px;
+            }
         }
+
 
 
         .InputBox{

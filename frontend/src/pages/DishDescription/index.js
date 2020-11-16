@@ -7,6 +7,8 @@ import Counter from '../../comps/Counter';
 import Calendar from '../../comps/Calendar';
 import Button from '../../comps/MainButton';
 import CoverImage from '../../comps/CoverImage';
+import BackButton from '../../comps/BackButton';
+import {useHistory, Link} from "react-router-dom";
 
 
 export default function DishDescription(props,{chefName, foodName, description, ingredient, list}) {
@@ -21,6 +23,11 @@ export default function DishDescription(props,{chefName, foodName, description, 
     return(
         <div className="appContainer">
             <div className="coverImage">
+                <div className="backCont">
+                <Link to="/DashBoardGourmet">
+                    <BackButton></BackButton>
+                </Link>
+                </div>
                 <CoverImage bgimg={dish.image}></CoverImage>
                 <div className="forLeft">
                     <Button  width="114px" height="36px" bgcolor="#E82828" text={dish.countInStock + " left"} radius="0px 10px 10px 0px" />

@@ -11,6 +11,8 @@ import AddListingItem from '../../comps/AddListingItem';
 import SetBox from '../../comps/SetBox';
 import {useHistory, Link} from "react-router-dom";
 import axios from 'axios';
+import BackButton from '../../comps/BackButton';
+
 
 
 
@@ -38,8 +40,17 @@ export default function CreateItemPage() {
 
   return<div className="CreateItemApp">
     <div className="content">
+
+    <div className="TopBox">
+      <div className="backBox">
+        <Link to="/DashBoardChef">
+          <BackButton></BackButton>
+      </Link>
+       </div>
         
         <h3>Create a menu item</h3>
+
+        </div>
         <div className="InputBox">
         <Input PHtext="Enter Food Name"
         onChange={(e)=>{
@@ -71,21 +82,21 @@ export default function CreateItemPage() {
           ></SetBox>
         </div>
 
-        <div>
+        {/* <div>
           <SetBox label="Brand"
           onChange={(e)=>{
             setBrand(e.target.value);
           }}
           ></SetBox>
-        </div>
+        </div> */}
 
         <div className="addPhotoBox">
           <AddListingItem></AddListingItem>
-          <input type="file"
+          {/* <input type="file"
           onChange={(e)=>{
             setImage(e.target.value);
           }}
-          ></input>
+          ></input> */}
         </div>
         <div className="noteBox">
           <Note></Note>

@@ -17,9 +17,15 @@
     margin-bottom: 50px;
 }
 .forLeft{
-    position: absolute;
-    top: 91px;
-    left: 0px;
+position: relative;
+top: -200px;
+}
+
+.backCont{
+    position: fixed;
+    left: 20px;
+    top:20px;
+    z-index: 1;
 }
 
 .appContainer h2{
@@ -34,7 +40,7 @@
 
 .Avatar{
     position: relative;
-    top: -40px;
+    top: -70px;
     left: 280px;
 }
 
