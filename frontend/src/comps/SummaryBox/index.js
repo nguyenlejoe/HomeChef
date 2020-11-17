@@ -78,7 +78,7 @@ const AvatarBox = styled.div`
 `;
 
 
-const SummaryBox = ({buyer,product, note1, date}) => {
+const SummaryBox = ({buyer,product, note1, date, foodimg, personimg}) => {
     
     return <SummaryContainer>
                 <TitleCont>{buyer} bought {product}</TitleCont>
@@ -89,7 +89,7 @@ const SummaryBox = ({buyer,product, note1, date}) => {
                         <AContainer>View full order</AContainer>
                     </InfoBox>
                     <AvatarBox>
-                        <AvatarOverlap></AvatarOverlap>
+                        <AvatarOverlap foodimg={foodimg} profileimg={personimg}></AvatarOverlap>
                     </AvatarBox>
 
                 </ContentContainer>

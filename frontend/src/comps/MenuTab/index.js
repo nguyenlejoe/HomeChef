@@ -33,9 +33,12 @@ left: 15px;
 top: 21px;
 border-radius: 10px;
 position:relative;
-background: #FFFFFF;
+background-color: ${props=>props.bgcolor ? props.bgcolor : "#FFFFFF"};
 box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.25);
 background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
 
 `
 
@@ -56,11 +59,11 @@ position:relative;
 left:300px;
 top:-50px;
 `
-const MenuTab = ({MenuText, bgimg, }) => {
+const MenuTab = ({MenuText, bgimg, bgcolor}) => {
     
     return <Menutabcont>
         <TabIcon>
-                <TabSquare bgimg={bgimg}>
+                <TabSquare bgimg={bgimg} bgcolor={bgcolor}>
                 {/* <img src="/currentorders.svg"/> */}
                 </TabSquare>
             </TabIcon>

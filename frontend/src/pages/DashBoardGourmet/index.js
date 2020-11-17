@@ -64,6 +64,9 @@ export default function DashBoardGourmet() {
             onClickOrder={()=>{
               history.push("/CurrentOrderPage");
             }}
+            onClickSearch={()=>{
+              history.push("/SearchPage");
+            }}
           ></NavBarGourmet>
         </div>
         

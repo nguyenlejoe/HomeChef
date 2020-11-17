@@ -3,6 +3,7 @@ import './chefmyaccount.scss'
 import MenuTabs from '../../comps/MenuTab';
 import NavBarChef from '../../comps/NavBarChef';
 import {useHistory, Link} from "react-router-dom";
+import CoverImage from '../../comps/CoverImage';
 
 
 
@@ -13,14 +14,16 @@ export default function Home() {
   const history = useHistory();
 
   return<div className="app">
-      <div className="CoverImage"></div>
+      <div className="CoverBox">
+        <CoverImage bgimg="/alex.jpg"></CoverImage>
+      </div>
         <div className="ChefDesc">
             <h2>Alex Inglis</h2>
             <p>Chef from Australia</p>
         </div>
 
 
-      <div>
+      <div className="optionCont">
       <MenuTabs MenuText="My Menu"></MenuTabs>
       <MenuTabs MenuText="View Credits"></MenuTabs>
       <MenuTabs MenuText="Reviews"></MenuTabs>

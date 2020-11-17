@@ -1,21 +1,28 @@
 .app{
     width: 100vw;
     height:100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-.CoverImage{
+.CoverBox{
     height: 40%;
-    background-image: url(../../imgs/alex.jpg);
     background-position: center;
     background-size: contain;
 }
 
+.optionCont{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+
 .ChefDesc{
-    height:20%;
+    height:8%;
     width: 65%;
     margin: 15px;
+    color: #24B574;
     p{
+        color: black;
         margin-top: -15px;
     }
 }
