@@ -19,22 +19,22 @@ export default function MyAccountGourmetPage() {
         </div>
         <div className="content">
           <div className="Button">
-            <MenuTab></MenuTab>
+            <MenuTab  bgimg="/MenuTabCurrentOrders.svg"></MenuTab>
           </div>
           <div className="Button">
-            <MenuTab  MenuText="Order History"></MenuTab>
+            <MenuTab bgcolor= "#178C58"bgimg="/history.svg" MenuText="Order History"></MenuTab>
           </div>
           <div className="Button">
-            <MenuTab MenuText="Favorites"></MenuTab>
+            <MenuTab bgcolor= "#2B445E" bgimg="/MenuTabFavorites.svg" MenuText="Favorites"></MenuTab>
           </div>
           <div className="Button">
-            <MenuTab MenuText="Help"></MenuTab>
+            <MenuTab  bgcolor= "#24B574" bgimg="/help.svg" MenuText="Help"></MenuTab>
           </div>
           <div className="Button">
-            <MenuTab MenuText="Become a Chef"></MenuTab>
+            <MenuTab  bgimg="/MenuTabSwitchGourmet.svg"MenuText="Become a Chef"></MenuTab>
           </div>
           <div className="Button">
-            <MenuTab MenuText="Terms of Service"></MenuTab>
+            <MenuTab bgimg="/MenuTabOrderHistory.svg"MenuText="Terms of Service"></MenuTab>
           </div>
         </div>
         <div className="Nav">
@@ -45,6 +45,9 @@ export default function MyAccountGourmetPage() {
             }}
             onClickOrder={()=>{
               history.push("/CurrentOrderPage");
+            }}
+            onClickSearch={()=>{
+              history.push("/SearchPage");
             }}
           ></NavBarGourmet>
         </div>

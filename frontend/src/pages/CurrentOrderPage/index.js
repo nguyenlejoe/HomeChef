@@ -42,6 +42,9 @@ console.log(state, Object.values(state).some(it => it === true) )
             onClickAccount={()=>{
               history.push("/MyAccountGourmet");
             }}
+            onClickSearch={()=>{
+              history.push("/SearchPage");
+            }}
           ></NavBarGourmet>
           </div>
     </div>

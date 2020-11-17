@@ -21,10 +21,10 @@ export default function ChefCalendar({text}) {
 
             <div className="SummaryCont">
             <div className="summary">
-                <SummaryBox/>
+                <SummaryBox foodimg="/friedchicken.jpg" personimg="/person2.jpg"  buyer="Milan" note1="Extra sauce" product="Fried Chicken"/>
             </div>
             <div className="summary">
-                <SummaryBox/>
+                <SummaryBox foodimg="/friedrice.jpg" personimg="/person5.jpg" buyer="Semi" note1="Extra Pepper" product="Fried Rice"/>
             </div>
             <div className="summary">
                 <SummaryBox/>
@@ -43,8 +43,8 @@ export default function ChefCalendar({text}) {
           onClickOrder={()=>{
             history.push("/ChefOrdersPending");
           }}
-          onClickCalendar={()=>{
-            history.push("/ChefCalendar");
+          onClickHome={()=>{
+            history.push("/DashBoardChef");
           }}
           ></NavBar>
             </div>
