@@ -1,0 +1,38 @@
+.app{
+    width: 100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+
+
+.backbutton {
+    position: relative;
+    margin: 10px;
+}
+
+.SearchPopup{
+    margin-bottom: 20px;
+    z-index:1;
+    // position: ${props=>props.expanded ? "relative" : ""};
+    // top: ${props=>props.expanded ? "200px" : "0px"};
+    
+}
+
+.foodcovers {
+    display: grid;
+    grid-template-columns: auto auto ;
+    justify-content: center;
+    z-index:-1;
+    
+}
+
+
+.Nav{
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    :nth-child(1){
+        font-size: 12px;
+    }
+}

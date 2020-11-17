@@ -4,8 +4,7 @@ import Button from '../../comps/MainButton';
 import TopBar from '../../comps/TopBar';
 import OrderDetails from '../../comps/OrderDetails';
 import ConfirmedLottie from '../../comps/ConfirmedLottie';
-import {useHistory, Link} from "react-router-dom";
-
+import {Link, useHistory} from "react-router-dom";
 
 
 
@@ -21,9 +20,11 @@ export default function OrderConfirmation() {
             <ConfirmedLottie></ConfirmedLottie>
             <OrderDetails profileimg="none" Chef=""></OrderDetails>
         </div>
+  
         <div className="ButtonBox"> 
         <Link to="/DashBoardGourmet" style={{ textDecoration: 'none' }}>
             <Button text="Continue"></Button>
+
             </Link>
         </div>
         </div>
