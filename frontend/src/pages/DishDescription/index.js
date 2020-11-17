@@ -63,10 +63,12 @@ export default function DishDescription(props,{chefName, foodName, description, 
             <h4>Add a note for the Chef</h4>
             <input/>
             <div className="counter"><Counter/></div>
+
             
             <Button width="175px" height="40px" text="Add to Cart"
             disabled={false}
             />
+
         </div>
     )
 }
