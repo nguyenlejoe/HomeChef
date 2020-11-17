@@ -5,6 +5,7 @@ import Button from '../../comps/MainButton';
 import CreateAccount from '../../comps/CreateAccount';
 import {useHistory, Link} from "react-router-dom";
 import axios from 'axios';
+import AddListingItem from '../../comps/AddListingItem';
 
 
 
@@ -54,15 +55,15 @@ export default function CreateAccountPageChef() {
         ></SignUp>
         </div>
         <div className="input">
-        <SignUp text="Password"
+        <SignUp 
+          type="password"
+          text="Password"
           onChange={(e)=>{
             setPass(e.target.value);
           }}
         ></SignUp>
         </div>
-        <div className="input">
-        <SignUp text="Date of Birth"></SignUp>
-        </div>
+    
         
         <div className="safe">
         <h3>Food Safe Verification</h3>
@@ -72,6 +73,10 @@ export default function CreateAccountPageChef() {
           <li>Health Inspector reference</li>
           <li>Goverment ID</li>
         </ul>
+        </div>
+
+        <div className="addPhoto">
+          <AddListingItem></AddListingItem>
         </div>
 
         <Link to="/DashBoardChef">

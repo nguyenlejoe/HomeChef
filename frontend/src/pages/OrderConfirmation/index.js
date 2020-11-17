@@ -7,6 +7,7 @@ import ConfirmedLottie from '../../comps/ConfirmedLottie';
 import {Link, useHistory} from "react-router-dom";
 
 
+
 export default function OrderConfirmation() {
     
   return <div className="app">             
@@ -19,9 +20,11 @@ export default function OrderConfirmation() {
             <ConfirmedLottie></ConfirmedLottie>
             <OrderDetails profileimg="none" Chef=""></OrderDetails>
         </div>
-        <div className="ButtonBox">
-            <Link style={{ textDecoration: 'none' }} to ="/CurrentOrderPage">  
-                <Button text="Continue"></Button>
+  
+        <div className="ButtonBox"> 
+        <Link to="/DashBoardGourmet" style={{ textDecoration: 'none' }}>
+            <Button text="Continue"></Button>
+
             </Link>
         </div>
         </div>

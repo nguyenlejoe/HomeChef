@@ -41,6 +41,9 @@ export default function Home() {
     onClickOrder={()=>{
       history.push("/ChefOrdersPending");
     }}
+    onClickCalendar={()=>{
+      history.push("/ChefCalendar");
+    }}
     > 
     </NavBarChef>
     </div>

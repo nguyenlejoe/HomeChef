@@ -37,10 +37,11 @@ function App() {
   return (
     <Router>
       <Switch>
+      <Route path="/" exact component={LoadingPage}></Route>
       <Route path="/ChefMyAccount" exact component={ChefMyAccount}></Route>
       <Route path="/ChefOrdersConfirm" exact component={ChefOrdersConfirm}></Route>
       <Route path="/GourmetFavorites" exact component={GourmetFavorites}></Route>
-      <Route path="/" exact component={Login}></Route>
+      <Route path="/Login" exact component={Login}></Route>
       <Route path="/CreateAccountChef" exact component={CreateAccountPageChef}></Route>
       <Route path="/DashBoardGourmet" exact component={DashBoardGourmet}></Route>
       <Route path="/CreateAccountGourmet" exact component={CreateAccountGourmet}></Route>

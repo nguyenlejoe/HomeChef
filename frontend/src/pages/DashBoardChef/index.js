@@ -38,6 +38,9 @@ export default function DashBoardChefPage() {
           onClickOrder={()=>{
             history.push("/ChefOrdersPending");
           }}
+          onClickCalendar={()=>{
+            history.push("/ChefCalendar");
+          }}
           ></NavBarChef>
         </div>
         

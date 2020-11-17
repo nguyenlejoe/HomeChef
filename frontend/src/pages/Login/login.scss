@@ -20,6 +20,10 @@
             color: #2B445E;
         }
 
+        .incorrect{
+            color: red;
+        }
+
         .input{
             margin: 20px;
             :nth-child(1){
@@ -33,7 +37,10 @@
                 font-size: 20px;
             }
         }
+
+    
     }
+
     
     .LogoBox{
         display: flex;

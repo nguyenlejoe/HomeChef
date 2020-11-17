@@ -22,11 +22,14 @@ export default function CheckoutPage() {
                 <div className="TotalText">TOTAL</div>
                 <div className="PriceText">12.99</div>
             </div>
-            <div className="ButtonBox">
-            <Link style={{ textDecoration: 'none' }} to ="/OrderConfirmation"> 
+            
+            <div className="ButtonBox"> 
+            <Link to="/OrderConfirmation" style={{ textDecoration: 'none' }}>
                     <Button text="Checkout"></Button>
-            </Link>
+                    </Link>
+
             </div>
+           
         </div>
     </div>
 }
