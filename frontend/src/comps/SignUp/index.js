@@ -18,10 +18,14 @@ const SignUpForm = styled.input`
     border-bottom: 3px solid #E0E0E0; 
 `;
 
-const SignUp = ({text, PHtext=text, width, height,  onChange}) => {
+const SignUp = ({text, PHtext=text, width, height,  onChange, type}) => {
     return <SignUpCont>
-        <SignUpForm onChange={onChange} type="text" placeholder={PHtext} width={width} height={height} ></SignUpForm>
-    </SignUpCont>;
+        <SignUpForm onChange={onChange} type={type} placeholder={PHtext} width={width} height={height} ></SignUpForm>
+        </SignUpCont>;
+}
+
+SignUp.defaultProps ={
+    type :"text"
 }
 
 export default SignUp;

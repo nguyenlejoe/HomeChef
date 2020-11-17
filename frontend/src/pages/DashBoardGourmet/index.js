@@ -26,6 +26,7 @@ export default function DashBoardGourmet() {
   const history = useHistory();
 
 
+
   return<div className="DashBoardGourmetApp" onLoad={HandleData}>
         <div className="CuisineBox">
             <CuisineBar></CuisineBar>
@@ -36,7 +37,7 @@ export default function DashBoardGourmet() {
         <div className="Content">
           
           {products.map((o,i)=>{
-           return <Link to={{ pathname: "/DishDescription", state: {o} }}>
+           return <Link style={{ textDecoration: 'none' }} to={{ pathname: "/DishDescription", state: {o} }}>
            <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
@@ -49,7 +50,9 @@ export default function DashBoardGourmet() {
         </div>
         
         <div className="Cart">
+          <Link to="/Checkout" style={{ textDecoration: 'none' }}>
           <ViewCartButton></ViewCartButton>
+          </Link>
         </div>
   
         <div className="Nav">
@@ -57,6 +60,9 @@ export default function DashBoardGourmet() {
             active={1}
             onClickAccount={()=>{
               history.push("/MyAccountGourmet");
+            }}
+            onClickOrder={()=>{
+              history.push("/CurrentOrderPage");
             }}
           ></NavBarGourmet>
         </div>
