@@ -34,11 +34,11 @@ const Max = styled.div`
     font-size:13px;
 `;
 
-const Description = ({text}) => {
+const Description = ({text, onChange}) => {
 
     return <DescriptionContainer>
         <DescriptionCap>Description (optional)</DescriptionCap>
-        <DesInput type="text" placeholder="Describe your item here..." />
+        <DesInput onChange={onChange} type="text" placeholder="Describe your item here..." />
         <Max>Max 350 Characters </Max> 
         </DescriptionContainer>
 }

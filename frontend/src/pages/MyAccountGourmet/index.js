@@ -7,6 +7,7 @@ import {useHistory, Link} from "react-router-dom";
 
 
 
+
 export default function MyAccountGourmetPage() {
 
   const history = useHistory();
@@ -41,6 +42,9 @@ export default function MyAccountGourmetPage() {
             active={4}
             onClickHome={()=>{
               history.push("/DashBoardGourmet");
+            }}
+            onClickOrder={()=>{
+              history.push("/CurrentOrderPage");
             }}
           ></NavBarGourmet>
         </div>

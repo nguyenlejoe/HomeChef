@@ -3,6 +3,7 @@ import './Checkout.scss';
 import CheckoutItem from '../../comps/CheckoutItem';
 import Button from '../../comps/MainButton';
 import TopBar from '../../comps/TopBar';
+import {useHistory, Link} from "react-router-dom";
 
 export default function CheckoutPage() {
   return<div className="app">             
@@ -20,9 +21,13 @@ export default function CheckoutPage() {
                 <div className="TotalText">TOTAL</div>
                 <div className="PriceText">12.99</div>
             </div>
+            
             <div className="ButtonBox"> 
+            <Link to="/OrderConfirmation" style={{ textDecoration: 'none' }}>
                     <Button text="Checkout"></Button>
+                    </Link>
             </div>
+           
         </div>
     </div>
 }
