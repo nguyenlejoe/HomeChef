@@ -27,14 +27,14 @@ import ChefPage from './pages/ChefPage';
 import ChefCalendar from './pages/ChefCalendar';
 import LoadingPage from './pages/LoadingPage';
 import SearchPage from './pages/SearchPage';
+import AppProvider, { AppContext } from './context/provider';
 import './App.scss';
-
-
 
 
 
 function App() {
   return (
+    <AppProvider>
     <Router>
       <Switch>
       <Route path="/" exact component={LoadingPage}></Route>
@@ -64,6 +64,7 @@ function App() {
 
       </Switch>
     </Router>
+    </AppProvider>
   );
 }
 

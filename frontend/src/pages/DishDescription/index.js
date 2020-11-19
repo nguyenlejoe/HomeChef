@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect, useContext} from 'react';
+import {AppContext} from '../../context/provider';
 import './DishDescription.scss';
 import Avatar from '../../comps/Avatar';
 import Trending from '../../comps/TrendingTag';
@@ -13,11 +14,28 @@ import {useHistory, Link} from "react-router-dom";
 
 export default function DishDescription(props,{chefName, foodName, description, ingredient, list}) {
 
+    const {state,dispatch} = useContext(AppContext);
+    const [countQty, setQty] = useState();
+
+
+    
+    const [count,setCount] = useState(1)
+
+    function minusCount() {
+        count > 1 &&
+        setCount(prevCount => prevCount -1)
+    }
+
+    function plusCount() {
+        setCount(prevCount => prevCount +1)
+    }
+
     var dish = props.location.state.o;
 
     console.log(props.location.state);
 
     console.log(dish.user);
+
 
 
     return(
@@ -62,11 +80,25 @@ export default function DishDescription(props,{chefName, foodName, description, 
             </div>
             <h4>Add a note for the Chef</h4>
             <input/>
-            <div className="counter"><Counter/></div>
+            <div className="counter"><Counter 
+            plus={(plusCount)}
+            minus={(minusCount)}
+            count={count}
+            /></div>
 
+            
             
             <Button width="175px" height="40px" text="Add to Cart"
             disabled={false}
+            onClick={()=>{
+                dispatch({
+                    type:"addCart",
+                    items:dish,
+                    qty:count
+                
+                })
+                console.log(state.items)
+            }}
             />
 
         </div>
