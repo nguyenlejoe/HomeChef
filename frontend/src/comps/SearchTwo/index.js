@@ -18,7 +18,7 @@ const SearchDropdown = styled.div`
 `;
 
 
-const SearchTwoInput = styled.div`
+const SearchTwoInput = styled.input`
     width: 270px;
     height: 35px;
     background-color: #ECECEC;
@@ -52,8 +52,11 @@ const SearchTwoImg = styled.div`
 `;
 
 
-const SearchFor = ({expand}) => {
+
+const SearchFor = ({expand, onChange,search, onClick}) => {
     const [expanded, setExpanded] = useState(false); 
+    const [keyword, setKeyword] = useState("");
+    const [name, setName] = useState("");
 
     useEffect(()=>{
         setExpanded(expand);
@@ -62,19 +65,24 @@ const SearchFor = ({expand}) => {
     return <SearchBox>
         <DropdownContainer>
             <SearchDropdown>
-                <SearchTwoInput type="text" placeholder="" onClick={()=>{
+                <SearchTwoInput onChange={(e)=>{
+                    setKeyword(e.target.value)
+                }} 
+                type="text" placeholder="" onClick={()=>{
                         setExpanded(!expanded);
                     }}>
                 </SearchTwoInput>
             </SearchDropdown>
-            <SearchExpand expanded={expanded}>
+            {/* <SearchExpand expanded={expanded}>
                 <div>#Beef</div>
                 <div>#Beef Noodle</div>
                 <div>#Beef Steak</div>
                 <div>#Beef Donair</div>
-            </SearchExpand>
+            </SearchExpand> */}
         </DropdownContainer>
-        <SearchTwoImg><img src='/Searchtwo.png'/></SearchTwoImg>
+        <SearchTwoImg onClick={()=>{
+            onClick(keyword,name)
+        }}><img src='/Searchtwo.png'/></SearchTwoImg>
     </SearchBox>;
 }
 

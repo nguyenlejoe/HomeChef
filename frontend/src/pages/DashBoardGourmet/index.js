@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext} from 'react';
+import {AppContext} from '../../context/provider';
 import './DashBoardGourmet.scss'
 import TopNav from '../../comps/TopNav';
 import FoodDisplayCover from '../../comps/FoodDisplayCover';
@@ -11,6 +12,9 @@ import axios from "axios";
 
 export default function DashBoardGourmet() {
   
+  const {state,dispatch} = useContext(AppContext);
+
+  console.log(state.token);
 
   const [products, setProducts] = useState([]);
 
