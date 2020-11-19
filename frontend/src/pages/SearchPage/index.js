@@ -1,26 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect, useContext} from 'react';
+import {AppContext} from '../../context/provider';
 import './SearchPage.scss';
 import SearchTwo from '../../comps/SearchTwo';
-import Foodcover from '../../comps/FoodDisplayCover';
+import FoodDisplayCover from '../../comps/FoodDisplayCover';
 import NavBarGourmet from '../../comps/NavBarGourmet';
 import BackButton from '../../comps/BackButton';
 import {useHistory, Link} from "react-router-dom";
+import axios from "axios";
 
 
 export default function SearchPage() {
 
+  const {state,dispatch} = useContext(AppContext);
+  const [products, setProducts] = useState([]);
+
+  const config = {
+    headers: {
+      Authorization: `Bearer ${state.token}`,
+    },
+  }
+
   const history = useHistory();
+
+  const HandleSearch = async(keyword, name) =>{
+    var resp = await axios.get(`/api/products?keyword=${keyword}`);
+  
+
+    setProducts(...[resp.data.products]);
+    console.log(resp.data.products);
+  }
+
 
 
   return<div>
     <div className="SearchPopup">
-      <SearchTwo></SearchTwo>
+      <SearchTwo onClick={HandleSearch} ></SearchTwo>
     </div>
     <div className="foodcovers">
-      <Foodcover  Mealnm="Pad Thai" MealPrc="$8.99" ></Foodcover>
-      <Foodcover  Mealnm="Fried Chicken" MealPrc="$8.99"></Foodcover>
-      <Foodcover  Mealnm="Joe's Pho" MealPrc="$12.99" bgimg="./JoesPho.png"></Foodcover>
-      <Foodcover  Mealnm="Veg Burger" MealPrc="$8.99"></Foodcover>
+
+    {products.map((o,i)=>{
+           return <Link style={{ textDecoration: 'none' }} to={{ pathname: "/DishDescription", state: {o} }}>
+           <FoodDisplayCover
+           Mealnm={o.name}
+           bgimg={o.image}
+           MealPrc={o.price}
+           ></FoodDisplayCover>
+           </Link>
+          })}
     </div>
 
     

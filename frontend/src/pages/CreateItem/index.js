@@ -1,4 +1,5 @@
-import React, { useState }from 'react';
+import React, {useState, useContext, useEffect} from 'react';
+import {AppContext} from '../../context/provider';
 import './CreateItem.scss';
 import Input from '../../comps/SignUp';
 import Tags from '../../comps/AddTags';
@@ -18,7 +19,15 @@ import BackButton from '../../comps/BackButton';
 
 export default function CreateItemPage() {
 
+  const {state, dispatch} = useContext(AppContext);
 
+  const config = {
+    headers: {
+      Authorization: `Bearer ${state.token}`,
+    },
+  }
+
+  console.log(state.username);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("")
@@ -28,14 +37,16 @@ export default function CreateItemPage() {
   const [brand, setBrand] = useState("");
   
   const HandleProduct = async(name,price,image,brand,stock,desc) =>{
-    var resp = await axios.post("/api/products" ,{
+    var resp = await axios.post("/api/products/" ,{
       name:name,
       price:price,
       image:image,
       brand:brand,
       countInStock:stock,
       description:desc
-    });
+    }, config);
+
+    console.log(resp.data);
   }
 
   return<div className="CreateItemApp">

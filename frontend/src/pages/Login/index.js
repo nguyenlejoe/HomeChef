@@ -1,4 +1,5 @@
-import React , {useState} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
+import {AppContext} from '../../context/provider';
 import './login.scss';
 import SignUp from '../../comps/SignUp';
 import Button from '../../comps/MainButton';
@@ -7,6 +8,8 @@ import axios from 'axios';
 
 export default function Login() {
 
+  const {state, dispatch} = useContext(AppContext);
+  console.log(state.username);
   
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
@@ -22,12 +25,21 @@ export default function Login() {
         password:pass
       });
 
-      if(resp.data.isMerchant === false){
-        history.push("/DashBoardGourmet");
-      }
-      else{
-        history.push("/DashBoardChef");
-      }
+  
+
+      dispatch({
+        type:"userInfo",
+        token:resp.data.token,
+        email:resp.data.email
+      });
+
+      history.push("/DashBoardGourmet");
+      // if(resp.data.isMerchant === false){
+      //   history.push("/DashBoardGourmet");
+      // }
+      // else{
+      //   history.push("/DashBoardChef");
+      // }
     console.log(resp.data);
   }
   catch(error){
