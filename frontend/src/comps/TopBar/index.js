@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import BackButton from '../BackButton';
 
 
 const TopBarContainer = styled.div`
@@ -32,7 +33,7 @@ const CreditText = styled.div`
 const TopBar = ({text}) => {
 
     return <TopBarContainer>
-            <LeftArrowImg><img src='/leftarrow.png' /></LeftArrowImg>
+            <LeftArrowImg><BackButton> </BackButton> </LeftArrowImg>
             <TopLeftText>{text}</TopLeftText>
             
         </TopBarContainer>

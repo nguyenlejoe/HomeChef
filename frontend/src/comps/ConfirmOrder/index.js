@@ -67,8 +67,14 @@ const ConfirmButtons = styled.div`
     `}
 `;
 
-const ConfirmOrder = ({Seller, Quantity, Product}) =>{
-    return <ConfirmContainer>
+const ConfirmOrder = ({Seller, Quantity, Product, setState, name, state}) =>{
+
+    // function confirm () {
+    //     setState({[name]: !state[name]})
+    // }
+
+
+    return <ConfirmContainer >
             <AvatarPlaceHolder>
             <AvatarOverlap></AvatarOverlap>
             </AvatarPlaceHolder>
@@ -78,7 +84,7 @@ const ConfirmOrder = ({Seller, Quantity, Product}) =>{
             </OrderBox>
             <labe>Confirm Order?</labe>
             <ConfirmButtonContainer>
-                    <ConfirmButtons></ConfirmButtons>
+                    <ConfirmButtons ></ConfirmButtons>
                     <ConfirmButtons active={true}></ConfirmButtons>
             </ConfirmButtonContainer>
             <a>View full order details</a>
