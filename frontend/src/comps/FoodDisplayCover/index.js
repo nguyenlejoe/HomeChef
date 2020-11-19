@@ -5,6 +5,16 @@ import Avatar from '../Avatar';
 const FoodDisplayCont = styled.div`
 cursor:pointer;
 `
+const FoodImage = styled.div`
+cursor:pointer;
+height: 238px;
+width: 159px;
+left: 0px;
+top: 0px;
+border-radius: 36px;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.79) 100%);
+opacity:100;
+`
 const FoodCont = styled.div`
 height: 238px;
 width: 159px;
@@ -47,11 +57,14 @@ const MealPrice = styled.div`
 const FoodDisplayCover = ({Mealnm, MealPrc, bgimg}) => {
     
     return <FoodDisplayCont>
-        <FoodCont  bgimg={bgimg}>
+        
+        <FoodCont bgimg={bgimg}>
+        <FoodImage >
             <Foodtxt>
             <MealName>{Mealnm}</MealName>
             <MealPrice>{MealPrc}</MealPrice>
             </Foodtxt>
+            </FoodImage>
         </FoodCont>
     </FoodDisplayCont>
 

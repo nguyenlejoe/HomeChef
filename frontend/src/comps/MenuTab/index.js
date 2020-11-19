@@ -25,6 +25,19 @@ display:flex;
 const TabIcon = styled.div`
 
 `
+const MenuTabIcon = styled.div`
+background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
+background-size:contain;
+background-repeat:no-repeat;
+background-position:center;
+height:${props=>props.iconheight ? props.iconheight : "42px"};
+width:${props=>props.iconwidth ? props.iconwidth : "40px"};
+position:relative;
+
+
+`
+
+
 
 const TabSquare = styled.div`
 height: 42px;
@@ -35,10 +48,10 @@ border-radius: 10px;
 position:relative;
 background-color: ${props=>props.bgcolor ? props.bgcolor : "#FFFFFF"};
 box-shadow: -1px 3px 3px rgba(0, 0, 0, 0.25);
-background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
-background-size:contain;
-background-repeat:no-repeat;
-background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+
 
 `
 
@@ -59,12 +72,14 @@ position:relative;
 left:300px;
 top:-50px;
 `
-const MenuTab = ({MenuText, bgimg, bgcolor}) => {
+const MenuTab = ({MenuText, bgimg, bgcolor, iconheight, iconwidth}) => {
     
     return <Menutabcont>
         <TabIcon>
-                <TabSquare bgimg={bgimg} bgcolor={bgcolor}>
-                {/* <img src="/currentorders.svg"/> */}
+                <TabSquare  bgcolor={bgcolor}>
+                <MenuTabIcon iconwidth={iconwidth} iconheight={iconheight} bgimg={bgimg}>
+        
+                </MenuTabIcon>
                 </TabSquare>
             </TabIcon>
         
