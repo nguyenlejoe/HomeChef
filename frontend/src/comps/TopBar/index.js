@@ -30,10 +30,10 @@ const CreditText = styled.div`
 `;
 
 
-const TopBar = ({text}) => {
+const TopBar = ({text, onClick}) => {
 
     return <TopBarContainer>
-            <LeftArrowImg><BackButton> </BackButton> </LeftArrowImg>
+            <LeftArrowImg onClick={onClick}><BackButton> </BackButton> </LeftArrowImg>
             <TopLeftText>{text}</TopLeftText>
             
         </TopBarContainer>

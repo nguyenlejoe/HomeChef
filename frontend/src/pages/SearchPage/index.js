@@ -33,8 +33,9 @@ export default function SearchPage() {
 
 
   return<div>
-    <div className="SearchPopup">
-      <SearchTwo onClick={HandleSearch} ></SearchTwo>
+   
+      <div className="SearchPopup">
+        <SearchTwo onClick={HandleSearch} ></SearchTwo>
     </div>
     <div className="foodcovers">
 

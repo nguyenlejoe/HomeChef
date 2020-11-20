@@ -33,13 +33,13 @@ export default function Login() {
         email:resp.data.email
       });
 
-      history.push("/DashBoardGourmet");
-      // if(resp.data.isMerchant === false){
-      //   history.push("/DashBoardGourmet");
-      // }
-      // else{
-      //   history.push("/DashBoardChef");
-      // }
+      
+      if(resp.data.isMerchant === false){
+        history.push("/DashBoardGourmet");
+      }
+      else{
+        history.push("/DashBoardChef");
+      }
     console.log(resp.data);
   }
   catch(error){

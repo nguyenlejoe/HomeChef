@@ -24,6 +24,7 @@ const SearchTwoInput = styled.input`
     background-color: #ECECEC;
     border-radius: 20px;
     border:none;
+    padding-left:20px;
 `;
 
 const SearchExpand = styled.div`
@@ -48,7 +49,7 @@ const SearchExpand = styled.div`
 `;
 
 const SearchTwoImg = styled.div`
-    
+    margin-left:10px;
 `;
 
 
@@ -65,10 +66,10 @@ const SearchFor = ({expand, onChange,search, onClick}) => {
     return <SearchBox>
         <DropdownContainer>
             <SearchDropdown>
-                <SearchTwoInput onChange={(e)=>{
+                <SearchTwoInput  onChange={(e)=>{
                     setKeyword(e.target.value)
                 }} 
-                type="text" placeholder="" onClick={()=>{
+                type="text" placeholder="Search for the item you are looking for!" onClick={()=>{
                         setExpanded(!expanded);
                     }}>
                 </SearchTwoInput>

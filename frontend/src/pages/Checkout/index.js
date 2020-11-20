@@ -13,11 +13,15 @@ export default function CheckoutPage() {
 
   const [cartItems, SetCart] = ([state.items]);
 
+  const history = useHistory();
+
   console.log(state.items);
 
   return<div className="app">             
        <div>
-           <TopBar text="Cart"></TopBar>
+           <TopBar onClick={()=>{
+                history.push("/DashBoardGourmet");
+           }}text="Cart"></TopBar>
        </div>
        <div className="checkout">
 
