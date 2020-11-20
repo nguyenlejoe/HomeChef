@@ -11,12 +11,27 @@
 }
 
 .Orderboxes {
+
+    h3{
+        color: #24B574;
+    }
     position: relative;
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     top:44px;
+    :nth-child(2){
+        font-size: 12px;
+    }
+}
+
+.SumBox{
+    margin: 5px;
+    :nth-child(2){
+        font-size: 12px;
+    }
+    
 }
 
 .Nav{

@@ -62,7 +62,7 @@ const FoodDisplayCover = ({Mealnm, MealPrc, bgimg}) => {
         <FoodImage >
             <Foodtxt>
             <MealName>{Mealnm}</MealName>
-            <MealPrice>{MealPrc}</MealPrice>
+            <MealPrice>${MealPrc}</MealPrice>
             </Foodtxt>
             </FoodImage>
         </FoodCont>

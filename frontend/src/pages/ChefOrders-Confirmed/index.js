@@ -24,7 +24,7 @@ export default function Home() {
         
     </div>
     <div className="Orderboxes">
-    <SummaryBox buyer="Yunus" Quantity="5x" product="Fried Rice" note1="No onions please!"></SummaryBox>
+    <SummaryBox buyer="Yunus" Quantity="5x" product="Fried Rice" note1="No onions"></SummaryBox>
     <br></br>
     <SummaryBox></SummaryBox>
     <br></br>

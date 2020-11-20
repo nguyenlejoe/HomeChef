@@ -50,7 +50,7 @@ export default function DishDescription(props,{chefName, foodName, description, 
                 <div className="forLeft">
                     <Button  width="114px" height="36px" bgcolor="#E82828" text={dish.countInStock + " left"} radius="0px 10px 10px 0px" />
                 </div> 
-                <div className="Avatar">
+                <div className="AvatarCont">
                 <Avatar/>
             </div>               
             </div>
