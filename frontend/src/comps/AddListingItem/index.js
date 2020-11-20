@@ -7,6 +7,7 @@ justify-content:center;
 align-items:center;
 display:column;
 position:relative;
+top-margin:10px;
 `;
 
 const HeadingText = styled.div`
@@ -16,12 +17,16 @@ font-size: 14px;
 line-height: 21px;
 /* identical to box height */
 position:relative;
-
+margin-bottom:10px;
 color: #1E9761;
 
 `;
 
 const PlusIcon = styled.div`
+position: relative;
+align-items: center;
+justify-content: center;
+margin-top:10px;
 `;
 
 const AddImage = styled.div`
@@ -35,6 +40,7 @@ display:flex;
 cursor:Pointer;
 left:30px;
 position:relative;
+top-margin:10px;
 `;
 
 const AddListingItem = ({text, type, fullDesc, date}) =>{

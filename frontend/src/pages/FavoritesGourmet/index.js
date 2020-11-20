@@ -30,7 +30,7 @@ export default function Home() {
 
 
 
-{/* <NavBarChef active={1}> </NavBarChef> */}
+<NavBarChef active={1}> </NavBarChef>
   </div>
 
 

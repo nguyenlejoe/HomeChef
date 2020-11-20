@@ -76,7 +76,7 @@ export default function CreateAccountPageChef() {
         </div>
 
         <div className="addPhoto">
-          <AddListingItem></AddListingItem>
+          <AddListingItem text="Upload your documents here!"></AddListingItem>
         </div>
 
         <Link to="/DashBoardChef">
