@@ -27,6 +27,7 @@ import ChefPage from './pages/ChefPage';
 import ChefCalendar from './pages/ChefCalendar';
 import LoadingPage from './pages/LoadingPage';
 import SearchPage from './pages/SearchPage';
+import EditMenuItem from './pages/EditMenuItems';
 import AppProvider, { AppContext } from './context/provider';
 import './App.scss';
 
@@ -61,6 +62,7 @@ function App() {
       <Route path="/ChefCalendar" exact component={ChefCalendar}></Route>
       <Route path="/LoadingPage" exact component={LoadingPage}></Route>
       <Route path="/SearchPage" exact component={SearchPage}></Route>
+      <Route path="/EditMenuItem" exact component={EditMenuItem}></Route>
 
       </Switch>
     </Router>

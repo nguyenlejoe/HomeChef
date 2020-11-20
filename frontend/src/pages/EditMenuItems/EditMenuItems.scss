@@ -1,0 +1,23 @@
+.app{
+    width: 100vw;
+    height:100vh;
+    overflow-x: hidden;
+}
+
+.HeadingTxt {
+    font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 30px;
+color: #24B574;
+}
+
+.Avatar {
+   position: relative;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    left:0px;
+    top:15px;
+
+}
