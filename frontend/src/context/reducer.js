@@ -1,8 +1,11 @@
 export const initialState = {
     username:"",
     items:[],
+    qty:0,
     token:null,
-    email:""
+    email:"",
+    product:"",
+
 }
 
 export const reducer = (state, action) =>{
@@ -14,6 +17,13 @@ export const reducer = (state, action) =>{
             ...state,
             username:"test name"
         }
+        
+        case"createItem":
+        return{
+            ...state,
+            product:action.product
+        }
+
 
         case"userInfo":
         return{
@@ -26,8 +36,9 @@ export const reducer = (state, action) =>{
         return{
             ...state, 
             items:[...state.items, action.items],
-            qty:action.items.qty
+            qty: action.qty
         }
+        
         default:
                 return state;
     }

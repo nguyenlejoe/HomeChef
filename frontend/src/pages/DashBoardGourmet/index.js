@@ -55,7 +55,7 @@ export default function DashBoardGourmet() {
         
         <div className="Cart">
           <Link to="/Checkout" style={{ textDecoration: 'none' }}>
-          <ViewCartButton></ViewCartButton>
+          <ViewCartButton itemsnum={state.qty}></ViewCartButton>
           </Link>
         </div>
   

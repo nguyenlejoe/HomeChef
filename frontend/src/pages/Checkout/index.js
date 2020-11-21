@@ -33,6 +33,8 @@ export default function CheckoutPage() {
            ></CheckoutItem>
            </div>
           })}
+        
+          
 
             <div className="total">
                 <div className="TotalText">TOTAL</div>
