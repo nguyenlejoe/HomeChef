@@ -13,11 +13,12 @@ import SetBox from '../../comps/SetBox';
 import {useHistory, Link} from "react-router-dom";
 import axios from 'axios';
 import BackButton from '../../comps/BackButton';
+import AlertBox from '../../comps/AlertBox';
 
 
 
 
-export default function CreateItemPage() {
+export default function CreateItemPage () {
 
   const {state, dispatch} = useContext(AppContext);
 
@@ -27,30 +28,73 @@ export default function CreateItemPage() {
     },
   }
 
-  console.log(state.username);
+
 
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("")
-  const [image, setImage] = useState("")
+  const [category, setCategory] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
   const [stock, setStock] = useState("");
   const [desc, setDesc] = useState("");
-  const [brand, setBrand] = useState("");
-  
-  const HandleProduct = async(name,price,image,brand,stock,desc) =>{
-    var resp = await axios.post("/api/products/" ,{
-      name:name,
-      price:price,
-      image:image,
-      brand:brand,
-      countInStock:stock,
-      description:desc
-    }, config);
+  const [AlertActive, setActive] = useState(true);
 
-    console.log(resp.data);
+
+  const [product, setProduct] = useState({});
+  
+  
+
+  const CreateProduct = async()=>{  
+    var resp = await axios.post("/api/products/" ,{}, config);
+
+    var grab = await axios.get(`/api/products/${resp.data._id}`)
+
+    setProduct(grab.data);
+
+    console.log(product)
+    
   }
+  
+  const DeleteProduct = async()=>{
+    await axios.delete(`/api/products/${product._id}`, config)
+  }
+
+
+  const UpdateProduct = async(product)=>{  
+
+    var update = await axios.put(`/api/products/${product._id}`,
+    product, config
+    );
+  
+    console.log(update.data);
+  }
+
+// const UploadeImage = async()=>{
+
+//   const imagePost = await axios.post('/api/upload', formData, config)
+
+// }
 
   return<div className="CreateItemApp">
     <div className="content">
+
+    <div className="Alert">
+        <AlertBox active={AlertActive} 
+        onClickYes={()=>{
+            product.name = name
+            product.description = desc
+            product.price = price
+            product.countInStock = stock
+            UpdateProduct(product);
+            setActive(true)
+        }}
+        onClickNo={()=>{
+          DeleteProduct();
+          setActive(true)
+        }}
+        
+        
+        ></AlertBox>
+    </div>
 
     <div className="TopBox">
       <div className="backBox">
@@ -103,11 +147,11 @@ export default function CreateItemPage() {
 
         <div className="addPhotoBox">
           <AddListingItem></AddListingItem>
-          {/* <input type="file"
+          <input type="file"
           onChange={(e)=>{
             setImage(e.target.value);
           }}
-          ></input> */}
+          ></input>
         </div>
         <div className="noteBox">
           <Note></Note>
@@ -122,7 +166,8 @@ export default function CreateItemPage() {
           <Button text="Create Item"
           disabled={false}
           onClick={()=>{
-            HandleProduct(name,desc,stock,image,brand,price);
+            CreateProduct()
+            setActive(false)
           }}
           ></Button>
         </div>

@@ -3,15 +3,16 @@
     height:100vh;
     overflow-x: hidden;
 
-    .Button{
-        margin: 5px;
-    }
     
     .content{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        height: 70%;
+
+        .MyAccountButton{
+            margin: -5px;
+        }
     }
     
     .TopBar{
@@ -38,17 +39,6 @@
         bottom: 0;
     }
     
-    .CuisineBox{
-        height: 10%;
-        width: 100%;
-        position: fixed;
-        top: 10px;
-        z-index: 1;
-    
-        div{
-            margin: 7px;
-        }
-    }
     
 }
 
