@@ -98,7 +98,9 @@ export default function Login() {
        
             <Link style={{ textDecoration: 'none' }} to ="/CreateAccountChef">
             <div className="ButtonBox1"> 
-            <Button text="Create Account" ></Button>
+            <Button text="Create Account"
+            disabled={false}
+            ></Button>
             </div>
             </Link>
             

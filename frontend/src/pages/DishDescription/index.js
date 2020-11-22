@@ -91,7 +91,13 @@ export default function DishDescription(props,{chefName, foodName, description, 
             onClick={()=>{
                 dispatch({
                     type:"addCart",
-                    items:dish,
+                    items:{
+                        product: dish._id,
+                        name: dish.name,
+                        price: dish.price,
+                        total:count*dish.price,
+                        qty:count,
+                    },
                     qty:count
                 
                 })

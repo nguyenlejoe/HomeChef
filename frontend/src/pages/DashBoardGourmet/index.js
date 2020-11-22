@@ -24,16 +24,14 @@ export default function DashBoardGourmet() {
     console.log(resp.data.products);
   }
 
-
-  
-
   const history = useHistory();
-
 
 
   return<div className="DashBoardGourmetApp" onLoad={HandleData}>
         <div className="CuisineBox">
-            <CuisineBar></CuisineBar>
+            <CuisineBar onClick={()=>{
+              history.push("/AddBalance");
+            }}></CuisineBar>
         </div>
         <div className="TopNavCon">
           <TopNav></TopNav>
