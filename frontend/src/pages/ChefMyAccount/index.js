@@ -24,12 +24,12 @@ export default function Home() {
 
 
       <div className="optionCont">
-      <MenuTabs MenuText="My Menu"></MenuTabs>
-      <MenuTabs MenuText="View Credits"></MenuTabs>
-      <MenuTabs MenuText="Reviews"></MenuTabs>
-      <MenuTabs MenuText="Switch to gourmet"></MenuTabs>
-      <MenuTabs MenuText="Help"></MenuTabs>
-      <MenuTabs MenuText="Edit my profile"></MenuTabs>
+      <MenuTabs bgimg="/mymenuchefmenu.svg"  bgcolor= "coral" iconheight="25px" iconwidth="25px" MenuText="My Menu"></MenuTabs>
+      <MenuTabs  bgimg="/creditchefmenu.svg" bgcolor= "lightgreen" MenuText="View Credits" iconheight="25px" iconwidth="25px"></MenuTabs>
+      <MenuTabs   bgimg="/reviewchefmenu.svg" bgcolor= "orange" MenuText="Reviews" iconheight="25px" iconwidth="25px"></MenuTabs>
+      <MenuTabs  bgimg="/switchchefmenu.svg" bgcolor= "#2B445E" MenuText="Switch to gourmet" iconheight="25px" iconwidth="25px"></MenuTabs>
+      <MenuTabs  bgimg="/helpiconmenu.svg" bgcolor= "green" MenuText="Help" iconheight="25px" iconwidth="25px"></MenuTabs>
+      <MenuTabs  bgimg="/editchefmenu.svg" MenuText="Edit my profile" iconheight="25px" iconwidth="25px"></MenuTabs>
       </div>
 
 
