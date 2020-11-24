@@ -14,17 +14,15 @@ export default function DashBoardGourmet() {
   
   const {state,dispatch} = useContext(AppContext);
 
-  console.log(state.token);
-
   const [products, setProducts] = useState([]);
 
   const HandleData = async() =>{
     var resp = await axios.get(`/api/products`);
     setProducts(...[resp.data.products]);
-    console.log(resp.data.products);
   }
 
   const history = useHistory();
+
 
 
   return<div className="DashBoardGourmetApp" onLoad={HandleData}>
@@ -40,11 +38,13 @@ export default function DashBoardGourmet() {
           
           {products.map((o,i)=>{
            return <Link style={{ textDecoration: 'none' }} to={{ pathname: "/DishDescription", state: {o} }}>
+           <div className="foodCont">
            <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
            MealPrc={o.price}
            ></FoodDisplayCover>
+           </div>
            </Link>
           })}
           

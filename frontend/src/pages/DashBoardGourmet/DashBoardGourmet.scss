@@ -19,11 +19,13 @@
          justify-content: center;
          align-items: center;
          flex-wrap: wrap;
-         margin: 15px 0 90px 0;
-     
-         div{
-             margin: 2px;
+         margin: 5px 0 120px 0;
+
+         .foodCont{
+             margin: 8px;
+
          }
+     
      }
      
      .Cart{
@@ -32,6 +34,7 @@
          justify-content: center;
          align-items: center;
          bottom: 15%;
+         z-index: 3;
      }
      
      .Nav{
@@ -39,6 +42,7 @@
          width: 100%;
          position: fixed;
          bottom: 0;
+         z-index: 3;
      }
      
      .CuisineBox{
@@ -46,7 +50,7 @@
          width: 95%;
          position: fixed;
          top: 15px;
-         z-index: 1;
+         z-index: 3;
          .css-2b097c-container{
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
             width: 115px;

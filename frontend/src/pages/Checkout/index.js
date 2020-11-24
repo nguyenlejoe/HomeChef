@@ -5,6 +5,7 @@ import CheckoutItem from '../../comps/CheckoutItem';
 import Button from '../../comps/MainButton';
 import TopBar from '../../comps/TopBar';
 import {Link, useHistory} from "react-router-dom";
+import axios from 'axios';
 
 
 export default function CheckoutPage() {
@@ -13,8 +14,8 @@ export default function CheckoutPage() {
 
   const [cartItems, SetCart] = ([state.items]);
 
-
   const history = useHistory();
+
 
   console.log(state.items);
   
@@ -48,6 +49,9 @@ export default function CheckoutPage() {
            Itemnm={o.name}
            Pricetag={o.price}
            Quant={o.qty+"x"}
+           onClick={()=>{
+             
+           }}
            ></CheckoutItem>
            </div>
           })}

@@ -31,7 +31,7 @@ const ViewCartButton = ({itemsnum}) => {
     
     return <Buttoncont>
             <Carttxt>
-            <Viewcart> View Cart - {itemsnum}  </Viewcart>
+            <Viewcart> View Cart - {itemsnum} items </Viewcart>
             <IconCont>
             <img src="/shopping-cart.png"/>
             </IconCont>
