@@ -19,29 +19,29 @@ export default function MyAccountGourmetPage({name}) {
         </div>
         <div className="content">
           <div className="MyAccountButton">
-          <Link to="/CurrentOrderPage" style={{ textDecoration: 'none' }}>
+          <Link to="/CurrentOrderPage" style={{ textDecoration: 'none', color:'#474747' }}>
             <MenuTab  bgimg="/currentordersiconmenu.svg" iconheight="34px" iconwidth="34px"></MenuTab>
           </Link>
           </div>
           <div className="MyAccountButton">
-          <Link to="/CurrentOrderPage" style={{ textDecoration: 'none' }}>
+          <Link to="/CurrentOrderPage" style={{  textDecoration: 'none', color:'#474747' }}>
             <MenuTab bgcolor= "#178C58" bgimg="/historyiconmenu.svg" MenuText="Order History"  iconheight="34px" iconwidth="34px"></MenuTab>
           </Link>
           </div>
           <div className="MyAccountButton">
-          <Link to="/GourmetFavorites" style={{ textDecoration: 'none' }}>
+          <Link to="/GourmetFavorites" style={{  textDecoration: 'none', color:'#474747' }}>
             <MenuTab bgcolor= "#2B445E" bgimg="/stariconmenu.svg" MenuText="Favorites"  iconheight="34px" iconwidth="34px"></MenuTab>
          </Link>
           </div>
-          <div className="MyAccountButton">
+          <div className="MyAccountButton" style={{  textDecoration: 'none', color:'#474747' }}>
             <MenuTab  bgcolor= "#24B574" bgimg="/helpiconmenu.svg" MenuText="Help"  iconheight="34px" iconwidth="34px"></MenuTab>
           </div>
           <div className="MyAccountButton">
-          <Link to="/CreateAccountChef" style={{ textDecoration: 'none' }}>
+          <Link to="/CreateAccountChef" style={{  textDecoration: 'none', color:'#474747' }}>
             <MenuTab  bgimg="/Chefhaticon.svg"MenuText="Become a Chef"  iconheight="34px" iconwidth="34px"></MenuTab>
           </Link>
           </div>
-          <div className="MyAccountButton">
+          <div className="MyAccountButton" style={{  textDecoration: 'none', color:'#474747' }}>
             <MenuTab bgimg="/MenuTabOrderHistory.svg"MenuText="Terms of Service"></MenuTab>
           </div>
         </div>
