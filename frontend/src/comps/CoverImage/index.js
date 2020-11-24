@@ -6,6 +6,7 @@ const CoverCont = styled.img`
     width:100%;
     // background-image:url(/${props=>props.bgimg ? props.bgimg : "none"});
     background-position:center;
+    object-fit: cover;
     background-size:cover;
     background-repeat:no-repeat;
     

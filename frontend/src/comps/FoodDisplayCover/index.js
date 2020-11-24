@@ -59,6 +59,7 @@ const MealPrice = styled.div`
 const ImgCont = styled.img`
 height: 100%;
 width: 100%;
+object-fit: cover;
 border-radius: 36px;
 filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.25));
 

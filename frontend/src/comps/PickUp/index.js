@@ -13,12 +13,10 @@ const InputForm = styled.input`
     height: ${props =>props.height ? props.height : '34px'};
     font-family: sans-serif;
     text-align: center;
-    background-color: #ECECEC;
     ::placeholder{
         color: #A5A5A5};
-    border-radius: 20px;
-    outline: none;
-    border: none;
+    border: 1px solid #C0C0C0;
+    border-radius: 20px; 
 `;
 
 const Input = ({PHtext, width, height}) => {
