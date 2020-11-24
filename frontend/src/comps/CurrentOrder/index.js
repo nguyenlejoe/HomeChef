@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 const ItemBox=styled.div`
-width: 87vw;
+width: 320px;
 height: 160px;
 display:inline-flex;
 align-items:center;
@@ -14,9 +14,12 @@ border-radius: 33px;
 padding: 10px;
 `;
 
-const ItemImage = styled.div`
-display: inline-flex;
-background-image:url(${props=>props.bgImg ? props.bgImg : '/food.png'});
+const ImageBox = styled.img`
+    display: inline-flex;
+    width: 40%;
+    height: 80%;
+    border-radius: 10px;
+    object-fit: cover;
 `;
 
 const ItemText = styled.div`
@@ -24,6 +27,7 @@ display: inline-flex;
 flex-direction: column;
 align-item: center;
 justify-content: space-around;
+width: 60%;
 padding: 10px;
 p{
     margin: 8px;
@@ -42,7 +46,8 @@ function select () {
 }
 return (
 <ItemBox onClick={select} style={{border: state[name] ? "3px solid #24B574" : ""}} >
-    <ItemImage bgImg={bgImg}></ItemImage>
+    <ImageBox src={bgImg}/>
+    
     <ItemText>
         <p>Order number : {oNumber} </p>
         <p>Pick up time : {upTime}</p>
@@ -54,7 +59,7 @@ return (
 }
 
 CurrentOrder.defaultProps = {
-    bgImg: "/food.png",
+    bgImg: "/friedrice.jpg",
 }
 
 export default CurrentOrder;

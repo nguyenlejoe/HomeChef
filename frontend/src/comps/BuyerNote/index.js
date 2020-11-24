@@ -12,11 +12,10 @@ const BuyerNoteCap = styled.div`
 `;
 
 const BuyerInput = styled.input`
-    width: 350px;
+    width: 280px;
     height: 80px;
-    background-color: #ECECEC;
-    border-radius: 25px;
-    border:none;   
+    border: 1px solid #C0C0C0;
+    border-radius: 20px;  
 `;
 
 
@@ -24,7 +23,7 @@ const BuyerNote = ({text}) => {
 
     return <BuyerNoteContainer>
             <BuyerNoteCap>Buyer note</BuyerNoteCap>
-            <BuyerInput type="text" placeholder="Note" />
+            <BuyerInput type="text" placeholder="   Note" />
         </BuyerNoteContainer>
 }
 

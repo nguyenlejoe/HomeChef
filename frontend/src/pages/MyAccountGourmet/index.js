@@ -8,14 +8,14 @@ import {useHistory, Link} from "react-router-dom";
 
 
 
-export default function MyAccountGourmetPage() {
+export default function MyAccountGourmetPage({name}) {
 
   const history = useHistory();
 
   return<div className="MyAccountGourmetApp">
         <div className="TopBar">
             <Avatar></Avatar>
-            <h3>Alex Inglis</h3>
+            <h3>{name}</h3>
         </div>
         <div className="content">
           <div className="MyAccountButton">
@@ -25,7 +25,7 @@ export default function MyAccountGourmetPage() {
           </div>
           <div className="MyAccountButton">
           <Link to="/CurrentOrderPage" style={{ textDecoration: 'none' }}>
-            <MenuTab bgcolor= "#178C58"bgimg="/historyiconmenu.svg" MenuText="Order History"  iconheight="34px" iconwidth="34px"></MenuTab>
+            <MenuTab bgcolor= "#178C58" bgimg="/historyiconmenu.svg" MenuText="Order History"  iconheight="34px" iconwidth="34px"></MenuTab>
           </Link>
           </div>
           <div className="MyAccountButton">
@@ -63,4 +63,8 @@ export default function MyAccountGourmetPage() {
         
     </div>
 
+}
+
+MyAccountGourmetPage.defaultProps = {
+  name:"Alex Inglis",
 }

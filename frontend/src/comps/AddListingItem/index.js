@@ -5,8 +5,8 @@ import styled, {css} from 'styled-components';
 const CompContainer = styled.div`
 justify-content:center;
 align-items:center;
-display:column;
-position:relative;
+display:flex;
+flex-direction:column;
 top-margin:10px;
 `;
 
@@ -16,14 +16,12 @@ font-weight: 500;
 font-size: 14px;
 line-height: 21px;
 /* identical to box height */
-position:relative;
 margin-bottom:10px;
 color: #1E9761;
 
 `;
 
-const PlusIcon = styled.div`
-position: relative;
+const PlusIcon = styled.img`
 align-items: center;
 justify-content: center;
 margin-top:10px;
@@ -38,8 +36,6 @@ justify-content:center;
 align-items:center;
 display:flex;
 cursor:Pointer;
-left:30px;
-position:relative;
 top-margin:10px;
 `;
 
@@ -47,9 +43,7 @@ const AddListingItem = ({text, type, fullDesc, date}) =>{
     return <CompContainer>
         <HeadingText>{text}</HeadingText>
         <AddImage>
-            <PlusIcon>
-        <img src="additem.png"/>
-        </PlusIcon>
+            <PlusIcon src="additem.png"/>
         </AddImage>
     </CompContainer>
 }

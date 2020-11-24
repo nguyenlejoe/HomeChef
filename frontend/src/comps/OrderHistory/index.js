@@ -13,6 +13,7 @@ background: #F5F5F5;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 border-radius: 33px;
 padding: 10px;
+margin-top: 20px;
 `;
 
 const ChefBox = styled.div`
@@ -34,12 +35,16 @@ align-items:center;
 justify-content:center;
 `;
 
-const ItemImage = styled.div`
+const ItemImage = styled.img`
 display: inline-flex;
-// background-image:url(${props=>props.bgImg ? props.bgImg : "none"});
+width: 40%;
+height: 80%;
+border-radius: 10px;
+object-fit: cover;
 `;
 
 const ItemText = styled.div`
+width: 60%;
 display: inline-flex;
 flex-direction: column;
 align-item: center;
@@ -67,7 +72,7 @@ const OrderHistory = ({name, oNumber, upTime, location, bgImg}) =>{
             <h2>CHEF {name}</h2>
         </ChefBox>
         <MealBox>
-            <ItemImage ><image src={bgImg}/></ItemImage>
+            <ItemImage  src={bgImg}/>
             <ItemText>
                 <p>Order number : {oNumber} </p>
                 <p>Pick up time : {upTime}</p>
@@ -85,7 +90,7 @@ const OrderHistory = ({name, oNumber, upTime, location, bgImg}) =>{
         oNumber:"1234567",
         upTime:"01/07/2020",
         location:"2136 Canada Way Burnaby",
-        bgImg:"/food.png",
+        bgImg:"/friedrice.jpg",
     }
     
     export default OrderHistory;

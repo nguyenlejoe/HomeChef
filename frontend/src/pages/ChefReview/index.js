@@ -2,13 +2,16 @@ import React from 'react';
 import './ChefReview.scss'
 import NavBarGourmet from '../../comps/NavBarGourmet';
 import Avatar from '../../comps/Avatar';
+import CoverImage from '../../comps/CoverImage';
 
-export default function Home() {
+export default function Home({text,name,review}) {
   return<div className="app">
-        <div className="CoverImage"></div>
+            <div className="CoverBox">
+                <CoverImage bgimg="/alex.jpg"></CoverImage>
+            </div>
         <div className="ChefDesc">
-            <h2>Alex Inglis</h2>
-            <p>Loves mamas fried chicken</p>
+        <h2>{name}</h2>
+            <p>{text}</p>
         </div>
         <div className="AvatarBox">
                 <Avatar></Avatar>
@@ -58,4 +61,9 @@ export default function Home() {
           ></NavBarGourmet>
         </div> 
     </div>
+}
+
+Home.defaultProps = {
+    name: "Alex Inglis",
+    text:"The God of Kitchen"
 }

@@ -100,109 +100,105 @@ export default function CreateItemPage () {
 
   return<div className="CreateItemApp">
     <div className="content">
+      <div className="Alert">
+          <AlertBox active={AlertActive} 
+              onClickYes={()=>{
+                product.name = name
+                product.description = desc
+                product.price = price
+                product.countInStock = stock
+                product.image = image
+                UpdateProduct(product);
+                setActive(true)
+              }}
+              onClickNo={()=>{
+                DeleteProduct();
+                setActive(true)
+              }}/>
+      </div>
 
-    <div className="Alert">
-        <AlertBox active={AlertActive} 
-        onClickYes={()=>{
-            product.name = name
-            product.description = desc
-            product.price = price
-            product.countInStock = stock
-            product.image = image
-            UpdateProduct(product);
-            setActive(true)
-        }}
-        onClickNo={()=>{
-          DeleteProduct();
-          setActive(true)
-        }}
-        
-        
-        ></AlertBox>
-    </div>
-
-    <div className="TopBox">
-      <div className="backBox">
-        <Link to="/DashBoardChef">
-          <BackButton></BackButton>
-      </Link>
-       </div>
-        
+      <div className="TopBox">
+        <div className="backBox">
+          <Link to="/DashBoardChef">
+            <BackButton/>
+          </Link>
+        </div>
         <h3>Create a menu item</h3>
+      </div>
 
-        </div>
-        <div className="InputBox">
+      <div className="InputBox">
         <Input PHtext="Enter Food Name"
-        onChange={(e)=>{
-          setName(e.target.value);
-        }}
-        ></Input>
-        </div>
-        <div className="TagBox">
-          <Tags></Tags>
-        </div>
-        <div className="descBox">
-          <Desc
+          onChange={(e)=>{
+            setName(e.target.value);
+          }}/>
+      </div>
+
+      <div className="TagBox">
+        <Tags PHtext="   Search"/>
+      </div>
+
+      <div className="descBox">
+        <Desc
           onChange={(e)=>{
             setDesc(e.target.value);
-          }}
-          ></Desc>
-        </div>
+          }}/>
+      </div>
 
-        <div className="InputPrice">
-          <SetBox
+      <div className="InputPrice">
+        <SetBox
+          placeH="   $10.00"
           onChange={(e)=>{
             setPrice(e.target.value);
-          }}
-          ></SetBox>
-          <SetBox label="quantity"
+          }}/>
+        <SetBox 
+          placeH="   4"
+          label="quantity"
           onChange={(e)=>{
             setStock(e.target.value);
-          }}
-          ></SetBox>
-        </div>
+          }}/>
+      </div>
 
-        {/* <div>
-          <SetBox label="Brand"
-          onChange={(e)=>{
-            setBrand(e.target.value);
-          }}
-          ></SetBox>
-        </div> */}
+          {/* <div>
+            <SetBox label="Brand"
+            onChange={(e)=>{
+              setBrand(e.target.value);
+            }}
+            ></SetBox>
+          </div> */}
 
-        <div className="addPhotoBox">
-          <AddListingItem></AddListingItem>
-          <input type="file"
+      <div className="addPhotoBox">
+        <AddListingItem
           onChange={(e)=>{
             // setImage(e.target.value);
             uploadFileHandler(e)
-          }}
-          ></input>
-        </div>
-        <div className="noteBox">
-          <Note></Note>
-        </div>
-        <div className="dateBox">
-          <PickDate></PickDate>
-        </div>
-        <div className="timeBox">
-          <PickTime></PickTime>
-        </div>
-        <div className="buttonBox">
-          <Button text="Create Item"
+          }}/>
+        {/* <input type="file"
+            onChange={(e)=>{
+              // setImage(e.target.value);
+              uploadFileHandler(e)
+            }}/> */}
+      </div>
+
+      <div className="noteBox">
+        <Note/>
+      </div>
+
+      <div className="dateBox">
+        <PickDate/>
+      </div>
+
+      <div className="timeBox">
+        <PickTime/>
+      </div>
+
+      <div className="buttonBox">
+        <Button text="Create Item"
           disabled={false}
           onClick={()=>{
             CreateProduct()
             setActive(false)
-          }}
-          ></Button>
-        </div>
-
-      
-    
+          }}/>
+      </div>
     </div>
-    
-
-    </div>
-
+  </div>
 }
