@@ -79,7 +79,7 @@ export default function CreateAccountPageChef() {
           <AddListingItem text="Upload your documents here!"></AddListingItem>
         </div>
 
-        <Link to="/DashBoardChef">
+        <Link to="/DashBoardChef"  style={{ textDecoration: 'none' }}>
         <div className="ButtonBox1"> 
         <Button text="Proceed"
           disabled={false}

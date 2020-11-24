@@ -36,6 +36,13 @@ export const reducer = (state, action) =>{
         return{
             ...state, 
             items:[...state.items, action.items],
+            qty: action.qty + state.qty
+        }
+
+        case"emptycart":
+        return{
+            ...state, 
+            items:action.items,
             qty: action.qty
         }
         

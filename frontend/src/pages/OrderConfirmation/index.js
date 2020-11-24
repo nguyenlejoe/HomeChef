@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect, useContext} from 'react';
+import {AppContext} from '../../context/provider';
 import './OrderConfirmation.scss';
 import Button from '../../comps/MainButton';
 import TopBar from '../../comps/TopBar';
@@ -9,6 +10,16 @@ import {Link, useHistory} from "react-router-dom";
 
 
 export default function OrderConfirmation() {
+
+    const {state,dispatch} = useContext(AppContext);
+
+    function emptyCart (){
+        dispatch({
+            type:"emptycart",
+            items:[],
+            qty:0
+        })
+    }
     
   return <div className="app">             
        <div>
@@ -23,7 +34,12 @@ export default function OrderConfirmation() {
   
         <div className="ButtonBox"> 
         <Link to="/DashBoardGourmet" style={{ textDecoration: 'none' }}>
-            <Button text="Continue"></Button>
+            <Button text="Continue"
+            disabled={false}
+            onClick={()=>{
+                emptyCart()
+            }}
+            ></Button>
 
             </Link>
         </div>

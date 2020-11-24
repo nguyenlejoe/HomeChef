@@ -75,15 +75,14 @@ left:10px;
 
 
 
-const CheckoutItem = ({Quant, Itemnm, Note, Pricetag,}) => {
+const CheckoutItem = ({Quant, Itemnm, Note, Pricetag, onClick}) => {
     
     return <Checkoutitemcont>
             <Carttxt>
             <Quantity>{Quant}</Quantity>
             <ItemName>{Itemnm}<ChefNote>   {Note}</ChefNote></ItemName>
             <Price>{Pricetag}</Price>
-            <Delete></Delete>
-            <Iconcont>
+            <Iconcont onClick={onClick}>
             <img src="/trash-2.svg"/>
             </Iconcont>
             </Carttxt>

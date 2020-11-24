@@ -21,10 +21,10 @@ const CuisineNav = styled.div`
     width: 100%;
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 `;
 
-export function CuisineBar() {
+export function CuisineBar({onClick}) {
 
     function customTheme(theme){
         return{
@@ -37,7 +37,7 @@ export function CuisineBar() {
         }
     }
     return <CuisineNav>
-        {/* <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="Filter" bgcolor= "#FFFFFF" textColor="#24B574"/> */}
+        <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="Filter" bgcolor= "#FFFFFF" textColor="#24B574"/>
         
         <Select
             options={optionCuisines}
@@ -45,7 +45,7 @@ export function CuisineBar() {
             placeholder='Cuisine'
 
         />
-        {/* <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="20.00" bgcolor= "#FFFFFF" textColor="#24B574"/> */}
+        <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="20.00" bgcolor= "#FFFFFF" textColor="#24B574" onClick={onClick} disabled={false}/>
     </CuisineNav>
 };
 

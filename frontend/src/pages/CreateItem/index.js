@@ -21,6 +21,7 @@ import AlertBox from '../../comps/AlertBox';
 export default function CreateItemPage () {
 
   const {state, dispatch} = useContext(AppContext);
+  const [uploading, setUploading] = useState(false)
 
   const config = {
     headers: {
@@ -28,6 +29,29 @@ export default function CreateItemPage () {
     },
   }
 
+  const uploadFileHandler = async (e) => {
+    const file = e.target.files[0]
+    const formData = new FormData()
+    formData.append('image', file)
+    setUploading(true)
+
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }
+
+      const { data } = await axios.post('/api/upload/', formData, config)
+
+      setImage(data)
+      setUploading(false)
+      console.log(image)
+    } catch (error) {
+      console.error(error)
+      setUploading(false)
+    }
+  }
 
 
   const [name, setName] = useState("");
@@ -84,6 +108,7 @@ export default function CreateItemPage () {
             product.description = desc
             product.price = price
             product.countInStock = stock
+            product.image = image
             UpdateProduct(product);
             setActive(true)
         }}
@@ -149,7 +174,8 @@ export default function CreateItemPage () {
           <AddListingItem></AddListingItem>
           <input type="file"
           onChange={(e)=>{
-            setImage(e.target.value);
+            // setImage(e.target.value);
+            uploadFileHandler(e)
           }}
           ></input>
         </div>
