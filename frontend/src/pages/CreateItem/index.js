@@ -167,16 +167,15 @@ export default function CreateItemPage () {
           </div> */}
 
       <div className="addPhotoBox">
-        <AddListingItem
-          onChange={(e)=>{
-            // setImage(e.target.value);
-            uploadFileHandler(e)
-          }}/>
-        {/* <input type="file"
+        <AddListingItem/>
+           <input type="file"
             onChange={(e)=>{
               // setImage(e.target.value);
               uploadFileHandler(e)
-            }}/> */}
+            }}/>
+
+        <label>{image}</label>
+       
       </div>
 
       <div className="noteBox">
