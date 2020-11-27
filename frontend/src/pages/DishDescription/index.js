@@ -10,11 +10,12 @@ import Button from '../../comps/MainButton';
 import CoverImage from '../../comps/CoverImage';
 import BackButton from '../../comps/BackButton';
 import {useHistory, Link} from "react-router-dom";
-
+import AlertBox from '../../comps/AlertBox';
 
 export default function DishDescription(props,{chefName, foodName, description, ingredient, list}) {
 
     const {state,dispatch} = useContext(AppContext);
+    const [AddedAlert, setAdd] = useState(true);
 
     
     const [count,setCount] = useState(1)
@@ -38,6 +39,15 @@ export default function DishDescription(props,{chefName, foodName, description, 
 
     return(
         <div className="appContainer">
+             <div className="Alert">
+          <AlertBox
+          active={AddedAlert}
+          buttonActive={true}
+          text="Added to cart!"
+          textButton1="Ok"
+          onClickYes={()=>{setAdd(true)}}
+          ></AlertBox>
+          </div>
             <div className="coverImage">
                 <div className="backCont">
                 <Link to="/DashBoardGourmet">
@@ -89,6 +99,7 @@ export default function DishDescription(props,{chefName, foodName, description, 
             <Button width="175px" height="40px" text="Add to Cart"
             disabled={false}
             onClick={()=>{
+                setAdd(false)
                 dispatch({
                     type:"addCart",
                     items:{
