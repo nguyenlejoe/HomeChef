@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, {useState, useContext, useEffect} from 'react';
+import {AppContext} from '../../context/provider';
 import './CreateAccountCheff.scss';
 import SignUp from '../../comps/SignUp';
 import Button from '../../comps/MainButton';
@@ -12,6 +13,9 @@ import AddListingItem from '../../comps/AddListingItem';
 
 export default function CreateAccountPageChef() {
 
+
+  const {state, dispatch} = useContext(AppContext);
+
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("")
   const [name, setName] = useState("")
@@ -19,11 +23,20 @@ export default function CreateAccountPageChef() {
   
   const HandleSignup = async(email,pass,name,merch) =>{
     var resp = await axios.post("/api/users" ,{
-      isMerchant:merch,
       email:email,
       password:pass,
-      name:name
+      name:name,
+      isMerchant:true
     });
+
+    dispatch({
+      type:"userInfo",
+      token:resp.data.token,
+      email:resp.data.email,
+      username:resp.data.name
+    });
+
+
   }
 
   const history = useHistory();
@@ -84,7 +97,7 @@ export default function CreateAccountPageChef() {
         <Button text="Proceed"
           disabled={false}
           onClick={()=>{
-            HandleSignup(email,pass,name, merch);
+            HandleSignup(email,pass,name);
           }}
         ></Button>
         </div>
