@@ -4,6 +4,7 @@ import  './AddBalance.scss';
 import Input from '../../comps/PickUp';
 import Button from '../../comps/MainButton';
 import TopBar from '../../comps/TopBar';
+import {useHistory, Link} from "react-router-dom";
 
 const selectCard =[
     {value: 'visa-card', label: 'Visa Card'},
@@ -34,8 +35,13 @@ const selectYear= [
 ];
 
 export default function AddBalance(){
+
+    const history = useHistory();
+
     return <div className="appCont">
-        <TopBar text="Add Balance"/>
+        <TopBar text="Add Balance" onClick={()=>{
+            history.push("/DashBoardGourmet");
+        }}/>
         <div className="inputCont">
             <div>
                 <p>Card Type*</p>
@@ -74,6 +80,10 @@ export default function AddBalance(){
                 <Input PHtext="$" radius="5px" width="25vw" height="35px" border="1px" bgcolor="none" />
             </div>
         </div>
-        <Button text="Confirm "/>
+        <Link to="/DashBoardGourmet" style={{ textDecoration: 'none' }}>
+        <Button text="Confirm "
+        disabled={false}
+        />
+        </Link>
     </div>
 }

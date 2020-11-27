@@ -63,7 +63,7 @@ export default function CreateAccountPageGourmet() {
         </div>
         
 
-        <Link to="/DashBoardGourmet">
+        <Link to="/DashBoardGourmet" style={{ textDecoration: 'none' }}>
         <div className="ButtonBox1"> 
         <Button text="Proceed"
         disabled={false}

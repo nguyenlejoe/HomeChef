@@ -28,7 +28,7 @@ console.log(state, Object.values(state).some(it => it === true) )
 
     return <div className="appCont">
         <div className="orderCont">
-            <CurrentOrder name={"a"} {...props} oNumber="123456" upTime="17/02/2021" location="2126 Hasting Street Burnaby"/>
+            <CurrentOrder bgImg="/friedrice.jpg" name={"a"} {...props} oNumber="123456" upTime="17/02/2021" location="2126 Hasting Street Burnaby"/>
             <CurrentOrder  name={"b"} {...props}/>
         </div>
         <Button text="Picked Up " disabled={disabled()}

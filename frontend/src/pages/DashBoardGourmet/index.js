@@ -14,18 +14,12 @@ export default function DashBoardGourmet() {
   
   const {state,dispatch} = useContext(AppContext);
 
-  console.log(state.token);
-
   const [products, setProducts] = useState([]);
 
   const HandleData = async() =>{
     var resp = await axios.get(`/api/products`);
     setProducts(...[resp.data.products]);
-    console.log(resp.data.products);
   }
-
-
-  
 
   const history = useHistory();
 
@@ -33,7 +27,9 @@ export default function DashBoardGourmet() {
 
   return<div className="DashBoardGourmetApp" onLoad={HandleData}>
         <div className="CuisineBox">
-            <CuisineBar></CuisineBar>
+            <CuisineBar onClick={()=>{
+              history.push("/AddBalance");
+            }}></CuisineBar>
         </div>
         <div className="TopNavCon">
           <TopNav></TopNav>
@@ -42,11 +38,13 @@ export default function DashBoardGourmet() {
           
           {products.map((o,i)=>{
            return <Link style={{ textDecoration: 'none' }} to={{ pathname: "/DishDescription", state: {o} }}>
+           <div className="foodCont">
            <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
            MealPrc={o.price}
            ></FoodDisplayCover>
+           </div>
            </Link>
           })}
           
@@ -55,7 +53,7 @@ export default function DashBoardGourmet() {
         
         <div className="Cart">
           <Link to="/Checkout" style={{ textDecoration: 'none' }}>
-          <ViewCartButton></ViewCartButton>
+          <ViewCartButton itemsnum={state.qty}></ViewCartButton>
           </Link>
         </div>
   

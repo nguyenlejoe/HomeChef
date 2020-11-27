@@ -15,8 +15,6 @@ import {useHistory, Link} from "react-router-dom";
 export default function DishDescription(props,{chefName, foodName, description, ingredient, list}) {
 
     const {state,dispatch} = useContext(AppContext);
-    const [countQty, setQty] = useState();
-
 
     
     const [count,setCount] = useState(1)
@@ -93,11 +91,17 @@ export default function DishDescription(props,{chefName, foodName, description, 
             onClick={()=>{
                 dispatch({
                     type:"addCart",
-                    items:dish,
+                    items:{
+                        product: dish._id,
+                        name: dish.name,
+                        price: dish.price,
+                        total:count*dish.price,
+                        qty:count,
+                    },
                     qty:count
                 
                 })
-                console.log(state.items)
+                console.log(state.qty)
             }}
             />
 

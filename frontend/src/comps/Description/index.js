@@ -6,7 +6,7 @@ const DescriptionContainer = styled.div`
     display:flex;
     flex-direction:column;
     position:relative;
-    width:350px;
+    width:280px;
 `;
 
 const DescriptionCap = styled.div`
@@ -14,15 +14,11 @@ const DescriptionCap = styled.div`
     margin-bottom:10px;
 `;
 const DesInput = styled.input`
-    width: 350px;
-    height: 150px;
-    background-color: #ECECEC;
+    width: 280px;
+    height: 120px;
+    margin-bottom: 5px;
+    border: 1px solid #C0C0C0;
     border-radius: 20px;
-    border:none;
-    ::placeholder {
-       
-      }
-
 `;
 
 
@@ -38,7 +34,7 @@ const Description = ({text, onChange}) => {
 
     return <DescriptionContainer>
         <DescriptionCap>Description (optional)</DescriptionCap>
-        <DesInput onChange={onChange} type="text" placeholder="Describe your item here..." />
+        <DesInput onChange={onChange} type="text" placeholder="   Describe your item here..." />
         <Max>Max 350 Characters </Max> 
         </DescriptionContainer>
 }

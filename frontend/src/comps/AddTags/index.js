@@ -19,30 +19,30 @@ const AddContent = styled.div`
 
 
 const SearchInput = styled.input`
-    width:276px;
+    width:280px;
     height:35px;
     border-radius: 64px;
-    background: #ECECEC;
-    border:none;
+    border: 1px solid #C0C0C0;
+    border-radius: 20px;
 `;
 
-const SearchImg = styled.div`
+const SearchImg = styled.img`
   
 `;
 
-const AddTags = ({}) => {
+const AddTags = ({PHtext}) => {
     return <AddTagsContainer>
         <AddCap>Add categories and tags </AddCap>
         <AddContent>
-            <SearchImg><img src='/searchicon.png' /></SearchImg>
-            <SearchInput type="text" placeholder="" /> 
+            {/* <SearchImg src='/searchicon.png'/> */}
+            <SearchInput type="text" placeholder={PHtext} /> 
             {/* <SpicyImg><img src='/spicy.png' /></SpicyImg> */}
         </AddContent>
     </AddTagsContainer>
 }
 
 AddTags.defaultProps = {
-    
+    PHtext: "   Search"
 }
 
 export default AddTags;
