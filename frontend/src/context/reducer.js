@@ -29,7 +29,8 @@ export const reducer = (state, action) =>{
         return{
             ...state,
             token:action.token,
-            email:action.email
+            email:action.email,
+            username:action.username
         }
 
         case"addCart":

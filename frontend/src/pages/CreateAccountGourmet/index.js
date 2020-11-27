@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, {useState, useContext, useEffect} from 'react';
+import {AppContext} from '../../context/provider';
 import './CreateAccountGourmet.scss';
 import SignUp from '../../comps/SignUp';
 import Button from '../../comps/MainButton';
@@ -12,6 +13,8 @@ export default function CreateAccountPageGourmet() {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("")
   const [name, setName] = useState("")
+
+  const {state, dispatch} = useContext(AppContext);
   
   const history = useHistory();
 
@@ -22,6 +25,14 @@ export default function CreateAccountPageGourmet() {
       isMerchant:false,
       name:name
     });
+
+    dispatch({
+      type:"userInfo",
+      token:resp.data.token,
+      email:resp.data.email,
+      username:resp.data.name
+    });
+
     console.log(resp.data);
   }
   

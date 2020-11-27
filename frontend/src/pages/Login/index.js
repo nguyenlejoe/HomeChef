@@ -30,7 +30,8 @@ export default function Login() {
       dispatch({
         type:"userInfo",
         token:resp.data.token,
-        email:resp.data.email
+        email:resp.data.email,
+        username:resp.data.name
       });
 
       
