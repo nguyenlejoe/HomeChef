@@ -108,6 +108,7 @@ export default function DishDescription(props,{chefName, foodName, description, 
                         price: dish.price,
                         total:count*dish.price,
                         qty:count,
+                        image:dish.image
                     },
                     qty:count
                 

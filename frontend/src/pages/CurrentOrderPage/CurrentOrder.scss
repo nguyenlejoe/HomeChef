@@ -12,7 +12,14 @@
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 46vh;
-    padding-bottom: 25vh;
+    height: 100%;
+}
+
+.OrderBox{
+    margin: 10px;
+}
+
+.pickUp{
+    position: fixed;
+    bottom: 100px;
 }

@@ -5,6 +5,8 @@ export const initialState = {
     token:null,
     email:"",
     product:"",
+    orderProducts:[],
+    img:""
 
 }
 
@@ -24,6 +26,12 @@ export const reducer = (state, action) =>{
             product:action.product
         }
 
+        case"userOrder":
+        return{
+            ...state,
+            orderProducts:[...state.orderProducts, action.orderProducts],
+
+        }
 
         case"userInfo":
         return{
@@ -37,7 +45,8 @@ export const reducer = (state, action) =>{
         return{
             ...state, 
             items:[...state.items, action.items],
-            qty: action.qty + state.qty
+            qty: action.qty + state.qty,
+            
         }
 
         case"emptycart":
