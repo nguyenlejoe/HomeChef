@@ -16,20 +16,42 @@ export default function DashBoardGourmet() {
 
   const [products, setProducts] = useState([]);
 
+  const [brand, setBrand] = useState();
+
   const HandleData = async() =>{
     var resp = await axios.get(`/api/products`);
     setProducts(...[resp.data.products]);
   }
 
+  const HandleDataBrand = async(keyword) =>{
+    var resp = await axios.get(`/api/products?keybrand=${keyword}`);
+    setProducts(...[resp.data.products]);
+  }
+
   const history = useHistory();
 
+  function onChangeInput(value){
+    setBrand(value.value)
+    console.log(brand)
+    }
 
+    
+  useEffect(()=>{
+    HandleData();
 
-  return<div className="DashBoardGourmetApp" onLoad={HandleData}>
+  },[]);
+
+  return<div className="DashBoardGourmetApp">
         <div className="CuisineBox">
             <CuisineBar onClick={()=>{
               history.push("/AddBalance");
-            }}></CuisineBar>
+            }}
+            onChange={onChangeInput}
+            onClickBrand={()=>{
+              alert(brand);
+              HandleDataBrand(brand);
+            }}
+            ></CuisineBar>
         </div>
         <div className="TopNavCon">
           <TopNav></TopNav>

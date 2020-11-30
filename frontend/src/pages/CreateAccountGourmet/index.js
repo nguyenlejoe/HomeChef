@@ -6,19 +6,21 @@ import Button from '../../comps/MainButton';
 import CreateAccount from '../../comps/CreateAccount';
 import {useHistory, Link} from "react-router-dom";
 import axios from 'axios';
-
+import AlertBox from '../../comps/AlertBox';
 
 export default function CreateAccountPageGourmet() {
 
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("")
   const [name, setName] = useState("")
+  const [AlertError, setError] = useState(true);
 
   const {state, dispatch} = useContext(AppContext);
   
   const history = useHistory();
-
+ 
   const HandleSignup = async(email,pass,name) =>{
+    try{
     var resp = await axios.post("/api/users" ,{
       email:email,
       password:pass,
@@ -34,9 +36,25 @@ export default function CreateAccountPageGourmet() {
     });
 
     console.log(resp.data);
+
+    history.push("/DashBoardGourmet");
+  }catch{
+    setError(false)
+  }
   }
   
   return<div className="CreateAccountGourmetApp">
+
+          <div className="AlertCont">
+           <AlertBox
+          active={AlertError}
+          buttonActive={true}
+          text="Please fill in all fields"
+          textButton1="Ok"
+          onClickYes={()=>{setError(true)}}
+          ></AlertBox>
+          </div>
+
 
         <div className="LogoBox">
         <h1>Create an account for</h1>
@@ -74,7 +92,7 @@ export default function CreateAccountPageGourmet() {
         </div>
         
 
-        <Link to="/DashBoardGourmet" style={{ textDecoration: 'none' }}>
+       
         <div className="ButtonBox1"> 
         <Button text="Proceed"
         disabled={false}
@@ -83,7 +101,6 @@ export default function CreateAccountPageGourmet() {
         }}
         ></Button>
         </div>
-        </Link>
 
         
      </div>   
