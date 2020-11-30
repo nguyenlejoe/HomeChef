@@ -7,6 +7,8 @@ import CreateAccount from '../../comps/CreateAccount';
 import {useHistory, Link} from "react-router-dom";
 import axios from 'axios';
 import AlertBox from '../../comps/AlertBox';
+import BackButton from '../../comps/WhiteBack';
+
 
 export default function CreateAccountPageGourmet() {
 
@@ -55,6 +57,10 @@ export default function CreateAccountPageGourmet() {
           ></AlertBox>
           </div>
 
+
+        <Link to="/Login"  style={{ textDecoration: 'none' }}>
+          <div className="BackButton"><BackButton/></div>
+        </Link>
 
         <div className="LogoBox">
         <h1>Create an account for</h1>

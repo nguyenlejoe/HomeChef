@@ -24,12 +24,15 @@ export default function Home() {
 
 
       <div className="optionCont">
-      <MenuTabs bgimg="/mymenuchefmenu.svg"  bgcolor= "coral" iconheight="25px" iconwidth="25px" MenuText="My Menu"></MenuTabs>
-      <MenuTabs  bgimg="/creditchefmenu.svg" bgcolor= "lightgreen" MenuText="View Credits" iconheight="25px" iconwidth="25px"></MenuTabs>
-      <MenuTabs   bgimg="/reviewchefmenu.svg" bgcolor= "orange" MenuText="Reviews" iconheight="25px" iconwidth="25px"></MenuTabs>
-      <MenuTabs  bgimg="/switchchefmenu.svg" bgcolor= "#2B445E" MenuText="Switch to gourmet" iconheight="25px" iconwidth="25px"></MenuTabs>
-      <MenuTabs  bgimg="/helpiconmenu.svg" bgcolor= "green" MenuText="Help" iconheight="25px" iconwidth="25px"></MenuTabs>
-      <MenuTabs  bgimg="/editchefmenu.svg" MenuText="Edit my profile" iconheight="25px" iconwidth="25px"></MenuTabs>
+      <MenuTabs bgimg="/mymenuchefmenu.svg"  bgcolor= "coral" iconheight="25px" iconwidth="25px" MenuText="My Menu"/>
+      <MenuTabs  bgimg="/creditchefmenu.svg" bgcolor= "lightgreen" MenuText="View Credits" iconheight="25px" iconwidth="25px"/>
+      <MenuTabs   bgimg="/reviewchefmenu.svg" bgcolor= "orange" MenuText="Reviews" iconheight="25px" iconwidth="25px"/>
+      <MenuTabs  bgimg="/switchchefmenu.svg" bgcolor= "#2B445E" MenuText="Switch to gourmet" iconheight="25px" iconwidth="25px"/>
+      <MenuTabs  bgimg="/helpiconmenu.svg" bgcolor= "green" MenuText="Help" iconheight="25px" iconwidth="25px"/>
+      <MenuTabs  bgimg="/editchefmenu.svg" MenuText="Edit my profile" iconheight="25px" iconwidth="25px"/>
+      <Link to="/Login"  style={{ textDecoration: 'none', color:'#474747' }}>
+        <MenuTabs  bgimg="/logout.svg" bgcolor= "#EF4800" MenuText="Log Out" iconheight="25px" iconwidth="25px" />
+      </Link>
       </div>
 
 

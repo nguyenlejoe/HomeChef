@@ -4,11 +4,17 @@
     background-color: #24B574;
     overflow: hidden;
 
+
     .AlertCont{
         position: fixed;
         top: 30%;
         right: 18%;
      }
+
+
+    .BackButton{
+        margin: 20px 0 0 20px;
+    }
 
     .InputBoxGourmet{
         height:65%;
