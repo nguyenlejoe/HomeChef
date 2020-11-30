@@ -21,6 +21,12 @@ position: relative;
 top: -200px;
 }
 
+.Alert{
+    position: fixed;
+    top:30%;
+    z-index: 1;
+}
+
 .backCont{
     position: fixed;
     left: 20px;

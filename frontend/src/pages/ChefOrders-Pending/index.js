@@ -1,16 +1,38 @@
-import React from 'react';
+import React, {useReducer, useState, useEffect, useContext} from 'react';
+import {AppContext} from '../../context/provider';
 import './ChefOrders.scss'
 import Button from '../../comps/MainButton';
 import ConfirmOrder from '../../comps/ConfirmOrder';
 import NavBarChef from '../../comps/NavBarChef';
 import {useHistory, Link} from "react-router-dom";
+import axios from 'axios';
 
 
 
 
-export default function Home() {
+export default function ChefOrderPending() {
+
+  const {state,dispatch} = useContext(AppContext);
+
+  const HandleOrders = async() =>{
+    const config = {
+      headers: {
+        Authorization: `Bearer ${state.token}`,
+      },
+    };
+    console.log("test")
+    const resp = await axios.get(`/api/orders`, config);
+    console.log(resp.data);
+  }
+
+  useEffect(()=>{
+    HandleOrders();
+  },[]);
 
   const history = useHistory();
+
+
+
 
   return<div className="app">
     <div className="topbuttons">
