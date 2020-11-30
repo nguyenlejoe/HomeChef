@@ -43,7 +43,7 @@ const AddListingItem = ({text, type, fullDesc, date}) =>{
     return <CompContainer>
         <HeadingText>{text}</HeadingText>
         <AddImage>
-            <PlusIcon src="additem.png"/>
+            <PlusIcon src="additem.svg"/>
         </AddImage>
     </CompContainer>
 }

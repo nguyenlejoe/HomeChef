@@ -59,6 +59,7 @@ export default function DishDescription(props,{chefName, foodName, description, 
             </div>
             <div className="foodDetail">
                 <h1>{dish.name}</h1>
+                 <h2>$ {dish.price}</h2>
                 <p>{dish.description}</p>
             </div>
             <div className="ingredients">

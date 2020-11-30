@@ -91,7 +91,7 @@ const MenuTab = ({MenuText, bgimg, bgcolor, iconheight, iconwidth}) => {
             
         </ContentContainer>
         <EnterIcon>
-            <img src="/enter.png"/>
+            <img src="/enter.svg"/>
             </EnterIcon> 
     </Menutabcont>
 
