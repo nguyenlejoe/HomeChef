@@ -78,16 +78,6 @@ export default function CheckoutPage() {
             })}
           
             
-            <div className="ButtonBox"> 
-            <Link to="/OrderConfirmation" style={{ textDecoration: 'none' }}>
-                    <Button text="Checkout"
-                     disabled={false}
-                     onClick={()=>{
-                        CreateOrder(order);
-                         val.total = 0
-                     }}
-                    ></Button>
-                    </Link>
 
               <div className="total">
                   <div className="TotalText">TOTAL</div>
