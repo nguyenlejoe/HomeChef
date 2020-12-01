@@ -30,10 +30,12 @@ console.log(state, Object.values(state).some(it => it === true) )
         <div className="orderCont">
             <CurrentOrder bgImg="/friedrice.jpg" name={"a"} {...props} oNumber="123456" upTime="17/02/2021" location="2126 Hasting Street Burnaby"/>
             <CurrentOrder  name={"b"} {...props}/>
+            <div className="CurrentButton">
+              <Button text="Picked Up " disabled={disabled()}/>
+            </div>
         </div>
-        <Button text="Picked Up " disabled={disabled()}
-         />
-          <div className="Nav">
+        
+        <div className="Nav">
           <NavBarGourmet
             active={3}
             onClickHome={()=>{
@@ -46,6 +48,6 @@ console.log(state, Object.values(state).some(it => it === true) )
               history.push("/SearchPage");
             }}
           ></NavBarGourmet>
-          </div>
+        </div>
     </div>
 }

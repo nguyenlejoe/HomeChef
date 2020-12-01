@@ -12,6 +12,7 @@ background: #F5F5F5;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 border-radius: 33px;
 padding: 10px;
+margin: 10px 0;
 `;
 
 const ImageBox = styled.img`
