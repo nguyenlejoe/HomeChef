@@ -30,12 +30,12 @@ const SearchImg = styled.img`
   
 `;
 
-const AddTags = ({PHtext}) => {
+const AddTags = ({PHtext , onChange}) => {
     return <AddTagsContainer>
-        <AddCap>Add categories and tags </AddCap>
+        <AddCap> Food's country of origin </AddCap>
         <AddContent>
             {/* <SearchImg src='/searchicon.png'/> */}
-            <SearchInput type="text" placeholder={PHtext} /> 
+            <SearchInput  onChange={onChange} type="text" placeholder={PHtext} /> 
             {/* <SpicyImg><img src='/spicy.png' /></SpicyImg> */}
         </AddContent>
     </AddTagsContainer>

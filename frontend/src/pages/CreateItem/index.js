@@ -55,7 +55,7 @@ export default function CreateItemPage () {
 
 
   const [name, setName] = useState("");
-  const [category, setCategory] = useState("");
+  const [brand, setBrand] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [stock, setStock] = useState("");
@@ -98,11 +98,6 @@ export default function CreateItemPage () {
     }
   }
 
-// const UploadeImage = async()=>{
-
-//   const imagePost = await axios.post('/api/upload', formData, config)
-
-// }
 
   return<div className="CreateItemApp">
     <div className="content">
@@ -128,6 +123,7 @@ export default function CreateItemPage () {
                 product.price = price
                 product.countInStock = stock
                 product.image = image
+                product.brand = brand
                 UpdateProduct(product);
                 setActive(true)
               }}
@@ -154,7 +150,10 @@ export default function CreateItemPage () {
       </div>
 
       <div className="TagBox">
-        <Tags PHtext="   Search"/>
+        <Tags PHtext="Country"
+         onChange={(e)=>{
+          setBrand(e.target.value);
+        }}/>
       </div>
 
       <div className="descBox">
@@ -178,19 +177,12 @@ export default function CreateItemPage () {
           }}/>
       </div>
 
-          {/* <div>
-            <SetBox label="Brand"
-            onChange={(e)=>{
-              setBrand(e.target.value);
-            }}
-            ></SetBox>
-          </div> */}
 
       <div className="addPhotoBox">
         <AddListingItem/>
            <input type="file"
             onChange={(e)=>{
-              // setImage(e.target.value);
+
               uploadFileHandler(e)
             }}/>
 
