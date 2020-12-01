@@ -15,7 +15,7 @@ margin: 5px;
 padding-left: 3px;
 
 `;
-const Trendtag = styled.div`
+const Trendtag = styled.img`
 margin:4px;
 `;
 
@@ -25,8 +25,7 @@ margin:4px;
 const TrendingTag = ({text, color, bgcolor, width, height, fontSize}) => {
     
     return <Trendingtagcont color={color} bgcolor={bgcolor} width={width} height={height} fontSize={fontSize}>
-        <Trendtag> <img src="/tag.svg"/>
-        </Trendtag>
+        <Trendtag src="/tag.svg"/>
         <Trendingtxt>{text}</Trendingtxt>
     </Trendingtagcont>
 

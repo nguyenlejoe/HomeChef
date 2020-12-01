@@ -35,46 +35,44 @@ export default function CheckoutPage() {
 
 //   total();
 
-  return<div className="app">             
-       <div>
-           <TopBar onClick={()=>{
-                history.push("/DashBoardGourmet");
-           }}text="Cart"></TopBar>
-       </div>
-       <div className="checkout">
+  return<div className="CartComp">             
+          <div>
+              <TopBar onClick={()=>{
+                    history.push("/DashBoardGourmet");
+              }}text="Cart"></TopBar>
+          </div>
+        <div className="checkout">
 
-       {cartItems.map((o,i)=>{
-           return <div className="checkouttwo">
-           <CheckoutItem
-           Itemnm={o.name}
-           Pricetag={o.price}
-           Quant={o.qty+"x"}
-           onClick={()=>{
-             
-           }}
-           ></CheckoutItem>
-           </div>
-          })}
-        
+          {cartItems.map((o,i)=>{
+            return <div className="checkouttwo">
+            <CheckoutItem
+            Itemnm={o.name}
+            Pricetag={o.price}
+            Quant={o.qty+"x"}
+            onClick={()=>{
+              
+            }}
+            />
+            </div>
+            })}
           
-
-            <div className="total">
-                <div className="TotalText">TOTAL</div>
-                <div className="PriceText">{val.total}</div>
-            </div>
             
-            <div className="ButtonBox"> 
-            <Link to="/OrderConfirmation" style={{ textDecoration: 'none' }}>
-                    <Button text="Checkout"
-                     disabled={false}
-                     onClick={()=>{
-                         val.total = 0
-                     }}
-                    ></Button>
-                    </Link>
 
-            </div>
-           
+              <div className="total">
+                  <div className="TotalText">TOTAL</div>
+                  <div className="PriceText">{val.total}</div>
+              </div>
+              
+              <div className="CheckoutButton"> 
+                <Link to="/OrderConfirmation" style={{ textDecoration: 'none' }}>
+                    <Button text="Checkout"
+                        disabled={false}
+                        onClick={()=>{
+                            val.total = 0
+                        }}
+                        />
+                </Link>
+              </div>           
         </div>
     </div>
 }
