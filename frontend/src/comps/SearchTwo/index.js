@@ -83,7 +83,7 @@ const SearchFor = ({expand, onChange,search, onClick}) => {
         </DropdownContainer>
         <SearchTwoImg onClick={()=>{
             onClick(keyword,name)
-        }}><img src='/Searchtwo.png'/></SearchTwoImg>
+        }}><img src='/SearchIcon.svg'/></SearchTwoImg>
     </SearchBox>;
 }
 

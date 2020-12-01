@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components';
 
 const Checkoutitemcont = styled.div`
 
-max-width:346px;
+max-width:330px;
 max-height:76px;
 
 
@@ -13,7 +13,8 @@ display:flex;
 flex-direction:row;
 `
 const Quantity = styled.div`
-Margin-right: 60px;font-size: 18px;
+Margin-right: 60px;
+font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: 27px;

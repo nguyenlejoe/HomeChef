@@ -1,44 +1,46 @@
-.app{
+.CartComp{
     width: 100vw;
-    height:100vh;
+    height:100%;
     overflow-x: hidden;
     
-}
 
-.cart{
-    margin-bottom: 200px;
-}
 
-.checkout{
-    margin: 100px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    .cart{
+        margin-bottom: 200px;
+    }
 
-.checkoutone{
-    margin-bottom: 50px;
-}
+    .checkout{
+        margin: 100px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-.checkouttwo{
-    margin-bottom: 50px;
-}
+    .checkoutone{
+        margin-bottom: 50px;
+    }
 
-.total{
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-}
+    .checkouttwo{
+        width: 80%;
+        margin-bottom: 50px;
+    }
 
-.PriceText{
-  margin-left:100px;
-}
+    .total{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
 
-.ButtonBox{
-    margin-top:270px;
-    bottom: 50px;
-    :nth-child(1){
-        font-size: 20px;
+    .PriceText{
+    margin-left:100px;
+    }
+
+    .CheckoutButton{
+        margin-top:40px;
+        bottom: 30px;
+        :nth-child(1){
+            font-size: 20px;
+        }
     }
 }
