@@ -24,6 +24,7 @@ export default function SearchPage() {
 
   const HandleSearch = async(keyword, keybrand) =>{
     var resp = await axios.get(`/api/products?keyword=${keyword}`);
+
   
 
     setProducts(...[resp.data.products]);

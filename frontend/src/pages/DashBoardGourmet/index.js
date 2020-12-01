@@ -11,7 +11,22 @@ import axios from "axios";
 
 
 export default function DashBoardGourmet() {
-  
+
+//   const optionCuisines= [
+//     {value: 'turkish' , label: 'Turkish'},
+//     {value: 'French' , label: 'French'},
+//     {value: 'Greek' , label: 'Greek'},
+//     {value: 'Indian' , label: 'Indian'},
+//     {value: 'Iranian' , label: 'Iranian'},
+//     {value: 'Chinese' , label: 'Chinese'},
+//     {value: 'Italian' , label: 'Italian'},
+//     {value: 'Japanese' , label: 'Japanese'},
+//     {value: 'Mexican' , label: 'Mexican'},
+//     {value: 'Korean' , label: 'Korean'},
+//     {value: 'Taiwanese' , label: 'Taiwanese'},
+// ];
+
+
   const {state,dispatch} = useContext(AppContext);
 
   const [products, setProducts] = useState([]);
@@ -24,18 +39,14 @@ export default function DashBoardGourmet() {
   }
 
   const HandleDataBrand = async(keyword) =>{
-    var resp = await axios.get(`/api/products?keybrand=${keyword}`);
+    var resp = await axios.get(`/api/products/brand?keybrand=${keyword}`);
+    console.log(resp.data)
     setProducts(...[resp.data.products]);
   }
 
+
   const history = useHistory();
 
-  function onChangeInput(value){
-    setBrand(value.value)
-    console.log(brand)
-    }
-
-    
   useEffect(()=>{
     HandleData();
 
@@ -46,10 +57,13 @@ export default function DashBoardGourmet() {
             <CuisineBar onClick={()=>{
               history.push("/AddBalance");
             }}
-            onChange={onChangeInput}
-            onClickBrand={()=>{
-              alert(brand);
-              HandleDataBrand(brand);
+            onChange={(value)=>{
+              console.log(value.value);
+              if(value.value === "All"){
+                HandleData();
+              }else if(value.value != "All"){
+              HandleDataBrand(value.value)
+              }
             }}
             ></CuisineBar>
         </div>
@@ -61,7 +75,7 @@ export default function DashBoardGourmet() {
           {products.map((o,i)=>{
            return <Link style={{ textDecoration: 'none' }} to={{ pathname: "/DishDescription", state: {o} }}>
            <div className="foodCont">
-           <FoodDisplayCover
+             <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
            MealPrc={o.price}
