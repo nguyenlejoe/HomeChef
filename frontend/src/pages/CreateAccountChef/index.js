@@ -7,7 +7,6 @@ import CreateAccount from '../../comps/CreateAccount';
 import {useHistory, Link} from "react-router-dom";
 import axios from 'axios';
 import AddListingItem from '../../comps/AddListingItem';
-import AlertBox from '../../comps/AlertBox';
 import BackButton from '../../comps/WhiteBack';
 
 
@@ -22,12 +21,8 @@ export default function CreateAccountPageChef() {
   const [pass, setPass] = useState("")
   const [name, setName] = useState("")
   const [merch, setMerch] = useState(true);
-  const [AlertError, setError] = useState(true);
-
-  const history = useHistory();
   
   const HandleSignup = async(email,pass,name,merch) =>{
-    try{
     var resp = await axios.post("/api/users" ,{
       email:email,
       password:pass,
@@ -42,32 +37,15 @@ export default function CreateAccountPageChef() {
       username:resp.data.name
     });
 
-    history.push("/DashBoardChef");
-  }
-  catch{
-    setError(false)
-  }
 
   }
 
+  const history = useHistory();
   
   return<div className="CreateAccountCheffApp">
-
-          <div className="AlertCont">
-           <AlertBox
-          active={AlertError}
-          buttonActive={true}
-          text="Please fill in all fields"
-          textButton1="Ok"
-          onClickYes={()=>{setError(true)}}
-          ></AlertBox>
-          </div>
-      
-
         <Link to="/Login"  style={{ textDecoration: 'none' }}>
           <div className="BackButton"><BackButton/></div>
         </Link>        
-
         <div className="LogoBox">
         <h1>Create an account for</h1>
         <CreateAccount onClick={()=>{
@@ -118,7 +96,7 @@ export default function CreateAccountPageChef() {
           <AddListingItem text="Upload your documents here!"></AddListingItem>
         </div>
 
-  
+        <Link to="/DashBoardChef"  style={{ textDecoration: 'none' }}>
         <div className="ButtonBox1"> 
         <Button text="Proceed"
           disabled={false}
@@ -127,7 +105,7 @@ export default function CreateAccountPageChef() {
           }}
         ></Button>
         </div>
-
+        </Link>
 
         
      </div>   

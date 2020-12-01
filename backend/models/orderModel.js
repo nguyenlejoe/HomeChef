@@ -5,18 +5,18 @@ const orderSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      required: false,
+      required: true,
       ref: 'User',
     },
     orderItems: [
       {
         name: { type: String, required: true },
         qty: { type: Number, required: true },
-        image: { type: String, required: false },
+        image: { type: String, required: true },
         price: { type: Number, required: true },
         product: {
           type: mongoose.Schema.Types.ObjectId,
-          required: false,
+          required: true,
           ref: 'Product',
         },
       },
@@ -35,7 +35,7 @@ const orderSchema = mongoose.Schema(
     },
     paymentMethod: {
       type: String,
-      required: false,
+      required: true,
     },
     paymentResult: {
       id: { type: String },
@@ -45,22 +45,22 @@ const orderSchema = mongoose.Schema(
     },
     taxPrice: {
       type: Number,
-      required: false,
+      required: true,
       default: 0.0,
     },
     shippingPrice: {
       type: Number,
-      required: false,
+      required: true,
       default: 0.0,
     },
     totalPrice: {
       type: Number,
-      required: false,
+      required: true,
       default: 0.0,
     },
     isPaid: {
       type: Boolean,
-      required: false,
+      required: true,
       default: false,
     },
     paidAt: {
@@ -68,7 +68,7 @@ const orderSchema = mongoose.Schema(
     },
     isDelivered: {
       type: Boolean,
-      required: false,
+      required: true,
       default: false,
     },
     deliveredAt: {

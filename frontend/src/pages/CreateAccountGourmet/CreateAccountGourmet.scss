@@ -4,18 +4,9 @@
     background-color: #24B574;
     overflow: hidden;
 
-
-    .AlertCont{
-        position: fixed;
-        top: 30%;
-        right: 18%;
-     }
-
-
     .BackButton{
         margin: 20px 0 0 20px;
     }
-
     .InputBoxGourmet{
         height:65%;
         background: #FFFFFF;
@@ -39,7 +30,6 @@
         }
         
         .ButtonBox1{
-            margin-top: 50px;
             margin-bottom: 60px;
             :nth-child(1){
                 font-size: 20px;
