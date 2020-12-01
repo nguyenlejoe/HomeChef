@@ -39,19 +39,19 @@ color: #2B445E;
 
 }
 `;
-const CurrentOrder = ({name, state, setState, oNumber, upTime, location, bgImg}) =>{
+const CurrentOrder = ({name, state, setState, oNumber, upTime, price, bgImg}) =>{
     
-function select () {
-    setState({[name]: !state[name]})
-}
+// function select () {
+//     setState({[name]: !state[name]})
+// }
 return (
-<ItemBox onClick={select} style={{border: state[name] ? "3px solid #24B574" : ""}} >
+<ItemBox >
     <ImageBox src={bgImg}/>
     
     <ItemText>
-        <p>Order number : {oNumber} </p>
-        <p>Pick up time : {upTime}</p>
-        <p>Location : {location}</p>
+        <p>Order Id : {oNumber} </p>
+        {/* <p>Orderd On : {upTime}</p> */}
+        <p>Total Price : {price}</p>
         <p><span onClick="">Chef contact details</span></p>
     </ItemText>
 </ItemBox>

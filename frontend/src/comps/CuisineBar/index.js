@@ -24,7 +24,7 @@ const CuisineNav = styled.div`
     justify-content: space-between;
 `;
 
-export function CuisineBar({onClick}) {
+export function CuisineBar({onClick, onChange,onClickBrand}) {
 
     function customTheme(theme){
         return{
@@ -36,6 +36,8 @@ export function CuisineBar({onClick}) {
             }
         }
     }
+
+
     return <CuisineNav>
         <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="Filter" bgcolor= "#FFFFFF" textColor="#24B574"/>
         
@@ -43,7 +45,8 @@ export function CuisineBar({onClick}) {
             options={optionCuisines}
             theme={customTheme}
             placeholder='Cuisine'
-
+            onChange={onChange}
+            onClick={onClickBrand}
         />
         <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="20.00" bgcolor= "#FFFFFF" textColor="#24B574" onClick={onClick} disabled={false}/>
     </CuisineNav>
