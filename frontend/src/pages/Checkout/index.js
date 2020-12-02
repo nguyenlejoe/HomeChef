@@ -10,13 +10,17 @@ import axios from 'axios';
 
 export default function CheckoutPage() {
 
-  
   const {state,dispatch} = useContext(AppContext);
 
   const [cartItems, SetCart] = ([state.items]);
-  console.log(state.items);
 
-  if(state.qty != 0){
+  const history = useHistory();
+
+
+  console.log(state.items);
+  
+
+    if(state.qty != 0){
 
     var val = cartItems.reduce(function(previousValue, currentValue) {
         return {
@@ -28,31 +32,6 @@ export default function CheckoutPage() {
     else{
         val = 0;
     }
-
-
-  const order = {
-    orderItems:state.items,
-    totalPrice:val.total
-    
-  }
-
-  const history = useHistory();
-
-  const CreateOrder = async(order) =>{
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${state.token}`,
-      },
-    };
-
-    var resp = await axios.post(`/api/orders`, order,config);
-
-    console.log(resp.data);
-    
-  }
-  
-
 
 //   total();
 

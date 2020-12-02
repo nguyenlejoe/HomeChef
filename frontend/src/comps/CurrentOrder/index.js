@@ -12,6 +12,7 @@ background: #F5F5F5;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 border-radius: 33px;
 padding: 10px;
+margin: 10px 0;
 `;
 
 const ImageBox = styled.img`
@@ -39,19 +40,19 @@ color: #2B445E;
 
 }
 `;
-const CurrentOrder = ({name, state, setState, oNumber, upTime, price, bgImg}) =>{
+const CurrentOrder = ({name, state, setState, oNumber, upTime, location, bgImg}) =>{
     
-// function select () {
-//     setState({[name]: !state[name]})
-// }
+function select () {
+    setState({[name]: !state[name]})
+}
 return (
-<ItemBox >
+<ItemBox onClick={select} style={{border: state[name] ? "3px solid #24B574" : ""}} >
     <ImageBox src={bgImg}/>
     
     <ItemText>
-        <p>Order Id : {oNumber} </p>
-        {/* <p>Orderd On : {upTime}</p> */}
-        <p>Total Price : {price}</p>
+        <p>Order number : {oNumber} </p>
+        <p>Pick up time : {upTime}</p>
+        <p>Location : {location}</p>
         <p><span onClick="">Chef contact details</span></p>
     </ItemText>
 </ItemBox>
