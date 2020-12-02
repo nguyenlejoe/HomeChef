@@ -11,48 +11,21 @@ import axios from "axios";
 
 
 export default function DashBoardGourmet() {
-
-//   const optionCuisines= [
-//     {value: 'turkish' , label: 'Turkish'},
-//     {value: 'French' , label: 'French'},
-//     {value: 'Greek' , label: 'Greek'},
-//     {value: 'Indian' , label: 'Indian'},
-//     {value: 'Iranian' , label: 'Iranian'},
-//     {value: 'Chinese' , label: 'Chinese'},
-//     {value: 'Italian' , label: 'Italian'},
-//     {value: 'Japanese' , label: 'Japanese'},
-//     {value: 'Mexican' , label: 'Mexican'},
-//     {value: 'Korean' , label: 'Korean'},
-//     {value: 'Taiwanese' , label: 'Taiwanese'},
-// ];
-
-
+  
   const {state,dispatch} = useContext(AppContext);
 
   const [products, setProducts] = useState([]);
-
-  const [brand, setBrand] = useState();
 
   const HandleData = async() =>{
     var resp = await axios.get(`/api/products`);
     setProducts(...[resp.data.products]);
   }
 
-  const HandleDataBrand = async(keyword) =>{
-    var resp = await axios.get(`/api/products/brand?keybrand=${keyword}`);
-    console.log(resp.data)
-    setProducts(...[resp.data.products]);
-  }
-
-
   const history = useHistory();
 
-  useEffect(()=>{
-    HandleData();
 
-  },[]);
 
-  return<div className="DashBoardGourmetApp">
+  return<div className="DashBoardGourmetApp" onLoad={HandleData}>
         <div className="CuisineBox">
             <CuisineBar onClick={()=>{
               history.push("/AddBalance");
@@ -66,8 +39,8 @@ export default function DashBoardGourmet() {
               HandleDataBrand(value.value)
               }
             }}
-            ></CuisineBar>
-        </div>
+          </div>
+          </div>
         <div className="TopNavCon">
           <TopNav></TopNav>
         </div>
@@ -76,7 +49,7 @@ export default function DashBoardGourmet() {
           {products.map((o,i)=>{
            return <Link style={{ textDecoration: 'none' }} to={{ pathname: "/DishDescription", state: {o} }}>
            <div className="foodCont">
-             <FoodDisplayCover
+           <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
            MealPrc={o.price}

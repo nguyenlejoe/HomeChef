@@ -24,15 +24,10 @@ display: flex;
 justify-content: center;
 margin:20px;
 
-
 `;
 
 const ButtonCont = styled.div`
 margin: 10px;
-
-${props => props.active === true && css`
-    display:none
-    `}
 
 `;
 
@@ -42,12 +37,12 @@ display:flex;
 text-align:center;
 `;
 
-const AlertBox = ({active, onClickYes, onClickNo, text, textButton1,textButton2, buttonActive}) =>{
+const AlertBox = ({active, onClickYes, onClickNo}) =>{
     return <AlertCont active={active}>
-        <TextCont>{text}</TextCont>
+        <TextCont>Are you sure you want to create item?</TextCont>
         <ButtonBox>
-            <ButtonCont><Button disabled={false} width="100px" height="50px" text={textButton1} onClick={onClickYes}></Button></ButtonCont>
-            <ButtonCont active={buttonActive}><Button disabled={false} width="100px" height="50px" text={textButton2} onClick={onClickNo}></Button></ButtonCont>
+            <ButtonCont><Button disabled={false} width="100px" height="50px" text="Yes" onClick={onClickYes}></Button></ButtonCont>
+            <ButtonCont><Button disabled={false} width="100px" height="50px" text="No" onClick={onClickNo}></Button></ButtonCont>
         </ButtonBox>
     </AlertCont>
 }
