@@ -5,19 +5,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-.orderCont{
-        display:flex;
+
+
+    .orderCont{
+        margin: 20px;
+        margin-bottom: 70px;
+        display: inline-flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        padding-bottom: 80px;
+        height: 100%;
+    }
     
-
-        .CurrentButton{
-            margin:20px;
-            :nth-child(1){
-                font-size: 20px;
-            }
-        }
+    .OrderBox{
+        margin: 10px;
+    }
+    
+    .pickUp{
+        position: fixed;
+        bottom: 100px;
     }
 }
+

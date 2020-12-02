@@ -14,13 +14,35 @@ const getProducts = asyncHandler(async (req, res) => {
       }
     : {}
 
+
+
   // const count = await Product.countDocuments({ ...keyword })
-  const products = await Product.find({ ...keyword })
+  const products = await Product.find({ ...keyword})
     // .limit(pageSize)
     // .skip(pageSize * (page - 1))
 
   res.json({ products})
 })
+
+const getBrand = asyncHandler(async (req, res) => {
+
+  const keybrand = req.query.keybrand
+    ? {
+        brand: {
+          $regex: req.query.keybrand,
+          $options: 'i',
+        },
+      }
+    : {}
+
+
+  const products = await Product.find({ ...keybrand})
+    
+
+  res.json({ products})
+})
+
+
 
 const getProductById = asyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id)
@@ -131,6 +153,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 
 export {
     getProducts,
+    getBrand,
     getProductById,
     deleteProduct,
     createProduct,

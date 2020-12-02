@@ -3,6 +3,7 @@ import express from "express";
 const router = express.Router();
 import {
   getProducts,
+  getBrand,
   getProductById,
   deleteProduct,
   updateProduct,
@@ -12,6 +13,7 @@ import {
 import { protect, merchant } from "../middleware/authMiddleware.js";
 
 router.route("/").get(getProducts).post(protect, merchant, createProduct)
+router.route("/brand").get(getBrand)
 router.route('/:id/reviews').post(protect, createProductReview)
 router
   .route("/:id")
