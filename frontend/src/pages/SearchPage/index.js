@@ -22,8 +22,9 @@ export default function SearchPage() {
 
   const history = useHistory();
 
-  const HandleSearch = async(keyword, name) =>{
+  const HandleSearch = async(keyword, keybrand) =>{
     var resp = await axios.get(`/api/products?keyword=${keyword}`);
+
   
 
     setProducts(...[resp.data.products]);

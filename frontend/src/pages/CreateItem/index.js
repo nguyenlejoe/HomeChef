@@ -61,6 +61,7 @@ export default function CreateItemPage () {
   const [stock, setStock] = useState("");
   const [desc, setDesc] = useState("");
   const [AlertActive, setActive] = useState(true);
+  const [AlertError, setError] = useState(true);
 
 
   const [product, setProduct] = useState({});
@@ -84,19 +85,38 @@ export default function CreateItemPage () {
 
 
   const UpdateProduct = async(product)=>{  
-
+    try{
     var update = await axios.put(`/api/products/${product._id}`,
     product, config
     );
   
     console.log(update.data);
+    }
+    catch{
+      DeleteProduct();
+      setError(false)
+    }
   }
 
 
   return<div className="CreateItemApp">
     <div className="content">
       <div className="Alert">
+          <AlertBox
+          active={AlertError}
+          buttonActive={true}
+          text="Please fill in all fields"
+          textButton1="Ok"
+          onClickYes={()=>{setError(true)}}
+          >
+            
+          </AlertBox>
           <AlertBox active={AlertActive} 
+              buttonActive={true}
+              buttonActive={false}
+              text="Are you sure you want to create item"
+              textButton1="Yes"
+              textButton2="No"
               onClickYes={()=>{
                 product.name = name
                 product.description = desc

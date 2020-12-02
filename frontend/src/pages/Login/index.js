@@ -51,7 +51,6 @@ export default function Login() {
 
 
 
-
   return<div className="LoginApp">
         <div className="LogoBox">
         <div className="logo"></div>

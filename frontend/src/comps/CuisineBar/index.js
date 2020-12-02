@@ -4,17 +4,16 @@ import Button from '../MainButton';
 import Select from 'react-select';
 
 const optionCuisines= [
+    {value: 'All' , label: 'All'},
     {value: 'turkish' , label: 'Turkish'},
     {value: 'French' , label: 'French'},
-    {value: 'Greek' , label: 'Greek'},
     {value: 'Indian' , label: 'Indian'},
-    {value: 'Iranian' , label: 'Iranian'},
     {value: 'Chinese' , label: 'Chinese'},
     {value: 'Italian' , label: 'Italian'},
     {value: 'Japanese' , label: 'Japanese'},
     {value: 'Mexican' , label: 'Mexican'},
     {value: 'Korean' , label: 'Korean'},
-    {value: 'Taiwanese' , label: 'Taiwanese'},
+    {value: 'Vietnamese' , label: 'Vietnamese'},
 ];
 
 const CuisineNav = styled.div`
@@ -24,7 +23,7 @@ const CuisineNav = styled.div`
     justify-content: space-between;
 `;
 
-export function CuisineBar({onClick}) {
+export function CuisineBar({onClick, onChange, options}) {
 
     function customTheme(theme){
         return{
@@ -36,6 +35,8 @@ export function CuisineBar({onClick}) {
             }
         }
     }
+
+
     return <CuisineNav>
         <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="Filter" bgcolor= "#FFFFFF" textColor="#24B574"/>
         
@@ -43,6 +44,8 @@ export function CuisineBar({onClick}) {
             options={optionCuisines}
             theme={customTheme}
             placeholder='Cuisine'
+            onChange={onChange}
+        
 
         />
         <Button width= "88px" height= "35px" radius="15px" fontSize= "14px" text="20.00" bgcolor= "#FFFFFF" textColor="#24B574" onClick={onClick} disabled={false}/>
