@@ -46,9 +46,11 @@ export default function DishDescription(props,{chefName, foodName, description, 
           buttonActive={true}
           buttonActive={false}
           text="Added to cart!"
-          textButton1="Ok"
+          textButton1="Continue shopping"
           textButton2="Checkout"
-          onClickYes={()=>{setAdd(true)}}
+          onClickYes={()=>{setAdd(true)
+            history.push("/DashBoardGourmet");
+        }}
           onClickNo={()=>{
             history.push("/Checkout");
           }}
