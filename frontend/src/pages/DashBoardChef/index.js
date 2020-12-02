@@ -29,7 +29,7 @@ export default function DashBoardChefPage() {
 
         <h3>Activity Feed</h3>
         <div className="ActivityFeedBox">
-            <ActivityFeed></ActivityFeed>
+            <ActivityFeed/>
         </div>
         <div className="Nav">
           <NavBarChef

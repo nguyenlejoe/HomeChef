@@ -21,9 +21,9 @@ export default function Home() {
         
     </div>
     <div className="Orderboxes">
-    <ConfirmOrder Seller="Yunus Emre" Quantity="5x" Product="Fried Rice"></ConfirmOrder>
+    <ConfirmOrder Seller="Yunus Emre" Quantity="5x" Product="Fried Rice"/>
     <br></br>
-    <ConfirmOrder></ConfirmOrder>
+    <ConfirmOrder/>
     </div>
     <div className="Nav">
     <NavBarChef active={2}
