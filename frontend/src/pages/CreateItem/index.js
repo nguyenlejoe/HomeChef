@@ -62,6 +62,7 @@ export default function CreateItemPage () {
   const [desc, setDesc] = useState("");
   const [AlertActive, setActive] = useState(true);
   const [AlertError, setError] = useState(true);
+  const [AlertSuccess, setSuccess] = useState(true);
 
 
   const [product, setProduct] = useState({});
@@ -89,7 +90,7 @@ export default function CreateItemPage () {
     var update = await axios.put(`/api/products/${product._id}`,
     product, config
     );
-  
+    setSuccess(false)
     console.log(update.data);
     }
     catch{
@@ -108,6 +109,15 @@ export default function CreateItemPage () {
           text="Please fill in all fields"
           textButton1="Ok"
           onClickYes={()=>{setError(true)}}
+          >
+            
+          </AlertBox>
+          <AlertBox
+          active={AlertSuccess}
+          buttonActive={true}
+          text="Successfully created item!"
+          textButton1="Ok"
+          onClickYes={()=>{setSuccess(true)}}
           >
             
           </AlertBox>
