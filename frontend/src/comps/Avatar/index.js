@@ -25,7 +25,7 @@ const Avatar = ({bgimg, width, height}) =>{
 }
 
 Avatar.defaultProps = {
-    bgimg : "./alex.jpg"
+    bgimg : "./profile.png"
 }
 
 export default Avatar;

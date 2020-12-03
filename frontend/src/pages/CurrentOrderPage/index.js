@@ -54,7 +54,7 @@ export default function CurrentOrderPage(){
         <div className="orderCont">
             {orders.map((o,i)=>{
 
-              return<Link style={{ textDecoration: 'none' }} to={{ pathname: "/FullOrderGourmet", state: {o} }}>
+              return<Link style={{ textDecoration: 'none' , color:'#474747' }} to={{ pathname: "/FullOrderGourmet", state: {o} }}>
               <div className="OrderBox">
               <CurrentOrder 
               upTime={o.updatedAt}

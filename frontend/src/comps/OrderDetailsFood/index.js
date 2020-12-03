@@ -24,7 +24,6 @@ display: inline-flex;
 align-item: center;
 justify-content: center;
 width: 60%;
-padding: 10px;
 p{
     margin: 8px;
     font-size: 13px;
@@ -41,8 +40,8 @@ const OrderDetailsFood = ({quantity, food, foodimage, price}) => {
     return(
             <ItemBox>
                 <ImageBox src={foodimage}/>
-                <ItemText><span>{quantity}X</span>{food} </ItemText>
-                <ItemText>{price}</ItemText>
+                <ItemText><span>{quantity}X </span>{" "+food} </ItemText>
+                <ItemText>${price}</ItemText>
             </ItemBox>
     )
 
