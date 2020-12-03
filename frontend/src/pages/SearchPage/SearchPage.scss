@@ -13,15 +13,16 @@
     // top: ${props=>props.expanded ? "200px" : "0px"};
 }
 
-.footBox{
-    margin: 5px;
+.foodBox{
+    margin: 10px;
 }
 
 .foodcovers {
-    display: grid;
-    grid-template-columns: auto auto ;
-    justify-content: center;
-    z-index:-1;
+    display:flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         margin: 5px 0 120px 0;
     
 }
 

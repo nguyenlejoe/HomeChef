@@ -34,7 +34,8 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
                 total={"$"+order.totalPrice}
                 />
             </div>           
-        
+            <hr width="300px"></hr>
+            <div className="orderCont">
             {order.orderItems.map((o,i)=>{
                 return <div className="FoodDetails"> 
                 <OrderDetailsFood
@@ -45,8 +46,8 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
                 />
             </div>
             })}
-
-            <div className="NavBar">
+            </div>
+            <div className="Nav">
                 <NavBar
                 active={1}
                 onClickAccount={()=>{
