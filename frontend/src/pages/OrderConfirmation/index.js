@@ -29,7 +29,7 @@ export default function OrderConfirmation() {
         <div className="OrderConfirmed">
             Order confirmed
             <ConfirmedLottie></ConfirmedLottie>
-            <OrderDetails profileimg="none" Chef=""></OrderDetails>
+            <OrderDetails></OrderDetails>
         </div>
   
         <div className="ButtonBox"> 

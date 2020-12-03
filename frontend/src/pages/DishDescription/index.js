@@ -41,20 +41,21 @@ export default function DishDescription(props,{chefName, foodName, description, 
     return(
         <div className="appContainer">
              <div className="Alert">
-          <AlertBox
-          active={AddedAlert}
-          buttonActive={true}
-          buttonActive={false}
-          text="Added to cart!"
-          textButton1="Continue shopping"
-          textButton2="Checkout"
-          onClickYes={()=>{setAdd(true)
-            history.push("/DashBoardGourmet");
-        }}
+                <AlertBox
+                active={AddedAlert}
+                buttonActive={true}
+                buttonActive={false}
+                text="Added to cart!"
+                textButton1="Continue shopping"
+                textButton2="Checkout"
+                onClickYes={()=>{setAdd(true)
+                    history.push("/DashBoardGourmet");
+                }}
           onClickNo={()=>{
-            history.push("/Checkout");
+            history.push("/Checkout");  
           }}
           ></AlertBox>
+          </div>
        
             <div className="coverImage">
                 <div className="backCont">

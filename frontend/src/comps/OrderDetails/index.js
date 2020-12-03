@@ -107,9 +107,9 @@ const OrderDetails = ({Chef, OrderNum, Pickupdate, Locationtxt, profileimg}) => 
             <Contact>Chef Contact Details</Contact>
             <FullDetails>View full order details</FullDetails>
             </Detailstxtboxs>
-            <Photocont>
+            {/* <Photocont>
             <Avatar bgimg={profileimg}></Avatar>
-            </Photocont>
+            </Photocont> */}
         </DetailsRectangle>
     </DetailsContainer>
 
