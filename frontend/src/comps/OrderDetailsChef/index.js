@@ -42,7 +42,7 @@ const OrderText = styled.p`
 
 `;
 
-const OrderDetailsChef = ({chefName, oNumber, date, time, phone, location}) => {
+const OrderDetailsChef = ({chefName, oNumber, date, time, phone, total}) => {
     return(
         <OrderCont>
             <UserAvatar>
@@ -53,7 +53,7 @@ const OrderDetailsChef = ({chefName, oNumber, date, time, phone, location}) => {
                 
                 <OrderText>Order Number: {oNumber}</OrderText>
                 <OrderText>Pick up date & time: {date}  {time}</OrderText>
-                <OrderText>Pick up location: {location}</OrderText>
+                <OrderText>Total Price {total}</OrderText>
                 <OrderText>Contact Number: {phone}</OrderText>
             </FullOrderDetails>
         </OrderCont>

@@ -9,7 +9,6 @@ height:${props=>props.height ? props.height : "80px"};
 `;
 
 const AvatarImg = styled.img`
-<<<<<<< HEAD
 width:100%;
 height:100%;
 background-size:cover;

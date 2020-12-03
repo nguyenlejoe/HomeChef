@@ -39,12 +39,13 @@ color: #24B574;
 }
 `;
 
-const OrderDetailsFood = ({quantity, food, foodimage}) => {
+const OrderDetailsFood = ({quantity, food, foodimage, price}) => {
 
     return(
             <ItemBox>
                 <ImageBox src={foodimage}/>
                 <ItemText><span>{quantity}X</span>{food} </ItemText>
+                <ItemText>{price}</ItemText>
             </ItemBox>
     )
 
