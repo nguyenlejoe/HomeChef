@@ -53,9 +53,9 @@ export default function CurrentOrderPage(){
     return <div className="appCont" onLoad={HandleOrders}>
         <div className="orderCont">
             {orders.map((o,i)=>{
-              var counter=0;
 
-              return<div className="OrderBox">
+              return<Link style={{ textDecoration: 'none' }} to={{ pathname: "/FullOrderGourmet", state: {o} }}>
+              <div className="OrderBox">
               <CurrentOrder 
               upTime={o.updatedAt}
               oNumber={o._id}
@@ -63,6 +63,7 @@ export default function CurrentOrderPage(){
               bgImg={o.orderItems[0].image}
               ></CurrentOrder>
               </div>
+              </Link>
             })}
         </div>
         <div className="pickUp">
