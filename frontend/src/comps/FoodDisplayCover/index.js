@@ -7,7 +7,6 @@ const FoodDisplayCont = styled.div`
 cursor:pointer;
 height: 238px;
 width: 159px;
-`;
 // const FoodImage = styled.div`
 // cursor:pointer;
 // height: 238px;
@@ -63,19 +62,24 @@ object-fit: cover;
 border-radius: 36px;
 filter: drop-shadow(0px 7px 7px rgba(0, 0, 0, 0.25));
 
-
-
 `;
 
-const Test = styled.div`
-position:relative;
-top:240px;
-height:238px;
-width:100%;
-background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.79) 100%);
-position:relative;
-border-radius: 36px;
-z-index:1
+const Vignette = styled.div`
+position: relative;
+display: inline-block;
+width: 100%;
+height: 100%;
+
+&:after{
+    content:"";
+    position:absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 100px rgb(0,0,0, 0.6);
+    border-radius: 36px;
+}
 `;
 
 
@@ -87,8 +91,9 @@ z-index:1
 const FoodDisplayCover = ({Mealnm, MealPrc, bgimg}) => {
     
     return <FoodDisplayCont>
-     
-        <ImgCont src={bgimg}></ImgCont>
+        <Vignette>
+            <ImgCont src={bgimg}/>
+        </Vignette>
         <Foodtxt>
             <MealName>{Mealnm}</MealName>
             <MealPrice>${MealPrc}</MealPrice>
