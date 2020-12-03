@@ -3,21 +3,18 @@ import styled from 'styled-components';
 
 const ItemBox=styled.div`
 width: 250px;
-height: 250px;
+height: 300px;
 display:inline-flex;
 flex-direction: column;
 align-items:center;
 justify-content:center;
-// background: #F5F5F5;
-// filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-// border-radius: 33px;
 padding: 10px;
 `;
 
 const ImageBox = styled.img`
     display: inline-flex;
-    width: 80%;
-    height: 80%;
+    width: 225px;
+    height: 225px;
     border-radius: 10px;
     object-fit: cover;
 `;

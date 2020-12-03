@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext} from 'react';
+import React, { useState, useEffect, useContext} from "react";
 import './FullOrder.scss';
 import {AppContext} from '../../context/provider';
 import BackButton from "../../comps/BackButton";
@@ -9,7 +9,6 @@ import {useHistory, Link} from "react-router-dom";
 import OrderDetailsChef from '../../comps/OrderDetailsUser';
 import OrderDetailsFood from '../../comps/OrderDetailsFood';
 import NavBar from '../../comps/NavBarGourmet';
-import axios from "axios";
 
 export default function FullOrderGourmet(props,{chefName, foodName, description, ingredient, list, oNumber, date, time, phone}){
     
@@ -17,7 +16,6 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
     var order = props.location.state.o;
     console.log(order);
 
-    const history = useHistory();
 
     return(
         <div className="FullOrderCont">
@@ -29,7 +27,6 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
             </div>
             <div className="OrderCont">
                 <OrderDetailsChef
-                chefName={order.name}
                 oNumber={order._id}
                 total={"$"+order.totalPrice}
                 />
@@ -47,18 +44,7 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
             })}
 
             <div className="NavBar">
-                <NavBar
-                active={1}
-                onClickAccount={()=>{
-                  history.push("/MyAccountGourmet");
-                }}
-                onClickOrder={()=>{
-                  history.push("/CurrentOrderPage");
-                }}
-                onClickSearch={()=>{
-                  history.push("/SearchPage");
-                }}
-                />
+                <NavBar/>
             </div>
         
          </div>   

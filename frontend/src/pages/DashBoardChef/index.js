@@ -64,6 +64,7 @@ export default function DashBoardChefPage() {
 
             
               return <div className="SumBox">
+                <Link style={{ textDecoration: 'none' }} to={{ pathname: "/FullOrderChef", state: {o} }}>
                 <SummaryBox
                   buyer={o.user.name}
                   product={o.orderItems[0].name}
@@ -71,7 +72,7 @@ export default function DashBoardChefPage() {
                   note1={"Total price $" + o.totalPrice}
                   // personimg={facepic.data.results[counter++].picture.large}
                   // buyerimg={o.orderItems[1].image}
-                ></SummaryBox>
+                /></Link>
               </div>
             })}
   

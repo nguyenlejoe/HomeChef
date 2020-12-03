@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext} from 'react';
+import React, { useState, useEffect, useContext} from "react";
 import './FullOrder.scss';
 import {AppContext} from '../../context/provider';
 import BackButton from "../../comps/BackButton";
@@ -6,12 +6,11 @@ import Avatar from '../../comps/Avatar';
 import Button from '../../comps/MainButton';
 import CoverImage from '../../comps/CoverImage';
 import {useHistory, Link} from "react-router-dom";
-import OrderDetailsChef from '../../comps/OrderDetailsUser';
+import OrderDetails from '../../comps/OrderDetailsUser';
 import OrderDetailsFood from '../../comps/OrderDetailsFood';
-import NavBar from '../../comps/NavBarGourmet';
-import axios from "axios";
+import NavBar from '../../comps/NavBarChef';
 
-export default function FullOrderGourmet(props,{chefName, foodName, description, ingredient, list, oNumber, date, time, phone}){
+export default function FullOrderChef(props,{chefName, foodName, description, ingredient, list, oNumber, date, time, phone}){
     
 
     var order = props.location.state.o;
@@ -22,14 +21,14 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
     return(
         <div className="FullOrderCont">
             <div className="BackButtonCont">
-                <Link to="/CurrentOrderPage">
+                <Link to="/DashBoardChef">
                     <BackButton/>
                 </Link>
                 <p>Full Order Details</p>
             </div>
             <div className="OrderCont">
-                <OrderDetailsChef
-                chefName={order.name}
+                <OrderDetails
+                title="Ordered by"
                 oNumber={order._id}
                 total={"$"+order.totalPrice}
                 />
@@ -48,16 +47,16 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
 
             <div className="NavBar">
                 <NavBar
-                active={1}
-                onClickAccount={()=>{
-                  history.push("/MyAccountGourmet");
-                }}
-                onClickOrder={()=>{
-                  history.push("/CurrentOrderPage");
-                }}
-                onClickSearch={()=>{
-                  history.push("/SearchPage");
-                }}
+                    active={1}
+                    onClickAccount={()=>{
+                      history.push("/MyAccountGourmet");
+                    }}
+                    onClickOrder={()=>{
+                      history.push("/CurrentOrderPage");
+                    }}
+                    onClickSearch={()=>{
+                      history.push("/SearchPage");
+                    }}
                 />
             </div>
         
@@ -66,6 +65,6 @@ export default function FullOrderGourmet(props,{chefName, foodName, description,
     );
 };
 
-FullOrderGourmet.defaultProps = {
+FullOrderChef.defaultProps = {
 
 }
