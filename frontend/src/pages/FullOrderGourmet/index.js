@@ -6,7 +6,7 @@ import Avatar from '../../comps/Avatar';
 import Button from '../../comps/MainButton';
 import CoverImage from '../../comps/CoverImage';
 import {useHistory, Link} from "react-router-dom";
-import OrderDetailsChef from '../../comps/OrderDetailsChef';
+import OrderDetailsChef from '../../comps/OrderDetailsUser';
 import OrderDetailsFood from '../../comps/OrderDetailsFood';
 
 export default function FullOrderGourmet({chefName, foodName, description, ingredient, list, oNumber, date, time, phone}){

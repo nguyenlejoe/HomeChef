@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext} from "react";
-import Avatar from '../../comps/Avatar';
+import Avatar from '../Avatar';
 import styled from 'styled-components';
 
 const OrderCont = styled.div`
@@ -42,12 +42,12 @@ const OrderText = styled.p`
 
 `;
 
-const OrderDetailsChef = ({chefName, oNumber, date, time, phone, location}) => {
+const OrderDetailsChef = ({chefName, title, oNumber, date, time, phone, location}) => {
     return(
         <OrderCont>
             <UserAvatar>
                 <Avatar/>
-                <OrderText>Chef {chefName}</OrderText>
+    <OrderText>{title} {chefName}</OrderText>
             </UserAvatar>
             <FullOrderDetails>
                 
@@ -62,6 +62,7 @@ const OrderDetailsChef = ({chefName, oNumber, date, time, phone, location}) => {
 
 OrderDetailsChef.defaultProps = {
     
+    title: 'Chef',
     chefName:"Alex Inglis",
     oNumber:"#1234567",
     date:"18/01/2021",
