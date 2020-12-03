@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import {useHistory, Link} from "react-router-dom";
 
 const AvatarContainer = styled.div`
+display: inline-flex;
 width:${props=>props.width ? props.width : "80px"};
 height:${props=>props.height ? props.height : "80px"};
 `;
 
 const AvatarImg = styled.img`
+<<<<<<< HEAD
 width:100%;
 height:100%;
-// background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
-// background-size:cover;
+background-size:cover;
 border-radius:100px;
 object-fit: cover;
 

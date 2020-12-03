@@ -81,7 +81,7 @@ export default function CheckoutPage() {
 
               <div className="total">
                   <div className="TotalText">TOTAL</div>
-                  <div className="PriceText">{val.total}</div>
+                  <div className="PriceText">$ {val.total}</div>
               </div>
               
               <div className="CheckoutButton"> 
