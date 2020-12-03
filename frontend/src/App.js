@@ -29,6 +29,7 @@ import LoadingPage from './pages/LoadingPage';
 import SearchPage from './pages/SearchPage';
 import EditMenuItem from './pages/EditMenuItems';
 import FullOrderGourmet from './pages/FullOrderGourmet';
+import FullOrderChef from './pages/FullOrderChef';
 import AppProvider, { AppContext } from './context/provider';
 import './App.scss';
 
@@ -65,6 +66,7 @@ function App() {
       <Route path="/SearchPage" exact component={SearchPage}/>
       <Route path="/EditMenuItem" exact component={EditMenuItem}/>
       <Route path="/FullOrderGourmet" exact component={FullOrderGourmet}/>
+      <Route path="/FullOrderChef" exact component={FullOrderChef}/>
 
       </Switch>
     </Router>
