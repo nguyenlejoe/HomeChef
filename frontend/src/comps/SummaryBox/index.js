@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
 import AvatarOverlap from '../AvatarOverlap';
+import Avatar from '../Avatar';
 
 const SummaryContainer = styled.div`
     display: inline-flex;
@@ -54,8 +55,8 @@ const NoteContainer = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-    width: 106px;
-    height: 20px;
+    width: 146px;
+    height: 40px;
     background: #FFFFFF; 
     border: 1px solid #E1E1E1;
     box-sizing: border-box;
@@ -71,25 +72,29 @@ const AvatarBox = styled.div`
     align-items:center;
     width:65%;
     div{
-        margin-bottom:5px;
+        margin-bottom:15px;
     }
     
 
 `;
 
 
-const SummaryBox = ({buyer,product, note1, date, foodimg, personimg}) => {
+const SummaryBox = ({buyer,product, note1, date, foodimg, personimg, active}) => {
     
     return <SummaryContainer>
                 <TitleCont>{buyer} bought {product}</TitleCont>
                 <ContentContainer>
                     <InfoBox>
-                        <DateContainer>Confirmed on {date}</DateContainer>
+                        {/* <DateContainer>Confirmed on {date}</DateContainer> */}
+                        <div>
                         <NoteContainer>{note1}</NoteContainer>
+                        </div>
                         <AContainer>View full order</AContainer>
                     </InfoBox>
                     <AvatarBox>
-                        <AvatarOverlap foodimg={foodimg} profileimg={personimg}></AvatarOverlap>
+                        <Avatar bgimg={foodimg} width="90px" height="90px"/>
+                        {/* <AvatarOverlap active={active}foodimg={foodimg} profileimg={personimg}></AvatarOverlap> */}
+                        
                     </AvatarBox>
 
                 </ContentContainer>

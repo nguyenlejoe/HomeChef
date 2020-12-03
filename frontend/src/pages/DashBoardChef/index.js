@@ -15,6 +15,7 @@ export default function DashBoardChefPage() {
   const {state,dispatch} = useContext(AppContext);
   const [orders, setOrders] = useState([]); 
   const [face, setFace] = useState();
+  const [active, setActive] = useState(true); 
 
   const history = useHistory();
 
@@ -67,8 +68,9 @@ export default function DashBoardChefPage() {
                   buyer={o.user.name}
                   product={o.orderItems[0].name}
                   foodimg={o.orderItems[0].image}
+                  note1={"Total price $" + o.totalPrice}
                   // personimg={facepic.data.results[counter++].picture.large}
-                  
+                  // buyerimg={o.orderItems[1].image}
                 ></SummaryBox>
               </div>
             })}

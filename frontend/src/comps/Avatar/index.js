@@ -7,19 +7,20 @@ width:${props=>props.width ? props.width : "80px"};
 height:${props=>props.height ? props.height : "80px"};
 `;
 
-const AvatarImg = styled.div`
-min-width:100%;
-min-height:100%;
-background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
-background-size:cover;
+const AvatarImg = styled.img`
+width:100%;
+height:100%;
+// background-image:url(${props=>props.bgimg ? props.bgimg : "none"});
+// background-size:cover;
 border-radius:100px;
+object-fit: cover;
 
 `;
 
 
 const Avatar = ({bgimg, width, height}) =>{
     return <AvatarContainer width={width} height={height}>
-        <AvatarImg bgimg={bgimg}></AvatarImg>    
+        <AvatarImg src={bgimg}></AvatarImg>    
     </AvatarContainer>
 }
 

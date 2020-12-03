@@ -22,7 +22,7 @@ const ActivityFeed = () =>{
         <ActivityPost date="12/8/2020"></ActivityPost>
         <ActivityPost buyer="Semi" type="order" bgimg="/person5.jpg" date="12/6/2020"></ActivityPost>
         <ActivityPost buyer="Milan" bgimg="/person2.jpg" date="12/2/2020"></ActivityPost>
-        <ActivityPost buyer="Yunus" type="order" bgimg="/person3.jpg" date="11/12/2020"></ActivityPost>
+        <ActivityPost  buyer="Yunus" type="order" bgimg="/person3.jpg" date="11/12/2020"></ActivityPost>
     </ActivityBox>
 }
 

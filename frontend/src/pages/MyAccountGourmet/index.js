@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useReducer, useState, useEffect, useContext} from 'react';
+import {AppContext} from '../../context/provider';
 import './MyAccountGourmet.scss'
 import NavBarGourmet from '../../comps/NavBarGourmet';
 import Avatar from '../../comps/Avatar';
@@ -8,14 +9,15 @@ import {useHistory, Link} from "react-router-dom";
 
 
 
-export default function MyAccountGourmetPage({name}) {
 
+export default function MyAccountGourmetPage({name}) {
+  const {state,dispatch} = useContext(AppContext);
   const history = useHistory();
 
   return<div className="MyAccountGourmetApp">
         <div className="TopBar">
             <Avatar></Avatar>
-            <h3>{name}</h3>
+            <h3>{state.username}</h3>
         </div>
         <div className="content">
           <div className="MyAccountButton">
