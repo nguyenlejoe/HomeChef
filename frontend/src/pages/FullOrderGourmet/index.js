@@ -9,22 +9,11 @@ import {useHistory, Link} from "react-router-dom";
 import OrderDetailsChef from '../../comps/OrderDetailsUser';
 import OrderDetailsFood from '../../comps/OrderDetailsFood';
 
-export default function FullOrderGourmet({chefName, foodName, description, ingredient, list, oNumber, date, time, phone}){
+export default function FullOrderGourmet(props,{chefName, foodName, description, ingredient, list, oNumber, date, time, phone}){
     
-    // const {state,dispatch} = useContext(AppContext);
-    
-    // const [count,setCount] = useState(1)
 
-    // function minusCount() {
-    //     count > 1 &&
-    //     setCount(prevCount => prevCount -1)
-    // };
-
-    // function plusCount() {
-    //     setCount(prevCount => prevCount +1)
-    // };
-
-    // var dish = props.location.state.o;
+    var order = props.location.state.o;
+    console.log(order);
 
 
     return(
@@ -36,13 +25,25 @@ export default function FullOrderGourmet({chefName, foodName, description, ingre
                 <p>Full Order Details</p>
             </div>
             <div className="OrderCont">
-                <OrderDetailsChef/>
-            </div>            
-            <div className="FoodDetails">                
-                <OrderDetailsFood/>
+                <OrderDetailsChef
+                oNumber={order._id}
+                total={"$"+order.totalPrice}
+                />
+            </div>           
+        
+            {order.orderItems.map((o,i)=>{
+                return <div className="FoodDetails"> 
+                <OrderDetailsFood
+                quantity={o.qty}
+                food={o.name}
+                price={o.price}
+                foodimage={o.image}
+                />
             </div>
-            
-        </div>
+            })}
+        
+         </div>   
+     
     );
 };
 

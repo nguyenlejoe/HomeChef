@@ -71,7 +71,7 @@ export default function CheckoutPage() {
             Pricetag={o.price}
             Quant={o.qty+"x"}
             onClick={()=>{
-              
+
             }}
             />
             </div>
@@ -89,6 +89,7 @@ export default function CheckoutPage() {
                     <Button text="Checkout"
                         disabled={false}
                         onClick={()=>{
+                          CreateOrder(order)
                             val.total = 0
                         }}
                         />

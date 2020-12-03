@@ -14,6 +14,7 @@ import AlertBox from '../../comps/AlertBox';
 
 export default function DishDescription(props,{chefName, foodName, description, ingredient, list}) {
 
+    const history = useHistory();
     const {state,dispatch} = useContext(AppContext);
     const [AddedAlert, setAdd] = useState(true);
 
@@ -39,15 +40,23 @@ export default function DishDescription(props,{chefName, foodName, description, 
 
     return(
         <div className="appContainer">
-            <div className="Alert">
+             <div className="Alert">
                 <AlertBox
                 active={AddedAlert}
                 buttonActive={true}
+                buttonActive={false}
                 text="Added to cart!"
-                textButton1="Ok"
-                onClickYes={()=>{setAdd(true)}}
-                />
-            </div>
+                textButton1="Continue shopping"
+                textButton2="Checkout"
+                onClickYes={()=>{setAdd(true)
+                    history.push("/DashBoardGourmet");
+                }}
+          onClickNo={()=>{
+            history.push("/Checkout");  
+          }}
+          ></AlertBox>
+          </div>
+       
             <div className="coverImage">
                 <div className="backCont">
                     <Link to="/DashBoardGourmet">

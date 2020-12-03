@@ -9,8 +9,8 @@ height:${props=>props.height ? props.height : "80px"};
 `;
 
 const AvatarImg = styled.img`
-min-width: 80px;
-min-height: 80px;
+width:100%;
+height:100%;
 background-size:cover;
 border-radius:100px;
 object-fit: cover;

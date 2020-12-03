@@ -19,14 +19,16 @@ const AvatarContainer = styled.div`
 z-index:1;
 position:relative;
 left:-40px;
+
+
 `;
 
-const AvatarOverlap = ({foodimg,profileimg}) =>{
+const AvatarOverlap = ({foodimg,profileimg, active}) =>{
     return <OverlapContainer>
         <FoodContainer>
             <Avatar bgimg={foodimg}></Avatar>
         </FoodContainer>
-        <AvatarContainer>
+        <AvatarContainer active={active}>
              <Avatar bgimg={profileimg}></Avatar>
         </AvatarContainer>
 
@@ -34,7 +36,7 @@ const AvatarOverlap = ({foodimg,profileimg}) =>{
 }
 
 AvatarOverlap.defaultProps = {
-    foodimg:"/coldnoodle.jpg"
+    foodimg:"/coldnoodle.jpg",
 }
 
 export default AvatarOverlap;

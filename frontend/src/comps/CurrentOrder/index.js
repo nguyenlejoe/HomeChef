@@ -39,7 +39,7 @@ color: #2B445E;
 
 }
 `;
-const CurrentOrder = ({name, state, setState, oNumber, upTime, price, bgImg}) =>{
+const CurrentOrder = ({name, state, setState, oNumber, qty, price, bgImg, onClick}) =>{
     
 // function select () {
 //     setState({[name]: !state[name]})
@@ -50,9 +50,9 @@ return (
     
     <ItemText>
         <p>Order Id : {oNumber} </p>
-        {/* <p>Orderd On : {upTime}</p> */}
-        <p>Total Price : {price}</p>
-        <p><span onClick="">Chef contact details</span></p>
+        {/* <p>Items ordered : {qty}</p> */}
+        <p>Total Price : ${price}</p>
+        <p><span onClick={onClick}>View full order</span></p>
     </ItemText>
 </ItemBox>
 )

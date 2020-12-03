@@ -18,6 +18,7 @@ const ContentContainer = styled.div`
 const RatingContainer = styled.div`
     height:40%;
     display:flex;
+
 `;
 const TitleContainer = styled.div``;
 
@@ -36,15 +37,20 @@ const StarBox = styled.div`
     background-image:url(/star.png);
     background-repeat:no-repeat;
     background-position:center;
+
+    
+    ${props => props.active === true && css`
+    display:none
+    `}
 `;
 
-const ActivityPost = ({buyer, type, fullDesc, date}) =>{
+const ActivityPost = ({buyer, type, fullDesc, date, bgimg, active}) =>{
     return <PostContainer>
-            <AvatarContainer><Avatar></Avatar></AvatarContainer>
+            <AvatarContainer><Avatar bgimg={bgimg}></Avatar></AvatarContainer>
             <ContentContainer>
                 <RatingContainer>
-                    <StarBox></StarBox>
-                    <StarBox></StarBox>
+                    <StarBox  active={active}></StarBox>
+                    <StarBox  active={active}></StarBox>
                 </RatingContainer>
                 <TitleContainer>{buyer} submitted a {type}</TitleContainer>
                 <FullDetailContainer>

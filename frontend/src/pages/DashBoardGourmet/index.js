@@ -60,7 +60,6 @@ export default function DashBoardGourmet() {
             onChange={(value)=>{
               console.log(value.value);
               if(value.value === "All"){
-                console.log("test")
                 HandleData();
               }else if(value.value != "All"){
               HandleDataBrand(value.value)

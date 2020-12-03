@@ -24,11 +24,11 @@ export default function Home() {
         
     </div>
     <div className="Orderboxes">
-    <SummaryBox buyer="Yunus" Quantity="5x" product="Fried Rice" note1="No onions"></SummaryBox>
+    <SummaryBox foodimg="/friedrice.jpg" buyer="Yunus" Quantity="5x" product="Fried Rice" note1="No onions"></SummaryBox>
     <br></br>
-    <SummaryBox></SummaryBox>
+    <SummaryBox note1="Extra noodle" foodimg="/coldnoodle.jpg"></SummaryBox>
     <br></br>
-    <SummaryBox></SummaryBox>
+    <SummaryBox  note1="More sauce" foodimg="/coldnoodle.jpg"></SummaryBox>
 
     </div>
     <div className="Nav">
