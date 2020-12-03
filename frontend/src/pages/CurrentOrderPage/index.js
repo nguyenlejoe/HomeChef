@@ -53,6 +53,8 @@ export default function CurrentOrderPage(){
     return <div className="appCont" onLoad={HandleOrders}>
         <div className="orderCont">
             {orders.map((o,i)=>{
+              var counter=0;
+
               return<div className="OrderBox">
               <CurrentOrder 
               upTime={o.updatedAt}

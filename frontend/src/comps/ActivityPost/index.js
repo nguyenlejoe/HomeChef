@@ -38,9 +38,9 @@ const StarBox = styled.div`
     background-position:center;
 `;
 
-const ActivityPost = ({buyer, type, fullDesc, date}) =>{
+const ActivityPost = ({buyer, type, fullDesc, date, bgimg}) =>{
     return <PostContainer>
-            <AvatarContainer><Avatar></Avatar></AvatarContainer>
+            <AvatarContainer><Avatar bgimg={bgimg}></Avatar></AvatarContainer>
             <ContentContainer>
                 <RatingContainer>
                     <StarBox></StarBox>

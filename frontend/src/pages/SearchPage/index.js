@@ -42,13 +42,16 @@ export default function SearchPage() {
 
     {products.map((o,i)=>{
            return <Link style={{ textDecoration: 'none' }} to={{ pathname: "/DishDescription", state: {o} }}>
+            <div className="foodBox">
            <FoodDisplayCover
            Mealnm={o.name}
            bgimg={o.image}
            MealPrc={o.price}
            ></FoodDisplayCover>
+           </div>
            </Link>
           })}
+          
     </div>
 
     
